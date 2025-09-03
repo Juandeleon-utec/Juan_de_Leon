@@ -1,11 +1,11 @@
 # Replace the text below to customize your site
-site_name: Nombre Estudiante - UTEC & Fab Lab Barcelona
+site_name: Juan Pedro de Le{on - UTEC & Fab Lab Barcelona
 site_description: Master in Design for Emergent Futures
-site_author: Nombre Estudiante
-copyright: Copyleft 2024 "Nombre Estudiante" - GNU Free Documentation License
-repo_name: 'Name : Github Repo'
-site_url: https://fablabbcn.github.io/efdi-template/
-repo_url: https://github.com/fablabbcn/efdi-template
+site_author: Juan Pedro de León
+copyright: Copyleft 2024 "Juan Pedro de León" - GNU Free Documentation License
+repo_name: 'Juan Pedro de León : Github Repo'
+site_url: https://juandeleon-utec.github.io/Juan_de_Leon/
+repo_url: https://juandeleon-utec.github.io/Juan_de_Leon/
 
 
 nav:
