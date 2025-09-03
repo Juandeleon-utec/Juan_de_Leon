@@ -11,15 +11,15 @@ repo_url: https://github.com/Juandeleon-utec
 nav:
   - Home: index.md
   - About: about/me.md
-  - Modulos Técnicos :
-    - MT01: tecnicos/mt01.md
-    - MT02: tecnicos/mt02.md
-  - Modulos Diseño :
-    - MD01: diseno/md01.md
-  - Modulos Innovación :
-    - MI01: inn/mi01.md
-  - Proyecto Integrador:
-    - Ideas Iniciales: proyecto/proyecto.md
+  #- Modulos Técnicos :
+  #  - MT01: tecnicos/mt01.md
+  # - MT02: tecnicos/mt02.md
+  #- Modulos Diseño :
+  #  - MD01: diseno/md01.md
+  #- Modulos Innovación :
+  #  - MI01: inn/mi01.md
+  #- Proyecto Integrador:
+  #  - Ideas Iniciales: proyecto/proyecto.md
   - Referencias:
     - web: ref/web.md
 
