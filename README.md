@@ -1,4 +1,4 @@
-### Esta es mi pagina personal -> [ Dale click para ir (https://juandeleon-utec.github.io/Juan_de_Leon/)]
+### Esta es mi pagina personal en Git -> [Dale click para ir](https://juandeleon-utec.github.io/Juan_de_Leon/)
 
 
 # 🌐 EFDI Website Template
