@@ -94,6 +94,7 @@ Para compilar la documentación y generar el sitio en la carpeta `site/`:
 mkdocs build
 ```
 
+
 El contenido dentro de `site/` es el que se publica en **GitHub Pages**.
 
 ---
