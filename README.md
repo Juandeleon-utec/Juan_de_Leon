@@ -1,3 +1,6 @@
+### Esta es mi pagina personal -> [ Dale click para ir (https://juandeleon-utec.github.io/Juan_de_Leon/)]
+
+
 # 🌐 EFDI Website Template
 
 Este es un template para el repositorio personal de los estudiantes durante la **Especialización en Fabricación Digital e Innovación (EFDI - UTEC & FAB LAB BARCELONA)**.
