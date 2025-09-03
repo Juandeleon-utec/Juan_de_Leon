@@ -1,6 +1,8 @@
 ## Hola y bienvenidos
 
-![](./images/juanpedro.jpg)
+![](./images/juanpedro.jpeg)
 
 
-Mi nombre es Juan Pedro de Leon, soy Licenciado en sistemas y docente de Inicio en el PRIA en UTEC.
+
+Especialización en Fabricación Digital e Innovación
+Revolucionando la innovación hacia un modelo productivo sostenible
