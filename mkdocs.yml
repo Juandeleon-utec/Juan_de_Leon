@@ -13,7 +13,7 @@ nav:
   - About: about/me.md
   - Modulos Técnicos :
     - MT01: tecnicos/mt01.md
-  # - MT02: tecnicos/mt02.md
+    - MT02: tecnicos/mt02.md
   #- Modulos Diseño :
   #  - MD01: diseno/md01.md
   #- Modulos Innovación :
