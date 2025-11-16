@@ -16,7 +16,7 @@ nav:
     - MT02: tecnicos/mt02.md
     - MT03: tecnicos/mt03.md
   - Modulos Diseño :
-   - MD02: diseno/md02.md
+    - MD02: diseno/md02.md
   - Modulos Innovación :
     - MI01: innovacion/mi01.md
   #- Proyecto Integrador:
