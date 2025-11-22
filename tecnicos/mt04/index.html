@@ -578,32 +578,32 @@
 <h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
 <p>En esta actividad vas a simular la detección de una llama usando la fotoresistencia y generar una respuesta de emergencia: encender luces y mover un actuador que simula apagar el fuego. </p>
 <p><strong>Descripción general</strong></p>
-<div class="codehilite"><pre><span></span><code>- Ubicar la fotoresistencia cerca de la zona a monitorear.
-- Detectar un aumento brusco de luz respecto del nivel ambiente y considerarlo como “llama detectada”.
-- Al detectar la “llama”, encender varios LEDs como alarma visual.
-- El servo (o un motor DC si cuentan con controlador adecuado) gira para simular un mecanismo que intenta “apagar” el fuego.
+<div class="codehilite"><pre><span></span><code>- Ubicar la fotoresistencia cerca de la zona a monitorear.  
+- Detectar un aumento brusco de luz respecto del nivel ambiente y considerarlo como “llama detectada”.  
+- Al detectar la “llama”, encender varios LEDs como alarma visual.  
+- El servo (o un motor DC si cuentan con controlador adecuado) gira para simular un mecanismo que intenta “apagar” el fuego.  
 - El botón sirve para resetear el sistema y volver al estado de vigilancia.
 </code></pre></div>
 
 <h2 id="investigacion-y-referencias">Investigación y referencias<a class="headerlink" href="#investigacion-y-referencias" title="Permanent link">&para;</a></h2>
 <p>Para utilziar una esp8266 desde la ide de Arduino necesitamos algunas cosas.
-    1 El ide de Arduino, de preferencia en su versión mas reciente.
-    2 Instalar los controladores de los driver CH340 para el Wemos
-    3 Los controladores del esp8266 para arduino.</p>
+    1 El ide de Arduino, de preferencia en su versión mas reciente.<br />
+    2 Instalar los controladores de los driver CH340 para el Wemos.<br />
+    3 Los controladores del esp8266 para arduino.  </p>
 <p>La informacion relevante esta en :
-   - <a href="https://www.arduino.cc/">https://www.arduino.cc/</a> 
-   - <a href="https://www.wemos.cc/en/latest/d1/index.html">https://www.wemos.cc/en/latest/d1/index.html</a>
-   - <a href="https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html">https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html</a></p>
+   - <a href="https://www.arduino.cc/">https://www.arduino.cc/</a> <br />
+   - <a href="https://www.wemos.cc/en/latest/d1/index.html">https://www.wemos.cc/en/latest/d1/index.html</a><br />
+   - <a href="https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html">https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html</a>  </p>
 <h3 id="materiales-para-el-desarrollo">Materiales para el desarrollo<a class="headerlink" href="#materiales-para-el-desarrollo" title="Permanent link">&para;</a></h3>
-<p>Arrmar el circuito electrico para tener una idea de los materiales y las conexiones que deben existir entre ellos. Para el caso del circuito utilice un software OpenSource llamado Kicad, que ademas de permitir hacer los esquemas electricos permite armar y diselar PCB y exportar en Gerber directo para la produccion en masa. <a href="https://www.kicad.org/">https://www.kicad.org/</a></p>
+<p>Arrmar el circuito electrico para tener una idea de los materiales y las conexiones que deben existir entre ellos. Para el caso del circuito utilice un software OpenSource llamado Kicad, que ademas de permitir hacer los esquemas electricos permite armar y diselar PCB y exportar en Gerber directo para la produccion en masa. <a href="https://www.kicad.org/">https://www.kicad.org/</a>  </p>
 <p><img alt="**Esquema electrico**" src="../../images/MT04/esquema_electrico.png" title="**Esquema electrico Armado**" /></p>
 <p><strong>Materiales utilizados</strong>
-    - Protoboard
-    - Cables varios
-    - Resistencia LDR
-    - Resistencias de 10K y 240ohm
-    - Servo SG90
-    - 1 Led Rojo</p>
+    - Protoboard<br />
+    - Cables varios<br />
+    - Resistencia LDR<br />
+    - Resistencias de 10K y 240ohm<br />
+    - Servo SG90<br />
+    - 1 Led Rojo  </p>
 <p><strong>Circuito armado sin el servo</strong>
 <img alt="Circuito Armado " src="../../images/MT04/circuito_armado_sin_servo.jpg" title="Circuito Armado" /></p>
 <p><strong>Test de reconocimiento de luminocidad</strong></p>
@@ -619,7 +619,7 @@ Teste del led ente el cambio de luminocidad</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 22, 2025 13:39:56 UTC">November 22, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 22, 2025 18:15:19 UTC">November 22, 2025</span>
     
   </small>
 </div>
