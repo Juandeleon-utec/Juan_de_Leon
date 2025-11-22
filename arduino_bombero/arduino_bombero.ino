@@ -18,7 +18,7 @@ void setup() {
   Serial.println("Iniciando SErial....");  
   servo.attach(pinServo); // Iniciar servo en el pin D5
   //Muevo el servo cuando esta iniciando la placa para corroborar
-  servo.write(90);    // Girar a 0°
+  servo.write(180);    // Girar a 0°
   delay(1000);
   servo.write(0);   // Girar a 90°
   delay(1000);
@@ -37,10 +37,10 @@ void loop() {
     //Mueve el servo como una manga
     for (int ang = 45; ang <= 180; ang += 5) {
       servo.write(ang);
-      delay(80);}
+      delay(100);}
     for (int ang = 180; ang >=45; ang -= 5) {
         servo.write(ang);
-        delay(80); }           
+        delay(100); }           
   
     } else {
      // Si baja apago
