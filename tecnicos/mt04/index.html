@@ -600,20 +600,20 @@ ESP8266 al gestor de tarjetas del IDE de Arduino.
 En cuanto al diseño del circuito, decidí utilizar el software KiCad para la creación de los esquemas
 eléctricos. Mi objetivo al usar KiCad, un software Open Source, fue asegurarme de tener una
 representación profesional y escalable del circuito, preparando los archivos para una posible
-fabricación de PCB en el futuro, si el proyecto escalara.
-Referencias Utilizadas:
-● Documentación de Arduino: <a href="https://www.arduino.cc/">https://www.arduino.cc/</a> (Para la sintaxis y funciones
-básicas).
-● Documentación Wemos D1:
-Para utilziar una esp8266 desde la ide de Arduino necesitamos algunas cosas.<br />
-    1 El ide de Arduino, de preferencia en su versión mas reciente.<br />
-    2 Instalar los controladores de los driver CH340 para el Wemos.<br />
-    3 Los controladores del esp8266 para arduino.<br />
-○ <a href="https://www.wemos.cc/en/latest/d1/index.html">https://www.wemos.cc/en/latest/d1/index.html</a>
-○ <a href="https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html">https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html</a> (Guía
-de inicio).
-● Software de Diseño: <a href="https://www.kicad.org/">https://www.kicad.org/</a> (Para el diseño del esquema).</li>
+fabricación de PCB en el futuro, si el proyecto escalara.  </li>
 </ol>
+<p>Referencias Utilizadas:<br />
+● Documentación de Arduino: <a href="https://www.arduino.cc/">https://www.arduino.cc/</a> (Para la sintaxis y funciones
+básicas).<br />
+● Documentación Wemos D1:<br />
+Para utilziar una esp8266 desde la ide de Arduino necesitamos algunas cosas.  <br />
+    1 El ide de Arduino, de preferencia en su versión mas reciente. <br />
+    2 Instalar los controladores de los driver CH340 para el Wemos. <br />
+    3 Los controladores del esp8266 para arduino. <br />
+○ <a href="https://www.wemos.cc/en/latest/d1/index.html">https://www.wemos.cc/en/latest/d1/index.html</a><br />
+○ <a href="https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html">https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html</a> (Guía
+de inicio). <br />
+● Software de Diseño: <a href="https://www.kicad.org/">https://www.kicad.org/</a> (Para el diseño del esquema).   </p>
 <h3 id="materiales-para-el-desarrollo">Materiales para el desarrollo<a class="headerlink" href="#materiales-para-el-desarrollo" title="Permanent link">&para;</a></h3>
 <p>Arrmar el circuito electrico para tener una idea de los materiales y las conexiones que deben existir entre ellos. Para el caso del circuito utilice un software OpenSource llamado Kicad, que ademas de permitir hacer los esquemas electricos permite armar y diselar PCB y exportar en Gerber directo para la produccion en masa. <a href="https://www.kicad.org/">https://www.kicad.org/</a>  </p>
 <p><img alt="**Esquema electrico**" src="../../images/MT04/esquema_electrico.png" title="**Esquema electrico Armado**" /></p>
@@ -630,13 +630,11 @@ de inicio).
 <img alt="Circuito Armado " src="../../images/MT04/circuito_armado_sin_servo.jpg" title="Circuito Armado" /></p>
 <p><strong>Test de reconocimiento de luminocidad</strong></p>
 <ol>
-<li>Test de Reconocimiento de Luminosidad (LDR)
+<li>Test de Reconocimiento de Luminosidad (LDR) <br />
 Se armó el circuito inicial solo con el LDR conectado a una entrada analógica del Wemos D1. La
-prueba consistió en monitorear los valores de lectura serial para establecer un umbral.
-● Resultado: El LDR funcionó correctamente,
-demostrando un cambio brusco en la lectura al exponerlo a
-una fuente de luz (simulando la llama). Esto permitió
-establecer un umbral de detección fiable.</li>
+prueba consistió en monitorear los valores de lectura serial para establecer un umbral. <br />
+● Resultado: El LDR funcionó correctamente, demostrando un cambio brusco en la lectura al exponerlo a
+una fuente de luz (simulando la llama). Esto permitió establecer un umbral de detección fiable.  </li>
 </ol>
 <p><img alt="Evolucion del dibujo " src="../../images/MT04/Luz_y_oscuridad_LDR.png" title="Luz y claridad" /></p>
 <p><strong>Teste del led ente el cambio de luminocidad</strong>  </p>
@@ -669,22 +667,22 @@ reset</p>
 <br>
 <br></p>
 <p><strong>Resultados y Errores</strong></p>
-<p>El circuito completo funcionó tal como se esperaba:
-1. Estado de Vigilancia: El sistema se mantiene en reposo, monitoreando el LDR.
+<p>El circuito completo funcionó tal como se esperaba:<br />
+1. Estado de Vigilancia: El sistema se mantiene en reposo, monitoreando el LDR.<br />
 2. Detección: Al acercar una luz, el LED se enciende como alarma y el servo realiza un
-movimiento.
-3. Reset: El sistema vuelve al estado de vigilancia tras presionar el botón.
-Fallo Documentado: Limitación Física del Servo SG90
-El error más significativo se encontró en el firmware durante la fase de control del actuador.
+movimiento.<br />
+3. Reset: El sistema vuelve al estado de vigilancia tras presionar el botón.<br />
+Fallo Documentado: Limitación Física del Servo SG90  <br />
+El error más significativo se encontró en el firmware durante la fase de control del actuador.<br />
 ● Descripción del Error: Inicialmente, el código de programación se configuró para que el
-servo realizará una barrida entre 45 y 180 grados.
+servo realizará una barrida entre 45 y 180 grados.<br />
 ● Realidad: Este servo SG90 en particular, debido a sus limitaciones físicas internas o
 calibración, sólo alcanza un ángulo máximo de aproximadamente 100 grados. Al intentar
 forzarlo a 180 grados, el motor vibraba y no se movía, lo que generaba un ruido audible y
-un consumo de energía innecesario.
+un consumo de energía innecesario.<br />
 ● Solución Aplicada: Tuve que modificar el código para limitar el rango de movimiento a un
 máximo seguro y funcional, ajustando la barrida entre 45° y 100° para evitar el
-sobreesfuerzo del SG90.</p>
+sobreesfuerzo del SG90.  </p>
 <p><strong>Reflexión</strong>
 Este proyecto me enseñó el conocimiento teórico de un componente (ej. un servo que
 generalmente permite 180°) a menudo debe ser ajustado por las limitaciones físicas y
@@ -712,7 +710,7 @@ Ubicacion de la carpeta de Github, con el material y videos:
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 29, 2025 18:21:22 UTC">November 29, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 29, 2025 18:24:38 UTC">November 29, 2025</span>
     
   </small>
 </div>
