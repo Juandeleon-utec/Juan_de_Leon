@@ -576,7 +576,10 @@
 <h2 id="tarea-5-detector-de-llama-simulado-con-respuesta-de-emergencia">Tarea 5 – Detector de “Llama” Simulado con Respuesta de Emergencia<a class="headerlink" href="#tarea-5-detector-de-llama-simulado-con-respuesta-de-emergencia" title="Permanent link">&para;</a></h2>
 <h3 id="actualizacion-del-pryecto-22-11-2025-finalizado">Actualizacion del pryecto 22-11-2025 - Finalizado<a class="headerlink" href="#actualizacion-del-pryecto-22-11-2025-finalizado" title="Permanent link">&para;</a></h3>
 <h2 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h2>
-<p>En esta actividad vas a simular la detección de una llama usando la fotoresistencia y generar una respuesta de emergencia: encender luces y mover un actuador que simula apagar el fuego. </p>
+<p>El objetivo de esta actividad fue simular la detección de una llama (fuego) utilizando un sensor
+simple, la fotoresistencia (LDR), y programar una respuesta de emergencia automatizada en un
+microcontrolador ESP8266 (en este caso, una Wemos D1). La simulación consistía en activar una
+alarma visual (LED) y desplegar un mecanismo de &ldquo;supresión&rdquo; de incendios (Servo SG90)</p>
 <p><strong>Descripción general</strong></p>
 <div class="codehilite"><pre><span></span><code>- Ubicar la fotoresistencia cerca de la zona a monitorear.  
 - Detectar un aumento brusco de luz respecto del nivel ambiente y considerarlo como “llama detectada”.  
@@ -586,14 +589,31 @@
 </code></pre></div>
 
 <h2 id="investigacion-y-referencias">Investigación y referencias<a class="headerlink" href="#investigacion-y-referencias" title="Permanent link">&para;</a></h2>
-<p>Para utilziar una esp8266 desde la ide de Arduino necesitamos algunas cosas.<br />
+<p>Para abordar este proyecto, la primera decisión clave fue utilizar la placa Wemos D1 (ESP8266).
+Esto requirió un proceso inicial de configuración del entorno de desarrollo que incluía:</p>
+<ol>
+<li>IDE de Arduino: Utilicé la versión más reciente para asegurar la compatibilidad.</li>
+<li>Controladores (Drivers): La instalación de los drivers CH340 fue crucial para que el
+ordenador reconociera la placa.</li>
+<li>Integración del ESP8266: Fue necesario añadir las URLs y los controladores de la tarjeta
+ESP8266 al gestor de tarjetas del IDE de Arduino.
+En cuanto al diseño del circuito, decidí utilizar el software KiCad para la creación de los esquemas
+eléctricos. Mi objetivo al usar KiCad, un software Open Source, fue asegurarme de tener una
+representación profesional y escalable del circuito, preparando los archivos para una posible
+fabricación de PCB en el futuro, si el proyecto escalara.
+Referencias Utilizadas:
+● Documentación de Arduino: <a href="https://www.arduino.cc/">https://www.arduino.cc/</a> (Para la sintaxis y funciones
+básicas).
+● Documentación Wemos D1:
+Para utilziar una esp8266 desde la ide de Arduino necesitamos algunas cosas.<br />
     1 El ide de Arduino, de preferencia en su versión mas reciente.<br />
     2 Instalar los controladores de los driver CH340 para el Wemos.<br />
-    3 Los controladores del esp8266 para arduino.  </p>
-<p>La informacion relevante esta en :<br />
-   - <a href="https://www.arduino.cc/">https://www.arduino.cc/</a> <br />
-   - <a href="https://www.wemos.cc/en/latest/d1/index.html">https://www.wemos.cc/en/latest/d1/index.html</a><br />
-   - <a href="https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html">https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html</a>  </p>
+    3 Los controladores del esp8266 para arduino.<br />
+○ <a href="https://www.wemos.cc/en/latest/d1/index.html">https://www.wemos.cc/en/latest/d1/index.html</a>
+○ <a href="https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html">https://www.wemos.cc/en/latest/tutorials/d1/get_started_with_arduino_d1.html</a> (Guía
+de inicio).
+● Software de Diseño: <a href="https://www.kicad.org/">https://www.kicad.org/</a> (Para el diseño del esquema).</li>
+</ol>
 <h3 id="materiales-para-el-desarrollo">Materiales para el desarrollo<a class="headerlink" href="#materiales-para-el-desarrollo" title="Permanent link">&para;</a></h3>
 <p>Arrmar el circuito electrico para tener una idea de los materiales y las conexiones que deben existir entre ellos. Para el caso del circuito utilice un software OpenSource llamado Kicad, que ademas de permitir hacer los esquemas electricos permite armar y diselar PCB y exportar en Gerber directo para la produccion en masa. <a href="https://www.kicad.org/">https://www.kicad.org/</a>  </p>
 <p><img alt="**Esquema electrico**" src="../../images/MT04/esquema_electrico.png" title="**Esquema electrico Armado**" /></p>
@@ -609,28 +629,81 @@
 <p><strong>Circuito armado sin el servo</strong>
 <img alt="Circuito Armado " src="../../images/MT04/circuito_armado_sin_servo.jpg" title="Circuito Armado" /></p>
 <p><strong>Test de reconocimiento de luminocidad</strong></p>
+<ol>
+<li>Test de Reconocimiento de Luminosidad (LDR)
+Se armó el circuito inicial solo con el LDR conectado a una entrada analógica del Wemos D1. La
+prueba consistió en monitorear los valores de lectura serial para establecer un umbral.
+● Resultado: El LDR funcionó correctamente,
+demostrando un cambio brusco en la lectura al exponerlo a
+una fuente de luz (simulando la llama). Esto permitió
+establecer un umbral de detección fiable.</li>
+</ol>
 <p><img alt="Evolucion del dibujo " src="../../images/MT04/Luz_y_oscuridad_LDR.png" title="Luz y claridad" /></p>
 <p><strong>Teste del led ente el cambio de luminocidad</strong>  </p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/Hm8ThlOeCjA?si=2o5bn_ZfuPHY7BwF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <p><br>
-<br>
-Pasada esta primera prueba, que veo que el LDR funciona correctamente se le agrega el servo para que reaccione junto al led Rojo.</p>
+<br></p>
+<ol>
+<li>
+<p>Integración del LED de Alarma
+En esta etapa, se añadió el LED Rojo. La lógica de control se programó para que, si la lectura del
+LDR superaba el umbral (detección de llama), el LED se encendiera inmediatamente.
+● Resultado: El test fue exitoso. El LED respondía instantáneamente al cambio de
+luminosidad, confirmando que la lógica de detección y la respuesta visual estaban
+operativas.</p>
+</li>
+<li>
+<p>Integración Final del Servo (Actuador)
+Finalmente, se incorporó el Servo SG90, junto con el botón de reset. El servo se integró al
+firmware para que, al detectarse la &ldquo;llama&rdquo;, este realizará una &ldquo;barrida&rdquo; o un giro para simular el
+mecanismo de extinción, y solo regresará a su posición de vigilancia al presionar el botón de
+reset</p>
+</li>
+</ol>
 <p><strong>Circuito Armado y completo</strong><br />
 <img alt="Circuito armado " src="../../images/MT04/circuito_armado.jpg" title="Circuito Armado y completo" />
 <br></p>
 <p><strong>Test final del circuito</strong></p>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/sKx7FfhQjt8?si=vk8XYXPiJ8lPsD_b" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 <p><br>
+<br>
 <br></p>
-<p><strong>Firmware</strong>
-El codigo Arduino del circuito esta disponible en :</p>
-<p><a href="https://github.com/Juandeleon-utec/Juan_de_Leon/tree/main/docs/kicad/bomberos/bomberos.7z">https://github.com/Juandeleon-utec/Juan_de_Leon/tree/main/docs/kicad/bomberos/bomberos.7z</a></p>
-<p><strong>Archivo de entrega MT04</strong>
-<a href="https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/MT04%20-%20Entrega.pdf">https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/MT04%20-%20Entrega.pdf</a></p>
-<p><br>
-<br></p>
-<p><strong>Errores</strong>
-En el codigo de programación la direccion del servo es entre 45 y 180 grados cuando hace la varredura, pero este servo en particular no pasa de los 100 grados.</p>
+<p><strong>Resultados y Errores</strong></p>
+<p>El circuito completo funcionó tal como se esperaba:
+1. Estado de Vigilancia: El sistema se mantiene en reposo, monitoreando el LDR.
+2. Detección: Al acercar una luz, el LED se enciende como alarma y el servo realiza un
+movimiento.
+3. Reset: El sistema vuelve al estado de vigilancia tras presionar el botón.
+Fallo Documentado: Limitación Física del Servo SG90
+El error más significativo se encontró en el firmware durante la fase de control del actuador.
+● Descripción del Error: Inicialmente, el código de programación se configuró para que el
+servo realizará una barrida entre 45 y 180 grados.
+● Realidad: Este servo SG90 en particular, debido a sus limitaciones físicas internas o
+calibración, sólo alcanza un ángulo máximo de aproximadamente 100 grados. Al intentar
+forzarlo a 180 grados, el motor vibraba y no se movía, lo que generaba un ruido audible y
+un consumo de energía innecesario.
+● Solución Aplicada: Tuve que modificar el código para limitar el rango de movimiento a un
+máximo seguro y funcional, ajustando la barrida entre 45° y 100° para evitar el
+sobreesfuerzo del SG90.</p>
+<p><strong>Reflexión</strong>
+Este proyecto me enseñó el conocimiento teórico de un componente (ej. un servo que
+generalmente permite 180°) a menudo debe ser ajustado por las limitaciones físicas y
+calibraciones del hardware específico que se está utilizando en el momento. No siempre la hoja
+de datos se traduce en un rendimiento idéntico en todos los modelos o lotes.
+Si repitiera el ejercicio, mejoraría la calibración del LDR creando un promedio de lecturas
+ambientales al inicio del programa, en lugar de utilizar un umbral fijo. Esto haría que el detector
+fuera más adaptativo a diferentes entornos de iluminación.</p>
+<p><strong>Archivos</strong>
+Todos los archivos del proyecto, incluyendo el esquema de KiCad (en formato editable y PDF), las
+capturas de pantalla de las pruebas, y el firmware (código Arduino), se encuentran disponibles en
+el repositorio:
+Firmware (Código Arduino):
+<a href="https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/arduino_bombero/arduino_bom">https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/arduino_bombero/arduino_bom</a>
+bero.ino
+Archivos de Diseño (KiCad):
+<a href="https://github.com/Juandeleon-utec/Juan_de_Leon/tree/main/docs/kicad/bomberos/bomberos.7z">https://github.com/Juandeleon-utec/Juan_de_Leon/tree/main/docs/kicad/bomberos/bomberos.7z</a>
+Ubicacion de la carpeta de Github, con el material y videos:
+<a href="https://juandeleon-utec.github.io/Juan_de_Leon/tecnicos/mt04/">https://juandeleon-utec.github.io/Juan_de_Leon/tecnicos/mt04/</a></p>
                 
                   
                     
@@ -639,7 +712,7 @@ En el codigo de programación la direccion del servo es entre 45 y 180 grados cu
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 22, 2025 21:56:29 UTC">November 22, 2025</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 29, 2025 18:21:22 UTC">November 29, 2025</span>
     
   </small>
 </div>
