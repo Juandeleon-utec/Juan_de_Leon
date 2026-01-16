@@ -474,7 +474,7 @@
                 
                 <h1 id="practica-09-diseno-de-molde-para-biomateriales">Práctica 09: Diseño de molde para biomateriales<a class="headerlink" href="#practica-09-diseno-de-molde-para-biomateriales" title="Permanent link">&para;</a></h1>
 <p>Diseño de molde para biomateriales
-Introducción — What</p>
+Introducción </p>
 <p>En este ejercicio diseñé un molde rígido de dos piezas para biomateriales, pensado para ser fabricado mediante impresión 3D y utilizado para colada de materiales de bajo espesor y con cierta flexibilidad al momento del desmolde.</p>
 <p>El objetivo no fue únicamente obtener un objeto funcional, sino poner en práctica los criterios de diseño de moldes vistos en el módulo, considerando aspectos como:</p>
 <p>tipo de molde (rígido, multipartes),</p>
@@ -484,20 +484,25 @@ Introducción — What</p>
 <p>espesores,</p>
 <p>elección de materiales y tecnologías.</p>
 <p>La fabricación y uso del biomaterial se abordará en otra materia, por lo que en este ejercicio me concentré específicamente en el diseño del molde como herramienta.</p>
-<p>Investigación y referencias — Why</p>
+<p>Investigación y referencias </p>
 <p>Antes de comenzar el diseño repasé los conceptos trabajados en el módulo sobre:</p>
-<p>tipos de moldes (rígidos vs flexibles),</p>
-<p>moldes de una pieza y de múltiples piezas,</p>
-<p>importancia del desmolde,</p>
-<p>necesidad de sistemas de alineación,</p>
-<p>relación entre geometría, material y proceso.</p>
+<ul>
+<li>tipos de moldes (rígidos vs flexibles),</li>
+<li>moldes de una pieza y de múltiples piezas,</li>
+<li>importancia del desmolde,</li>
+<li>necesidad de sistemas de alineación,</li>
+<li>relación entre geometría, material y proceso.</li>
+</ul>
 <p>También tomé como referencia el ejemplo de molde para biomateriales proporcionado en la consigna, que está pensado para impresión 3D, y lo usé como guía conceptual más que como modelo a copiar literalmente.</p>
 <p>Decidí trabajar con:</p>
-<p>un molde rígido de dos piezas, porque permite definir mejor geometrías con relieves y texto, y facilita el desmolde sin dañar la pieza,</p>
-<p>un diseño de geometría simple, para enfocarme más en los criterios técnicos que en la complejidad formal,</p>
-<p>un material flexible como resultado final (biomaterial), lo cual permite cierto margen en el desmolde aunque el molde sea rígido.</p>
-<p>Proceso — How
-Diseño</p>
+<ul>
+<li>un molde rígido de dos piezas, porque permite definir mejor geometrías con relieves y texto, y facilita el desmolde sin dañar la pieza, en esta caso utilice PLA, ya que era el material que tenia disponible.</li>
+<li>un diseño de geometría simple, para enfocarme más en los criterios técnicos que en la complejidad formal.</li>
+<li>un material flexible como resultado final (biomaterial), lo cual permite cierto margen en el desmolde aunque el molde sea rígido.</li>
+<li></li>
+</ul>
+<h1 id="proceso">Proceso<a class="headerlink" href="#proceso" title="Permanent link">&para;</a></h1>
+<h2 id="diseno">Diseño<a class="headerlink" href="#diseno" title="Permanent link">&para;</a></h2>
 <p>El molde fue diseñado en Fusion 360 como un conjunto de dos cuerpos que encastran entre sí.</p>
 <p>Durante el diseño tuve en cuenta:</p>
 <p>Sistema de encastre y alineación:
@@ -509,14 +514,18 @@ El molde está pensado para piezas de poco espesor, por lo que la cavidad no es 
 <p>Textura y texto:
 Incorporé relieve y/o perforaciones para experimentar cómo se reproducen detalles en el biomaterial y evaluar la fidelidad de copia.</p>
 <p>Tolerancias:
-Consideré las tolerancias propias de la impresión 3D (especialmente en FDM), dejando holguras mínimas entre las partes móviles o de encastre.</p>
-<p>Fabricación</p>
-<p>El molde se está fabricando mediante impresión 3D en [PLA / PETG / material que uses], utilizando una impresora FDM.</p>
-<p>[Acá podés agregar:]</p>
-<p>altura de capa,</p>
-<p>porcentaje de relleno,</p>
-<p>orientación de impresión,
-si querés mostrar más profundidad técnica.</p>
+Consideré las tolerancias propias de la impresión 3D (especialmente en FDM), dejando holguras mínimas entre las partes móviles o de encastre.
+Tambien aumente la distancia entre las barras del logo de utec, ya que no tengo claro cual sera la viscosidad del bioplastico utilizado.</p>
+<p><img alt="&quot;Diseño del molde&quot;" src="../../images/MT09/1_BASE.png" title="Diseño del molde" />
+<img alt="&quot;Diseño del molde&quot;" src="../../images/MT09/2_logo_UTEC.png" title="Diseño del molde" />
+<img alt="&quot;Diseño del molde&quot;" src="../../images/MT09/3_volumen_Logo_UTEC.png" title="Diseño del molde" />
+<img alt="&quot;Diseño del molde&quot;" src="../../images/MT09/8_copia_de_segunda_parte_encahes.png" title="Diseño del molde" />
+<img alt="&quot;Diseño del molde&quot;" src="../../images/MT09/12_final.png" title="Diseño del molde" /></p>
+<h2 id="fabricacion">Fabricación<a class="headerlink" href="#fabricacion" title="Permanent link">&para;</a></h2>
+<p>El molde se está fabricando mediante impresión 3D en PLA, utilizando una impresora FDM.</p>
+<p>Para imprimir el modelo se exporto a STL y luego lo procese en CURA, para imprimir.</p>
+<p><img alt="&quot;Diseño del molde&quot;" src="../../images/MT09/Llavero-UltiMaker%20Cura.png" title="Diseño del molde" /></p>
+<p>Como parametro importante aumente la densidad de relleno a 30%, lo que hizo que le impresion tardara 30 minutos mas, aproximadamente, me parecio relevante, ya que esto le confiere algo mas de resistencia.</p>
 <p>Resultados</p>
 <p>El resultado es un molde de dos piezas que:</p>
 <p>encastra correctamente,</p>
@@ -524,7 +533,7 @@ si querés mostrar más profundidad técnica.</p>
 <p>presenta buena rigidez estructural,</p>
 <p>reproduce correctamente las geometrías diseñadas (texto, textura y cavidad).</p>
 <p>Aún no se realizó el llenado con biomaterial, ya que esa parte corresponde a otra materia, pero el molde está listo para ser utilizado en procesos de colada.</p>
-<p>[Acá van las fotos finales del molde impreso, idealmente: cerrado, abierto y detalle de encastres.]</p>
+<p><img alt="&quot;Molde Impreso&quot;" src="../../images/MT09/impresion_mt09.jpeg" title="MoldeImpreso" /></p>
 <p>Dificultades y cómo las resolví</p>
 <p>Durante el proceso encontré algunas dificultades:</p>
 <p>Ajuste del encastre:
@@ -532,22 +541,24 @@ En la primera versión, el encastre era demasiado ajustado debido a la precisió
 <p>Rigidez vs peso del molde:
 En una iteración inicial el molde era demasiado liviano y flexible. Aumenté el espesor de las paredes y el porcentaje de relleno para darle mayor rigidez.</p>
 <p>Estas iteraciones me permitieron entender mejor la relación entre diseño digital y resultado físico.</p>
-<p>Reflexión personal</p>
+<h2 id="reflexion-personal">Reflexión personal<a class="headerlink" href="#reflexion-personal" title="Permanent link">&para;</a></h2>
 <p>Este ejercicio me ayudó a comprender que diseñar un molde no es solo “modelar una forma negativa”, sino pensar el objeto como una herramienta de proceso: debe cerrar bien, resistir el uso, permitir el llenado, facilitar el desmolde y reproducir fielmente la geometría.</p>
 <p>También fue claro que pequeños detalles como una décima de milímetro en tolerancia pueden marcar la diferencia entre un molde usable y uno que no lo es. El proceso iterativo fue tan valioso como el resultado final.</p>
-<p>Archivos — Where</p>
-<p>Modelo editable (Fusion 360): [link]</p>
-<p>STL para impresión: [link]</p>
-<p>G-code (si corresponde): [link]</p>
-<p>Repositorio completo: [link]</p>
-<p>Atribución y uso de herramientas</p>
+<h2 id="archivos">Archivos<a class="headerlink" href="#archivos" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Modelo editable (Fusion 360):  <a href="https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/Llavero.f3d">https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/Llavero.f3d</a></li>
+<li>Modelo STL: <a href="https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/Llavero.stl">https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/Llavero.stl</a></li>
+<li>G-code (si corresponde): <a href="https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/CFFFP_Llavero.gcode">https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/CFFFP_Llavero.gcode</a></li>
+</ul>
+<h3 id="atribucion-y-uso-de-herramientas">Atribución y uso de herramientas<a class="headerlink" href="#atribucion-y-uso-de-herramientas" title="Permanent link">&para;</a></h3>
+<ul>
+<li>
 <p>Software de diseño: Fusion 360</p>
-<p>Impresión: impresora FDM [modelo si querés]</p>
-<p>Asistencia con IA: ChatGPT — utilizado para ayudar a estructurar la documentación y revisar la redacción.</p>
-<p>Si querés, decime:</p>
-<p>qué biomaterial pensás usar después (agar, gelatina, alginato, etc.) y lo puedo mencionar como contexto,</p>
-<p>qué material de impresión usaste,</p>
-<p>si tu sitio es en Markdown (GitHub, FabAcademy), HTML o Notion — y lo adapto al formato exacto que necesitás.|</p>
+</li>
+<li>
+<p>Impresión: impresora FDM Artillery  Hornet</p>
+</li>
+</ul>
                 
                   
                     
@@ -556,7 +567,7 @@ En una iteración inicial el molde era demasiado liviano y flexible. Aumenté el
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 15, 2026 10:41:07 UTC">January 15, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 16, 2026 13:36:53 UTC">January 16, 2026</span>
     
   </small>
 </div>
