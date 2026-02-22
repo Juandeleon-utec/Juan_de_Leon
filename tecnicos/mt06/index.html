@@ -11,7 +11,7 @@
         <meta name="description" content="Master in Design for Emergent Futures">
       
       
-        <link rel="canonical" href="https://juandeleon-utec.github.io/Juan_de_Leon/tecnicos/mt09/">
+        <link rel="canonical" href="https://juandeleon-utec.github.io/Juan_de_Leon/tecnicos/mt06/">
       
       
         <meta name="author" content="Juan Pedro de León">
@@ -21,7 +21,7 @@
     
     
       
-        <title>MT09 - Juan Pedro de León - UTEC & Fab Lab Barcelona</title>
+        <title>MT06 - Juan Pedro de León - UTEC & Fab Lab Barcelona</title>
       
     
     
@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practica-09-diseno-de-molde-para-biomateriales" class="md-skip">
+        <a href="#control-de-servo-remoto-via-mqtt-esp8266" class="md-skip">
           Skip to content
         </a>
       
@@ -96,7 +96,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              MT09
+              MT06
             
           </span>
         </div>
@@ -301,18 +301,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../mt06/" title="MT06" class="md-nav__link">
-      MT06
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -324,12 +312,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        MT09
+        MT06
         <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="MT09" class="md-nav__link md-nav__link--active">
-      MT09
+    <a href="./" title="MT06" class="md-nav__link md-nav__link--active">
+      MT06
     </a>
     
       
@@ -346,23 +334,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#diseno-de-molde-para-biomateriales" class="md-nav__link">
-    Diseño de molde para biomateriales
+  <a href="#tabla-de-contenidos" class="md-nav__link">
+    Tabla de Contenidos
   </a>
   
-    <nav class="md-nav" aria-label="Diseño de molde para biomateriales">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    1. Introducción
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
-    Introducción
+  <a href="#que-hace-este-proyecto" class="md-nav__link">
+    ¿Qué hace este proyecto?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#investigacion-y-referencias" class="md-nav__link">
-    Investigación y referencias
+  <a href="#por-que-mqtt" class="md-nav__link">
+    ¿Por qué MQTT?
   </a>
   
 </li>
@@ -373,58 +368,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso" class="md-nav__link">
-    Proceso
+  <a href="#2-arquitectura-del-sistema" class="md-nav__link">
+    2. Arquitectura del Sistema
   </a>
   
-    <nav class="md-nav" aria-label="Proceso">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hardware-requerido" class="md-nav__link">
+    3. Hardware Requerido
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-esquemas-de-conexion" class="md-nav__link">
+    4. Esquemas de Conexión
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Esquemas de Conexión">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#diseno" class="md-nav__link">
-    Diseño
+  <a href="#dispositivo-a-emisor" class="md-nav__link">
+    Dispositivo A (Emisor)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fabricacion" class="md-nav__link">
-    Fabricación
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resultados" class="md-nav__link">
-    Resultados
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dificultades-y-como-las-resolvi" class="md-nav__link">
-    Dificultades y cómo las resolví
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reflexion-personal" class="md-nav__link">
-    Reflexión personal
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#archivos" class="md-nav__link">
-    Archivos
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#atribucion-y-uso-de-herramientas" class="md-nav__link">
-    Atribución y uso de herramientas
+  <a href="#dispositivo-b-receptor" class="md-nav__link">
+    Dispositivo B (Receptor)
   </a>
   
 </li>
@@ -434,10 +408,56 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#5-codigo-fuente-y-funcionamiento" class="md-nav__link">
+    5. Código Fuente y Funcionamiento
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Código Fuente y Funcionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-pruebas-con-mqtt-explorer" class="md-nav__link">
+    5.1 Pruebas con MQTT Explorer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-reflexion-personal-y-aprendizajes" class="md-nav__link">
+    6. Reflexión Personal y Aprendizajes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-utilizadas" class="md-nav__link">
+    🛠️ Herramientas Utilizadas
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
     
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../mt09/" title="MT09" class="md-nav__link">
+      MT09
+    </a>
   </li>
 
         
@@ -596,23 +616,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#diseno-de-molde-para-biomateriales" class="md-nav__link">
-    Diseño de molde para biomateriales
+  <a href="#tabla-de-contenidos" class="md-nav__link">
+    Tabla de Contenidos
   </a>
   
-    <nav class="md-nav" aria-label="Diseño de molde para biomateriales">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1-introduccion" class="md-nav__link">
+    1. Introducción
+  </a>
+  
+    <nav class="md-nav" aria-label="1. Introducción">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#introduccion" class="md-nav__link">
-    Introducción
+  <a href="#que-hace-este-proyecto" class="md-nav__link">
+    ¿Qué hace este proyecto?
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#investigacion-y-referencias" class="md-nav__link">
-    Investigación y referencias
+  <a href="#por-que-mqtt" class="md-nav__link">
+    ¿Por qué MQTT?
   </a>
   
 </li>
@@ -623,64 +650,77 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#proceso" class="md-nav__link">
-    Proceso
+  <a href="#2-arquitectura-del-sistema" class="md-nav__link">
+    2. Arquitectura del Sistema
   </a>
   
-    <nav class="md-nav" aria-label="Proceso">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-hardware-requerido" class="md-nav__link">
+    3. Hardware Requerido
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-esquemas-de-conexion" class="md-nav__link">
+    4. Esquemas de Conexión
+  </a>
+  
+    <nav class="md-nav" aria-label="4. Esquemas de Conexión">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#diseno" class="md-nav__link">
-    Diseño
+  <a href="#dispositivo-a-emisor" class="md-nav__link">
+    Dispositivo A (Emisor)
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fabricacion" class="md-nav__link">
-    Fabricación
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#resultados" class="md-nav__link">
-    Resultados
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dificultades-y-como-las-resolvi" class="md-nav__link">
-    Dificultades y cómo las resolví
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reflexion-personal" class="md-nav__link">
-    Reflexión personal
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#archivos" class="md-nav__link">
-    Archivos
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#atribucion-y-uso-de-herramientas" class="md-nav__link">
-    Atribución y uso de herramientas
+  <a href="#dispositivo-b-receptor" class="md-nav__link">
+    Dispositivo B (Receptor)
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-codigo-fuente-y-funcionamiento" class="md-nav__link">
+    5. Código Fuente y Funcionamiento
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Código Fuente y Funcionamiento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-pruebas-con-mqtt-explorer" class="md-nav__link">
+    5.1 Pruebas con MQTT Explorer
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-reflexion-personal-y-aprendizajes" class="md-nav__link">
+    6. Reflexión Personal y Aprendizajes
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#herramientas-utilizadas" class="md-nav__link">
+    🛠️ Herramientas Utilizadas
+  </a>
   
 </li>
       
@@ -696,7 +736,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Juandeleon-utec/edit/master/docs/tecnicos/mt09.md" title="Edit this page" class="md-content__button md-icon">
+                  <a href="https://github.com/Juandeleon-utec/edit/master/docs/tecnicos/mt06.md" title="Edit this page" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
                   </a>
                 
@@ -704,109 +744,119 @@
                   
                 
                 
-                <h1 id="practica-09-diseno-de-molde-para-biomateriales"><strong>Práctica 09: Diseño de molde para biomateriales</strong><a class="headerlink" href="#practica-09-diseno-de-molde-para-biomateriales" title="Permanent link">&para;</a></h1>
-<h2 id="diseno-de-molde-para-biomateriales">Diseño de molde para biomateriales<a class="headerlink" href="#diseno-de-molde-para-biomateriales" title="Permanent link">&para;</a></h2>
-<h3 id="introduccion">Introducción<a class="headerlink" href="#introduccion" title="Permanent link">&para;</a></h3>
-<p>En este ejercicio diseñé un molde rígido de dos piezas para biomateriales, pensado para ser fabricado mediante impresión 3D y utilizado para colada de materiales de bajo espesor y con cierta flexibilidad al momento del desmolde.</p>
-<p>El objetivo no fue únicamente obtener un objeto funcional, sino poner en práctica los criterios de diseño de moldes vistos en el módulo, considerando aspectos como:</p>
-<p>tipo de molde (rígido, multipartes),</p>
-<p>sistema de encastre y cierre,</p>
-<p>criterios de llenado y desmolde,</p>
-<p>tolerancias,</p>
-<p>espesores,</p>
-<p>elección de materiales y tecnologías.</p>
-<p>La fabricación y uso del biomaterial se abordará en otra materia, por lo que en este ejercicio me concentré específicamente en el diseño del molde como herramienta.</p>
-<h3 id="investigacion-y-referencias">Investigación y referencias<a class="headerlink" href="#investigacion-y-referencias" title="Permanent link">&para;</a></h3>
-<p>Antes de comenzar el diseño repasé los conceptos trabajados en el módulo sobre:</p>
+                <h1 id="control-de-servo-remoto-via-mqtt-esp8266">📡 Control de Servo Remoto vía MQTT (ESP8266)<a class="headerlink" href="#control-de-servo-remoto-via-mqtt-esp8266" title="Permanent link">&para;</a></h1>
+<p>Este proyecto implementa una arquitectura de comunicación IoT entre dos nodos <strong>Wemos D1 Mini</strong>. Un nodo actúa como emisor (sensor) leyendo la posición de un potenciómetro, y el segundo como receptor (actuador) controlando un servomotor SG90.</p>
+<p>La idea de este proyecto es utilizar la comunicación entre dispositivos; para mi caso particular, la implementación de prueba se realiza en cercanía, pero podrían ser dispositivos geográficamente muy lejanos.</p>
+<hr />
+<h2 id="tabla-de-contenidos">Tabla de Contenidos<a class="headerlink" href="#tabla-de-contenidos" title="Permanent link">&para;</a></h2>
 <ul>
-<li>tipos de moldes (rígidos vs flexibles)</li>
-<li>moldes de una pieza y de múltiples piezas,</li>
-<li>importancia del desmolde,</li>
-<li>necesidad de sistemas de alineación,</li>
-<li>relación entre geometría, material y proceso.</li>
+<li><a href="#introducción">Introducción</a></li>
+<li><a href="#arquitectura-del-sistema">Arquitectura del Sistema</a></li>
+<li><a href="#hardware-requerido">Hardware Requerido</a></li>
+<li><a href="#esquemas-de-conexión">Esquemas de Conexión</a></li>
+<li><a href="#código-fuente">Código Fuente</a></li>
+<li><a href="#reflexión-y-mejoras">Reflexión y Mejoras</a></li>
 </ul>
-<p>También tomé como referencia el ejemplo de molde para biomateriales proporcionado en la consigna, que está pensado para impresión 3D, y lo usé como guía conceptual más que como modelo a copiar literalmente. </p>
-<p>Decidí trabajar con:</p>
+<hr />
+<h2 id="1-introduccion">1. Introducción<a class="headerlink" href="#1-introduccion" title="Permanent link">&para;</a></h2>
+<h3 id="que-hace-este-proyecto"><strong>¿Qué hace este proyecto?</strong><a class="headerlink" href="#que-hace-este-proyecto" title="Permanent link">&para;</a></h3>
+<p>El sistema simula una barrera o control remoto industrial, utilizando la información del movimiento de una perilla (potenciómetro) para transmitir dicha posición a un servo.
+1. <strong>Wemos A:</strong> Realiza lecturas analógicas de un potenciómetro, las convierte a grados (<span class="arithmatex"><span class="MathJax_Preview">0-180</span><script type="math/tex">0-180</script></span>) y las publica en un broker MQTT.
+2. <strong>Wemos B:</strong> Se suscribe al tópico, recibe los datos y posiciona un servo <strong>SG90</strong> inmediatamente.</p>
+<h3 id="por-que-mqtt"><strong>¿Por qué MQTT?</strong><a class="headerlink" href="#por-que-mqtt" title="Permanent link">&para;</a></h3>
 <ul>
-<li>un molde rígido de dos piezas, porque permite definir mejor geometrías con relieves y texto, y facilita el desmolde sin dañar la pieza, en esta caso utilice PLA, ya que era el material que tenia disponible.</li>
-<li>un diseño de geometría simple, para enfocarme más en los criterios técnicos que en la complejidad formal.</li>
-<li>un material flexible como resultado final (biomaterial), lo cual permite cierto margen en el desmolde aunque el molde sea rígido.</li>
+<li><strong>Desacoplamiento:</strong> Los dispositivos no necesitan conocer sus IPs internas. Además, no tiene restricciones de distancia: el potenciómetro podría estar en Rivera y el servo en Montevideo, sin que existiera una latencia apreciable. Cabe destacar que, al utilizar un broker público, la estabilidad es subjetiva.</li>
+<li><strong>Escalabilidad:</strong> Se pueden añadir más servos suscribiéndolos al mismo tópico.</li>
+<li><strong>Estándar Industrial:</strong> Es el protocolo líder en IoT debido a su bajo consumo de ancho de banda.</li>
 </ul>
-<h2 id="proceso">Proceso<a class="headerlink" href="#proceso" title="Permanent link">&para;</a></h2>
-<h3 id="diseno">Diseño<a class="headerlink" href="#diseno" title="Permanent link">&para;</a></h3>
-<p>El molde fue diseñado en Fusion 360 como un conjunto de dos cuerpos que encastran entre sí.</p>
-<p>Durante el diseño tuve en cuenta:</p>
-<p>Sistema de encastre y alineación:
-Incorporé geometrías de centrado para asegurar que ambas mitades siempre cierren en la misma posición, evitando desplazamientos que generen rebabas o deformaciones.</p>
-<p>Criterios de desmolde:
-Evité socavados y diseñé ligeros ángulos implícitos en las paredes para facilitar la extracción de la pieza una vez solidificada.</p>
-<p>Espesores:
-El molde está pensado para piezas de poco espesor, por lo que la cavidad no es profunda y el cuerpo del molde mantiene un espesor suficiente para que sea estructuralmente estable durante el uso.</p>
-<p>Textura y texto:
-Incorporé relieve y/o perforaciones para experimentar cómo se reproducen detalles en el biomaterial y evaluar la fidelidad de copia.</p>
-<p>Tolerancias:
-Consideré las tolerancias propias de la impresión 3D (especialmente en FDM), dejando holguras mínimas entre las partes móviles o de encastre.
-Tambien aumente la distancia entre las barras del logo de utec, ya que no tengo claro cual sera la viscosidad del bioplastico utilizado.</p>
-<p><img alt="&quot;Diseño del molde&quot;" src="../../images/MT09/1_BASE.png" title="Diseño del molde" />
-<img alt="&quot;Diseño del molde&quot;" src="../../images/MT09/2_logo_UTEC.png" title="Diseño del molde" />
-<img alt="&quot;Diseño del molde&quot;" src="../../images/MT09/3_volumen_Logo_UTEC.png" title="Diseño del molde" />
-<img alt="&quot;Diseño del molde&quot;" src="../../images/MT09/8_copia_de_segunda_parte_encahes.png" title="Diseño del molde" />
-<img alt="&quot;Diseño del molde&quot;" src="../../images/MT09/12_final.png" title="Diseño del molde" /></p>
-<h3 id="fabricacion">Fabricación<a class="headerlink" href="#fabricacion" title="Permanent link">&para;</a></h3>
-<p>El molde se está fabricando mediante impresión 3D en PLA, utilizando una impresora FDM.</p>
-<p>Para imprimir el modelo se exporto a STL y luego lo procese en CURA, para imprimir.</p>
-<p>Como parametro importante aumente la densidad de relleno a 30%, lo que hizo que le impresion tardara 30 minutos mas, aproximadamente, me parecio relevante, ya que esto le confiere algo mas de resistencia, esto debido a problemas que se detallan al final de documento.</p>
-<p><img alt="&quot;Molde en CURA&quot;" src="../../images/MT09/Llavero-UltiMakerCura.png" title="Molde en CURA" /></p>
-<p>Tambien se habilito &ldquo;Soporte&rdquo; ya que la pieza tiene una pequeña perforacion para la salida del aire cuando se vierta el bioplastico.</p>
-<p><img alt="&quot;Molde en CURA&quot;" src="../../images/MT09/salida_aire.png" title="Molde en CURA" /></p>
-<p>Como parametro importante aumente la densidad de relleno a 30%, lo que hizo que le impresion tardara 30 minutos mas, aproximadamente, me parecio relevante, ya que esto le confiere algo mas de resistencia, esto debido a problemas que se detallan al final de documento.</p>
-<h3 id="resultados">Resultados<a class="headerlink" href="#resultados" title="Permanent link">&para;</a></h3>
-<p>El resultado es un molde de dos piezas que:</p>
+<p><img alt="Como funciona MQTT" src="../../images/MT06/mqtt-1.jpg" /></p>
+<hr />
+<h2 id="2-arquitectura-del-sistema">2. Arquitectura del Sistema<a class="headerlink" href="#2-arquitectura-del-sistema" title="Permanent link">&para;</a></h2>
+<p>El sistema utiliza un <strong>Broker Público</strong> para la mensajería:
+* <strong>Servidor:</strong> <code>test.mosquitto.org</code>
+* <strong>Puerto:</strong> <code>1883</code>
+* <strong>Tópico:</strong> <code>grados_mqtt_efdi</code></p>
+<hr />
+<h2 id="3-hardware-requerido">3. Hardware Requerido<a class="headerlink" href="#3-hardware-requerido" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Cantidad</th>
+<th style="text-align: left;">Componente</th>
+<th style="text-align: left;">Función</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Wemos D1 Mini (ESP8266)</td>
+<td style="text-align: left;">Microcontroladores WiFi</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Potenciómetro 10kΩ</td>
+<td style="text-align: left;">Sensor de posición</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Servo SG90</td>
+<td style="text-align: left;">Actuador final</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Cables USB</td>
+<td style="text-align: left;">Conexión a PC/Alimentación</td>
+</tr>
+<tr>
+<td style="text-align: left;">-</td>
+<td style="text-align: left;">Jumpers y Protoboard</td>
+<td style="text-align: left;">Conexiones físicas</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="Wemos con potenciómetro" src="../../images/MT06/wemos_potenciometro.jpeg" />
+<img alt="Wemos con servo" src="../../images/MT06/wemos_servo.jpeg" />
+<img alt="Dos Wemos" src="../../images/MT06/wemos2.jpeg" /></p>
+<hr />
+<h2 id="4-esquemas-de-conexion">4. Esquemas de Conexión<a class="headerlink" href="#4-esquemas-de-conexion" title="Permanent link">&para;</a></h2>
+<h3 id="dispositivo-a-emisor"><strong>Dispositivo A (Emisor)</strong><a class="headerlink" href="#dispositivo-a-emisor" title="Permanent link">&para;</a></h3>
 <ul>
-<li>
-<p>encastra correctamente,</p>
-</li>
-<li>
-<p>cierra de forma alineada,</p>
-</li>
-<li>
-<p>presenta buena rigidez estructural,</p>
-</li>
-<li>
-<p>reproduce correctamente las geometrías diseñadas (texto, textura y cavidad).</p>
-</li>
+<li><strong>VCC (3.3V)</strong> -&gt; Alimentación vía USB.</li>
+<li><strong>GND</strong> -&gt; Pin lateral del potenciómetro.</li>
+<li><strong>A0</strong> -&gt; Pin central del potenciómetro.</li>
 </ul>
-<p>Aún no se realizó el llenado con biomaterial, ya que esa parte corresponde a otra materia, pero el molde está listo para ser utilizado en procesos de colada, tambien puede ser necesario algun ajuste, ya que no se la viscosidad del biomaterial.</p>
-<p><img alt="&quot;Molde Impreso&quot;" src="../../images/MT09/impresion_mt09.jpeg" title="MoldeImpreso" /></p>
-<h3 id="dificultades-y-como-las-resolvi">Dificultades y cómo las resolví<a class="headerlink" href="#dificultades-y-como-las-resolvi" title="Permanent link">&para;</a></h3>
-<p>Durante el proceso encontré algunas dificultades:</p>
-<p>Luego de la impresion del primer molde encontre dificultades en el armado del mismo, y al forzar genero demasiada fueza sobre algunas piezas que llego a la ruptura de parte del molde. De esto quier resaltar :</p>
-<p>Ajuste del encastre:
-En la primera versión, el encastre era demasiado ajustado debido a la precisión limitada de la impresión 3D. Lo resolví aumentando ligeramente las tolerancias entre las piezas.</p>
-<p>Rigidez vs peso del molde:
-En una iteración inicial el molde era demasiado liviano y flexible. Aumenté el espesor de las paredes y el porcentaje de relleno para darle mayor rigidez.</p>
-<p>Estas iteraciones me permitieron entender mejor la relación entre diseño digital y resultado físico.</p>
-<p><img alt="&quot;Molde roto &quot;" src="../../images/MT09/roto1.jpeg" title="Molde roto" /></p>
-<h3 id="reflexion-personal">Reflexión personal<a class="headerlink" href="#reflexion-personal" title="Permanent link">&para;</a></h3>
-<p>Este ejercicio me ayudó a comprender que diseñar un molde no es solo “modelar una forma negativa”, sino pensar el objeto como una herramienta de proceso: debe cerrar bien, resistir el uso, permitir el llenado, facilitar el desmolde y reproducir fielmente la geometría.</p>
-<p>También fue claro que pequeños detalles como una décima de milímetro en tolerancia pueden marcar la diferencia entre un molde usable y uno que no lo es. El proceso iterativo fue tan valioso como el resultado final.</p>
-<h3 id="archivos">Archivos<a class="headerlink" href="#archivos" title="Permanent link">&para;</a></h3>
+<h3 id="dispositivo-b-receptor"><strong>Dispositivo B (Receptor)</strong><a class="headerlink" href="#dispositivo-b-receptor" title="Permanent link">&para;</a></h3>
 <ul>
-<li>Modelo editable (Fusion 360):  <a href="https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/Llavero.f3d">https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/Llavero.f3d</a></li>
-<li>Modelo STL: <a href="https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/Llavero.stl">https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/Llavero.stl</a></li>
-<li>G-code : <a href="https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/CFFFP_Llavero.gcode">https://github.com/Juandeleon-utec/Juan_de_Leon/blob/main/docs/anexos/mt09/CFFFP_Llavero.gcode</a></li>
+<li><strong>D4 (GPIO2)</strong> -&gt; Señal del servo (Naranja).</li>
+<li><strong>5V Externo</strong> -&gt; Alimentación vía USB.</li>
+<li><strong>GND</strong> -&gt; GND del servo (Marrón) + GND del Wemos (Masa común).</li>
 </ul>
-<h3 id="atribucion-y-uso-de-herramientas">Atribución y uso de herramientas<a class="headerlink" href="#atribucion-y-uso-de-herramientas" title="Permanent link">&para;</a></h3>
+<hr />
+<h2 id="5-codigo-fuente-y-funcionamiento">5. Código Fuente y Funcionamiento<a class="headerlink" href="#5-codigo-fuente-y-funcionamiento" title="Permanent link">&para;</a></h2>
+<p>Los archivos de código fuente para el entorno de Arduino IDE se encuentran en las siguientes rutas:</p>
 <ul>
-<li>
-<p>Software de diseño: Fusion 360</p>
-</li>
-<li>
-<p>Impresión: impresora FDM Artillery  Hornet</p>
-</li>
-<li>
-<p>Chatgpt : corrección de sintaxis y ortografía.</p>
-</li>
+<li>📥 <a href="../../anexos/mt06/wemos_2_potenciometro.ino"><strong>Código Emisor (Wemos A)</strong></a>: Lee el potenciómetro y publica vía MQTT.</li>
+<li>📥 <a href="../../anexos/mt06/wemos_1_Servo.ino"><strong>Código Receptor (Wemos B)</strong></a>: Recibe datos del tópico y mueve el servo.</li>
+</ul>
+<h3 id="51-pruebas-con-mqtt-explorer"><strong>5.1 Pruebas con MQTT Explorer</strong><a class="headerlink" href="#51-pruebas-con-mqtt-explorer" title="Permanent link">&para;</a></h3>
+<p>Para revisar el funcionamiento del envío de datos se utilizó <strong>MQTT Explorer</strong>, un software de código abierto que permite conectarse desde el sistema operativo al broker para monitorear nuestro tópico. De esta manera, se analizó si el Wemos responsable de publicar los datos lo estaba haciendo correctamente.</p>
+<p><img alt="MQTT Explorer 1" src="../../images/MT06/MQTT_Explorer01.png" />
+<img alt="MQTT Explorer 2" src="../../images/MT06/MQTT_Explorer02.png" /></p>
+<p>Como se aprecia en la imagen 2, los datos se reciben correctamente. Posteriormente, se procedió a realizar la prueba de conexión del segundo Wemos con el servo.</p>
+<p><img alt="Recibiendo datos" src="../../images/MT06/recepcion.mp4" /></p>
+<hr />
+<h2 id="6-reflexion-personal-y-aprendizajes">6. Reflexión Personal y Aprendizajes<a class="headerlink" href="#6-reflexion-personal-y-aprendizajes" title="Permanent link">&para;</a></h2>
+<p>Durante el desarrollo se identificaron los siguientes puntos críticos:
+* <strong>Gestión de Energía:</strong> El servo SG90 genera ruido eléctrico; se recomienda una fuente externa para evitar reinicios en el Wemos. Al alimentarlo únicamente por el cable USB, se generan oscilaciones indeseadas en el movimiento.
+* <strong>Latencia:</strong> El uso de brokers públicos presenta un ligero retraso (ping), aunque es aceptable para aplicaciones que no sean de misión crítica.
+* <strong>Robustez:</strong> Se implementó una función de reconexión automática tanto para la red WiFi como para el cliente MQTT.</p>
+<hr />
+<h2 id="herramientas-utilizadas">🛠️ Herramientas Utilizadas<a class="headerlink" href="#herramientas-utilizadas" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>IDE:</strong> Arduino IDE 2.1.0</li>
+<li><strong>Librerías:</strong> <code>PubSubClient</code>, <code>Servo</code> (específica para ESP8266).</li>
+<li><strong>Broker:</strong> Mosquitto.</li>
+<li><strong>Documentación:</strong> Markdown editado y corregido con asistencia de IA.</li>
 </ul>
                 
                   
@@ -816,7 +866,7 @@ En una iteración inicial el molde era demasiado liviano y flexible. Aumenté el
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="January 20, 2026 11:21:10 UTC">January 20, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 22, 2026 23:35:34 UTC">February 22, 2026</span>
     
   </small>
 </div>
@@ -839,7 +889,7 @@ En una iteración inicial el molde era demasiado liviano y flexible. Aumenté el
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../mt06/" title="MT06" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../mt05/" title="MT05" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -848,19 +898,19 @@ En una iteración inicial el molde era demasiado liviano y flexible. Aumenté el
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                MT06
+                MT05
               </div>
             </div>
           </a>
         
         
-          <a href="../../diseno/md02/" title="MD02" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../mt09/" title="MT09" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                MD02
+                MT09
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
