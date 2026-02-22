@@ -1,9 +1,9 @@
 #include <ESP8266WiFi.h>
 #include <PubSubClient.h>
 
-const char* ssid = "test";
-const char* password = "test123";
-const char* mqtt_server = "broker.hivemq.com";
+const char* ssid = "test"; // cambiado por seguridad
+const char* password = "test123"; //cambiado por seguridad
+const char* mqtt_server = "test.mosquitto.org";
 
 WiFiClient espClient;
 PubSubClient client(espClient);
@@ -25,7 +25,7 @@ void setup() {
 
 void reconnect() {
   while (!client.connected()) {
-    if (client.connect("WemosA")) {
+    if (client.connect("Wemos_Jpdeleon_P")) {
       Serial.println("Conectado al broker");
     } else {
       delay(2000);
@@ -44,7 +44,7 @@ void loop() {
 
   char msg[10];
   sprintf(msg, "%d", grados);
-  client.publish("grados_mqtt", msg);
+  client.publish("grados_mqtt_efdi", msg);
 
   Serial.print("Publicado: ");
   Serial.println(grados);
