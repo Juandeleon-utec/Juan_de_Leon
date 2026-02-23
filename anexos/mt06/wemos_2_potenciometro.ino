@@ -39,6 +39,9 @@ void loop() {
   }
   client.loop();
 
+
+
+  
   int potValue = analogRead(potPin);
   int grados = map(potValue, 0, 1023, 0, 180);
 
