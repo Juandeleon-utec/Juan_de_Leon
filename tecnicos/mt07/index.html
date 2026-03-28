@@ -369,7 +369,7 @@
         
           <li class="md-nav__item">
   <a href="#actuador-seleccionado" class="md-nav__link">
-    ⚙️ Actuador seleccionado
+    Actuador seleccionado
   </a>
   
 </li>
@@ -651,7 +651,7 @@
         
           <li class="md-nav__item">
   <a href="#actuador-seleccionado" class="md-nav__link">
-    ⚙️ Actuador seleccionado
+    Actuador seleccionado
   </a>
   
 </li>
@@ -757,16 +757,18 @@
 <li>Implementar una comunicación clara entre cliente (navegador) y servidor (ESP8266)</li>
 </ul>
 <p>Se buscó mantener una solución simple, pero lo suficientemente completa como para reflejar un caso real de IoT.</p>
-<h3 id="actuador-seleccionado">⚙️ Actuador seleccionado<a class="headerlink" href="#actuador-seleccionado" title="Permanent link">&para;</a></h3>
+<h3 id="actuador-seleccionado">Actuador seleccionado<a class="headerlink" href="#actuador-seleccionado" title="Permanent link">&para;</a></h3>
 <p>Se decidió trabajar con un <strong>módulo relé</strong>, acompañado de un LED como indicador visual. </p>
 <p>El relé es un componente interesante porque permite controlar cargas externas (por ejemplo, una lámpara o un motor), lo que lo convierte en un elemento muy utilizado en automatización. En este caso, se utilizó principalmente como demostración de control.</p>
-<p>Se opto por un rele para simular de manera mas realista una implementacion de IOT para domotica, que fue el enfoque que le di a este trabajo. 
+<p>Se opto por un rele para simular de manera mas realista una implementacion de IOT para domótica, que fue el enfoque que le di a este trabajo. 
 Los actuactodes del tipo rele pueden manejar pequeñas cargas a 220V como para encender una lampara por ejemplo.</p>
 <ul>
-<li>Relé activado → LED encendido</li>
-<li>Relé desactivado → LED apagado</li>
+<li>Relé activado → Lampara encendida</li>
+<li>Relé desactivado → Lampara apagada</li>
 </ul>
+<p>Lo mismo se repite para las dos cargas.</p>
 <h3 id="interfaz-utilizada">Interfaz utilizada<a class="headerlink" href="#interfaz-utilizada" title="Permanent link">&para;</a></h3>
+<p><strong>Primero se abordara el metodo clasico, todo dentro del esp32</strong></p>
 <p>Se implementó una interfaz web utilizando <strong>HTML y aldo de JavaScript</strong> para darle un poco mas de &ldquo;color&rdquo;, servida directamente desde el ESP8266.</p>
 <p>Se optó por esta solución por varias razones:</p>
 <ul>
@@ -825,12 +827,21 @@ Los actuactodes del tipo rele pueden manejar pequeñas cargas a 220V como para e
 <li>Da mayor control sobre la implementación</li>
 <li>Es más transparente desde el punto de vista educativo</li>
 </ul>
-<p><img alt="Cascara de Huevo" src="../../images/MT07/paginaweb.png" /></p>
+<p><img alt="La pagina WEB" src="../../images/MT07/paginaweb.png" /></p>
 <p>También se decidió mantener una interfaz simple, priorizando la claridad sobre el diseño visual complejo. Esto está alineado con las buenas prácticas vistas en el módulo, donde se prioriza la legibilidad y la coherencia.</p>
-<p><img alt="Cascara de Huevo" src="../../images/MT07/armado.jpg" /></p>
+<p><img alt="CModulo armado" src="../../images/MT07/armado.jpg" /></p>
 <h3 id="prube-de-funcioanmiento">Prube de funcioanmiento<a class="headerlink" href="#prube-de-funcioanmiento" title="Permanent link">&para;</a></h3>
 <p>Acá se muestra como quedo la interfaz web y el modulo funcioando:</p>
 <p><a href="https://youtube.com/shorts/J3BBkVHdbC0"><img alt="Ver video" src="https://img.youtube.com/vi/J3BBkVHdbC0/0.jpg" /></a></p>
+<p><strong>Ahora con Node-RED</strong>
+A modo de test, implemente la solucion con Node-red tambien, probar las dificultades del mecanismo. </p>
+<p>El Dashboard quedo armado de esta mandera:
+<img alt="CModulo armado" src="../../images/MT07/node-red.png" /></p>
+<p>Dejo un pequeño video de Node-red controlado el ESP8266 :
+Como ventaja es mas vistoso, creo que es aplicable en un centro de control integrado, no me quedo claro la ventaja aún.
+<a href="https://youtu.be/1Yw8C-kdq2w">https://youtu.be/1Yw8C-kdq2w</a>
+<a href="https://youtu.be/1Yw8C-kdq2w"><img alt="Ver video" src="https://img.youtube.com/vi/1Yw8C-kdq2w/0.jpg" /></a></p>
+<p>No practique demasiado como para tener una idea clara.</p>
 <h3 id="dificultades-encontradas">Dificultades encontradas<a class="headerlink" href="#dificultades-encontradas" title="Permanent link">&para;</a></h3>
 <p>Durante el desarrollo surgieron algunas dificultades interesantes:</p>
 <ul>
@@ -839,6 +850,7 @@ Los actuactodes del tipo rele pueden manejar pequeñas cargas a 220V como para e
 <li>Manejar múltiples solicitudes HTTP de forma ordenada</li>
 <li>El Whemos D1 mini, por mas que tenga una salida 5V la misma no brinda carga suficiente para alimantar el Rele, por lo que se opto por una fuente externa.</li>
 <li>Una dificultad particular fue evitar que la interfaz muestre un estado incorrecto. Esto se resolvió implementando un endpoint específico (<code>/estado</code>) y consultándolo periódicamente desde el navegador.</li>
+<li>Sugiero bajar la versin 22.2 de node, con la ultima version me fue imposible hacer que funcionara el DASHBOARD</li>
 </ul>
 <h3 id="reflexion-personal">Reflexión personal<a class="headerlink" href="#reflexion-personal" title="Permanent link">&para;</a></h3>
 <p>Este proyecto permitió ver claramente cómo una interfaz cambia completamente la forma en que se interactúa con un sistema.</p>
@@ -864,7 +876,7 @@ Los actuactodes del tipo rele pueden manejar pequeñas cargas a 220V como para e
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 28, 2026 18:08:30 UTC">March 28, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 28, 2026 19:50:46 UTC">March 28, 2026</span>
     
   </small>
 </div>
