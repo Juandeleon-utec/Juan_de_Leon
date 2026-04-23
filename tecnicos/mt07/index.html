@@ -833,15 +833,15 @@ Los actuactodes del tipo rele pueden manejar pequeñas cargas a 220V como para e
 <h3 id="prube-de-funcioanmiento">Prube de funcioanmiento<a class="headerlink" href="#prube-de-funcioanmiento" title="Permanent link">&para;</a></h3>
 <p>Acá se muestra como quedo la interfaz web y el modulo funcioando:</p>
 <p><a href="https://youtube.com/shorts/J3BBkVHdbC0"><img alt="Ver video" src="https://img.youtube.com/vi/J3BBkVHdbC0/0.jpg" /></a></p>
-<p><strong>Ahora con Node-RED</strong>
-A modo de test, implemente la solucion con Node-red tambien, probar las dificultades del mecanismo. </p>
-<p>El Dashboard quedo armado de esta mandera:
-<img alt="CModulo armado" src="../../images/MT07/node-red.png" /></p>
+<p><strong>Ahora con Node-RED</strong></p>
+<p>A modo de test, implemente la solucion con Node-red tambien, probar las dificultades del mecanismo. </p>
+<p>El flujo de trabajo y el Dashboard quedaron armados de esta mandera:</p>
+<p><img alt="Node-Red 1" src="../../images/MT07/node-red.png" />
+<img alt="Node-Red 2" src="../../images/MT07/node-red-dash.png" /></p>
 <p>Dejo un pequeño video de Node-red controlado el ESP8266 :
-Como ventaja es mas vistoso, creo que es aplicable en un centro de control integrado, no me quedo claro la ventaja aún.
-<a href="https://youtu.be/1Yw8C-kdq2w">https://youtu.be/1Yw8C-kdq2w</a>
-<a href="https://youtu.be/1Yw8C-kdq2w"><img alt="Ver video" src="https://img.youtube.com/vi/1Yw8C-kdq2w/0.jpg" /></a></p>
-<p>No practique demasiado como para tener una idea clara.</p>
+Como ventaja es mas vistoso, creo que es aplicable en un centro de control integrado, en el cual pueda controlar varios dispositivos distintos, caso contrario, como e este ejemplo o en el de utilizar solo 1 dispositivo, no me quedo claro la ventaja en un aún.</p>
+<p><a href="https://youtu.be/1Yw8C-kdq2w"><img alt="Ver video" src="https://img.youtube.com/vi/1Yw8C-kdq2w/0.jpg" /></a></p>
+<p>No practique demasiado como para tener una idea clara, ademas de dificultades importantes encotradas en la implementacion que detallare a continuación.</p>
 <h3 id="dificultades-encontradas">Dificultades encontradas<a class="headerlink" href="#dificultades-encontradas" title="Permanent link">&para;</a></h3>
 <p>Durante el desarrollo surgieron algunas dificultades interesantes:</p>
 <ul>
@@ -850,7 +850,7 @@ Como ventaja es mas vistoso, creo que es aplicable en un centro de control integ
 <li>Manejar múltiples solicitudes HTTP de forma ordenada</li>
 <li>El Whemos D1 mini, por mas que tenga una salida 5V la misma no brinda carga suficiente para alimantar el Rele, por lo que se opto por una fuente externa.</li>
 <li>Una dificultad particular fue evitar que la interfaz muestre un estado incorrecto. Esto se resolvió implementando un endpoint específico (<code>/estado</code>) y consultándolo periódicamente desde el navegador.</li>
-<li>Sugiero bajar la versin 22.2 de node, con la ultima version me fue imposible hacer que funcionara el DASHBOARD</li>
+<li>Sugiero bajar la versin 22.2 de node, con la ultima version me fue imposible hacer que funcionara el DASHBOARD, aunque dice que es compatible, no fue posible hacerlo funcionar adecuadamente.</li>
 </ul>
 <h3 id="reflexion-personal">Reflexión personal<a class="headerlink" href="#reflexion-personal" title="Permanent link">&para;</a></h3>
 <p>Este proyecto permitió ver claramente cómo una interfaz cambia completamente la forma en que se interactúa con un sistema.</p>
@@ -876,7 +876,7 @@ Como ventaja es mas vistoso, creo que es aplicable en un centro de control integ
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 28, 2026 19:50:46 UTC">March 28, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="March 30, 2026 10:49:32 UTC">March 30, 2026</span>
     
   </small>
 </div>
