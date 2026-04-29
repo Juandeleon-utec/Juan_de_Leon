@@ -1,0 +1,13 @@
+(1001)
+(T2 D=2 CR=0 - ZMIN=-2 - fresa con punta plana)
+G90 G94
+G17
+G21
+G28 G91 Z0
+G90
+
+(2D Cajeras2)
+S5000 M3
+G17 G90 G94
+G54
+!Error: Failed to post data. See log for details.
