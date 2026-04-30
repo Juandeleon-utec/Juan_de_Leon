@@ -21,7 +21,7 @@
     
     
       
-        <title>Práctica 08: Preparación de archivo para router CNC - Juan Pedro de León - UTEC & Fab Lab Barcelona</title>
+        <title>MT08 - Juan Pedro de León - UTEC & Fab Lab Barcelona</title>
       
     
     
@@ -96,7 +96,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Práctica 08: Preparación de archivo para router CNC
+              MT08
             
           </span>
         </div>
@@ -218,10 +218,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Modulos Técnicos
@@ -316,6 +318,172 @@
     <a href="../mt07/" title="MT07" class="md-nav__link">
       MT07
     </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        MT08
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="MT08" class="md-nav__link md-nav__link--active">
+      MT08
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparacion-de-archivo-para-mecanizado-cnc" class="md-nav__link">
+    Preparación de archivo para mecanizado CNC
+  </a>
+  
+    <nav class="md-nav" aria-label="Preparación de archivo para mecanizado CNC">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    Introducción
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#investigacion-y-referencias" class="md-nav__link">
+    Investigación y referencias
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#proceso" class="md-nav__link">
+    Proceso
+  </a>
+  
+    <nav class="md-nav" aria-label="Proceso">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#configuracion-en-fusion-360" class="md-nav__link">
+    Configuración en Fusion 360
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estrategias-de-mecanizado" class="md-nav__link">
+    Estrategias de mecanizado
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simulacion" class="md-nav__link">
+    Simulación
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dificultades-encontradas" class="md-nav__link">
+    Dificultades encontradas
+  </a>
+  
+    <nav class="md-nav" aria-label="Dificultades encontradas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#errores-en-la-exportacion-del-g-code-en-formato-grbl" class="md-nav__link">
+    Errores en la exportación del G-code en formato GRBL
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#solucion-adoptada" class="md-nav__link">
+    Solución adoptada
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#resultados" class="md-nav__link">
+    Resultados
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trabajo-en-progreso-pcb" class="md-nav__link">
+    Trabajo en progreso (PCB)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#reflexion-personal" class="md-nav__link">
+    Reflexión personal
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#archivos-resumen" class="md-nav__link">
+    Archivos Resumen
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#atribucion-y-herramientas" class="md-nav__link">
+    Atribución y herramientas
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -822,6 +990,41 @@ También, después de mucho investigar, llegué a que el G-code contenía la lí
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../mt07/" title="MT07" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                MT07
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../mt09/" title="MT09" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                MT09
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
