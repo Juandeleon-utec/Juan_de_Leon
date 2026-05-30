@@ -105,7 +105,7 @@ Se reorganizó completamente la disposición interna de los sistemas eléctricos
 - Diseño preparado para futuros ajustes derivados de cambios de proveedor.
 - Se anexa al diseño un plano electrico, que esta **en desarrollo** en este momento.
 
-![Imagen del plano electrico](../images/MD03/circuito_electrico.jpeg)
+![Imagen del plano electrico](../images/PROYECTO/circuito_electrico.jpeg)
 
 #### Punto 1: Redefinición del sistema de potencia por cambio de proveedor
 
@@ -247,11 +247,11 @@ El rediseño también consideró desde el inicio las condiciones reales de trans
 - Diseño pensado para manipulación, izaje y montaje en sitio.
 
 **Soporte para izado de la estructura**
-!["Soporte para izado de la estructura"](../images/MD03/Iluminacion_y_anclajes.png)
+!["Soporte para izado de la estructura"](../images/PROYECTO/Iluminacion_y_anclajes.png)
 
 
 **Salida para colocacion de tornillo para izado**
-!["Soporte para izado de la estructura"](../images/MD03/anclajes2.png)
+!["Soporte para izado de la estructura"](../images/PROYECTO/anclajes2.png)
 
 ### Electrónica y eléctrica
 
@@ -275,8 +275,8 @@ Se diseño un difusor el led para indicar el estatus de cada uno de los cargador
 - Todos los archivos exportados, tanto PDF , STL, Gcode, se encuentran en el apartado de documentación del proyecto.
 
 **Indicador de estado de carga - PS047**
-!["Soporte para izado de la estructura"](../images/MD03/luces_1.png)
-!["Soporte para izado de la estructura"](../images/MD03/luces_2.png)
+!["Soporte para izado de la estructura"](../images/PROYECTO/luces_1.png)
+!["Soporte para izado de la estructura"](../images/PROYECTO/luces_2.png)
 
 <!-- MARCADOR IMAGEN:
      cortes del modelo mostrando flujos de aire o zonas vedadas -->
@@ -421,7 +421,7 @@ En futuras iteraciones del proyecto puede incorporarse análisis por elementos f
 
 #### Estado actual del diseño  - 05-26
 Actualmente se estan realizando todas las perforaciones del gabinete.
-!["Soporte para izado de la estructura"](../images/MD03/gabinete_10_05_26.jpeg)
+!["Soporte para izado de la estructura"](../images/PROYECTO/gabinete_10_05_26.jpeg)
 
 **Entre Ellas:**
 
@@ -448,9 +448,9 @@ Actualmente se estan realizando todas las perforaciones del gabinete.
 #### Repositorio de Archivos
 | Archivo | Formato | Descripción | Enlace |
 | :--- | :--- | :--- | :--- |
-| **Cargador_EV_Estructura_v3.f3d** | Fusion 360 (Editable) | Archivo maestro del proyecto con historial paramétrico, componentes y estructura general del cargador. | [Descargar](../anexos/md03/Movev_Final_componentes.f3d) |
-| **Excel con resumen de piezas y compras** | Archivo XLSX | Listado de materiales, cantidades y clasificación por categorías para compra en plaza de hierros y proveedores locales. | [Descargar](../anexos/md03/lista_piezas_estructura.xlsx) |
-| **Proyectos eléctricos y PCB** | KiCad(imagenes) | Esquemáticos eléctricos, diseño de placas PCB, documentación técnica y archivos asociados al sistema electrónico del cargador. | [Descargar](../anexos/md03/kicad_proyectos.zip) |
+| **Cargador_EV_Estructura_v3.f3d** | Fusion 360 (Editable) | Archivo maestro del proyecto con historial paramétrico, componentes y estructura general del cargador. | [Descargar](../anexos/PROYECTO/Movev_Final_componentes.f3d) |
+| **Excel con resumen de piezas y compras** | Archivo XLSX | Listado de materiales, cantidades y clasificación por categorías para compra en plaza de hierros y proveedores locales. | [Descargar](../anexos/PROYECTO/lista_piezas_estructura.xlsx) |
+| **Proyectos eléctricos y PCB** | KiCad(imagenes) | Esquemáticos eléctricos, diseño de placas PCB, documentación técnica y archivos asociados al sistema electrónico del cargador. | [Descargar](../anexos/PROYECTO/kicad_proyectos.zip) |
 | **Tablero de desarrollo del proyecto** | Miro Board (Online) | Espacio de trabajo visual con referencias, ideas, evolución del diseño, organización técnica y documentación complementaria del proyecto. | [Abrir tablero](https://miro.com/app/board/uXjVJ0RGljI=/) |
 
 
