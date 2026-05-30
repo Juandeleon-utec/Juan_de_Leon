@@ -22,13 +22,14 @@ nav:
     - MT08: tecnicos/mt08.md
     - MT09: tecnicos/mt09.md
   - Modulos Diseño :
+    - MD01: diseno/md01.md
     - MD02: diseno/md02.md
     - MD03: diseno/md03.md
   - Modulos Innovación :
     - MI01: innovacion/mi01.md
     - MI02: innovacion/mi02.md
-  #- Proyecto Integrador:
-  #  - Proyecto: proyecto/proyecto.md
+  - Proyecto Integrador:
+    - Proyecto: proyecto/proyecto.md
   - Referencias:
     - web: ref/web.md
 
