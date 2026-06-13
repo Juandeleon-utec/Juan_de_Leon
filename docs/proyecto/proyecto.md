@@ -1,7 +1,7 @@
 # Documentación del Proyecto  
 ## Rediseño estructural de cargador rápido para vehículos eléctricos
 
-> **Estado:** Borrador 4 — con documentación de proveedores y certificación
+> **Estado:** Borrador 4 — con documentación de proveedores
 > **Actualización:** 13-06-2026
 > **Curso:** Posgrado en Fabricación Digital  
 > **Autor:** Juan Pedro de León  
@@ -568,11 +568,10 @@ Actualmente se estan realizando todas las perforaciones del gabinete.
 | **Excel con resumen de piezas y compras** | XLSX | Listado de materiales, cantidades y clasificación por categorías para compra en plaza. | [Descargar](../anexos/PROYECTO/lista_piezas_estructura.xlsx) |
 | **Proyectos eléctricos y PCB** | KiCad | Esquemáticos eléctricos, diseño de placas PCB y documentación técnica del sistema electrónico. | [Descargar](../anexos/PROYECTO/kicad_proyectos.zip) |
 
-**Documentación de proveedores y certificación**
+**Documentación de proveedores**
 
 | Archivo | Formato | Descripción | Enlace |
 | :--- | :--- | :--- | :--- |
-| **Cotización TÜV SÜD Nro. 8341298** | PDF | Presupuesto de ensayos de seguridad y EMC para marcado CE europeo. ~€106.350 total. Febrero 2026. | [Descargar](<doc_anexos/(3) TUV 8341298.pdf>) |
 | **Presupuesto terminación superficial — RECUFLON** | PDF | Cotización Nro. 20260529_01 para pintura en polvo electrostática. USD 525–620 + IVA por unidad. | [Descargar](<doc_anexos/PRESUPUESTO 2026.05.29 MUEBLES C.E..pdf>) |
 | **Intercambio con Tincafil** | PDF | Correos de cotización de fabricación con taller local de Rivera. Evidencia de la limitación de proveedores locales con formatos 3D. | [Descargar](<doc_anexos/MOVEV Mail - Cotización gabinete cargador _ MOVEV.pdf>) |
 
