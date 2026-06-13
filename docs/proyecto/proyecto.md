@@ -60,32 +60,6 @@ priorizando los siguientes criterios:
 
 El hecho de contar con **dibujos técnicos completos y control total del modelo CAD** permite que, ante un cambio definitivo de proveedor de fuentes, los ajustes internos necesarios puedan realizarse de manera autónoma, sin volver a depender de terceros.
 
-### Visión de certificación internacional como driver del diseño
-
-Un factor determinante que no estuvo presente en el diseño original, pero que condicionó profundamente el rediseño, fue la **necesidad de preparar el equipo para certificación CE en el mercado europeo**.
-
-En febrero de 2026, **TÜV SÜD Product Service GmbH** emitió la cotización Nro. 8341298 para ensayos de seguridad y compatibilidad electromagnética del cargador DC GOshow, con el objetivo de obtener el marcado CE para Europa. El costo total estimado asciende a **~€106.350**:
-
-| Ensayo | Norma de referencia | Costo |
-| :--- | :--- | :--- |
-| Seguridad eléctrica DC EV Charging Station | IEC 61851-23:2014 + IEC 61851-1:2010 | € 71.000 |
-| EMC para mercado UE | EN 61000-6-2/3, EN IEC 61851-21-2:2021 | € 26.850 |
-| Radio Integration (WiFi 2,4 GHz, GSM 2G, LTE 4G) | ETSI EN 300 328, EN 301 511, EN 301 908 | € 5.200 |
-| Protección EMF — campos electromagnéticos | EN 62311:2008 / EN IEC 62311:2020 | € 1.300 |
-| Certificado IEC CB (CB Report + Certificate) | IEC CB Scheme | € 1.800 |
-| **Total estimado** | | **~€ 106.350** |
-
-Este horizonte de certificación explica retroactivamente **por qué** cada decisión técnica del rediseño tomó la forma que tomó:
-
-- El controlador **Vector vSECC** fue elegido porque ya cuenta con certificaciones propias como componente, lo que reduce el alcance de los ensayos en TÜV SÜD.
-- El **IMD** (Insulation Monitoring Device) es requisito explícito de la norma IEC 61851-23 para cargadores DC.
-- El conector **CCS2** con protocolo **ISO 15118** es condición obligatoria indicada expresamente en la cotización TÜV SÜD.
-- Las comunicaciones **WiFi 2,4 GHz, GSM 2G y LTE 4G** son testeadas en los ensayos de radio integración y condicionan el diseño del sistema de conectividad.
-- Las dimensiones del equipo (840 × 1975 × 350 mm, ~250 kg) son los valores declarados en la cotización y condicionan directamente la arquitectura del gabinete.
-
-Un diseño con errores estructurales o de seguridad que obligara a repetir pruebas en laboratorio supondría costos adicionales muy significativos sobre los €106.000 ya previstos. El rediseño desde cero, con control total del modelo CAD, fue la única forma de garantizar que el equipo llegue al laboratorio de ensayos en condiciones previsibles y documentadas.
-
-[Descargar cotización TÜV SÜD Nro. 8341298](<doc_anexos/(3) TUV 8341298.pdf>)
 
 
 ## Investigación y referencias
@@ -609,7 +583,7 @@ Actualmente se estan realizando todas las perforaciones del gabinete.
 
 - **Inicio del posgrado:** Exploración del concepto con biorreactor de algas integrado.
 - **Replanteo del proyecto:** Abandono del biorreactor. Inicio del rediseño estructural desde cero en Fusion 360.
-- **Febrero 2026:** Recepción de cotización de TÜV SÜD (Nro. 8341298) para certificación CE europeo (~€106.350). Este documento se convierte en referencia técnica obligatoria para el diseño.
+- **Comienzo del posgrado** Levantamiento de preguntas del proyecto original, problemas, necesidades, relevancia.
 - **Febrero 2026:** Cierre del listado completo de piezas estructurales para compra (07/02/2026).
 - **Mayo 2026:** Inicio de perforaciones y trabajos físicos sobre el gabinete. Generación de planos técnicos 2D (Anexos I–IV) para comunicación con proveedores locales.
 - **Mayo 2026:** Cotización formal de terminación superficial recibida de RECUFLON (Nro. 20260529_01, USD 525–620 por unidad).
@@ -647,10 +621,7 @@ Los tres aprendizajes clave:
 
 ## Próximos pasos
 
-- Validar el diseño mediante fabricación real. ( al 07/02/2026 se termino la listas de piezas para combrar)
-- Ajustar detalles según pruebas físicas.
-- Documentar nuevas iteraciones. (anexar fotos)
-- Integrar aprendizajes del proceso de soldadura.
+- Fabricar.................
 
 
 
@@ -670,8 +641,7 @@ Documentar este proceso forma parte activa del aprendizaje y no representa un ci
 **Normativa**
 - **Norma IEC 61851 (carga conductiva para vehículos eléctricos):** https://www.unit.org.uy/normalizacion/norma/100001554
 
-**Certificación y ensayos**
-- **TÜV SÜD Product Service GmbH — Cotización Nro. 8341298** (febrero 2026): Ensayos de seguridad y EMC para marcado CE. Contacto: Eray Agrak — ESY@tuvsud.com
+
 
 **Proveedores locales contactados**
 - **Tincafil — Metalmecánica (Rivera, Uruguay):** imello.tincafil@gmail.com · arodriguez.tincafil@gmail.com · Tel: 4623 1020 / 4622 6760
