@@ -8,6 +8,7 @@
 
 
 
+
 ## Introducción
 
 Este proyecto surge a partir de la necesidad de **reformular completamente el diseño estructural** de un cargador rápido para vehículos eléctricos que ya se encontraba en desarrollo. El modelo original presentó múltiples problemas vinculados al transporte, la instalación en campo y la resistencia a la intemperie, lo que dejó en evidencia limitaciones tanto en el diseño del gabinete como en la estrategia de fabricación y provisión de componentes.
