@@ -68,7 +68,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sintesis-academica-del-proyecto" class="md-skip">
+        <a href="#sintesis-del-proyecto" class="md-skip">
           Skip to content
         </a>
       
@@ -1020,21 +1020,19 @@
                   
                 
                 
-                <h1 id="sintesis-academica-del-proyecto">Síntesis Académica del Proyecto<a class="headerlink" href="#sintesis-academica-del-proyecto" title="Permanent link">&para;</a></h1>
+                <h1 id="sintesis-del-proyecto">Síntesis del Proyecto<a class="headerlink" href="#sintesis-del-proyecto" title="Permanent link">&para;</a></h1>
 <h2 id="rediseno-estructural-de-cargador-rapido-para-vehiculos-electricos">Rediseño Estructural de Cargador Rápido para Vehículos Eléctricos<a class="headerlink" href="#rediseno-estructural-de-cargador-rapido-para-vehiculos-electricos" title="Permanent link">&para;</a></h2>
 <p><strong>Institución:</strong> UTEC — Universidad Tecnológica del Uruguay
 <strong>Curso:</strong> Posgrado en Fabricación Digital
 <strong>Autor:</strong> Juan Pedro de León
-<strong>Estado del proyecto base:</strong> Borrador 3 con imágenes
-<strong>Última actualización del sitio fuente:</strong> 11-05-2026</p>
+<strong>Estado del proyecto base:</strong> Casi la final&hellip;
+<strong>Última actualización del sitio fuente:</strong> 21-06-2026</p>
 <blockquote>
 <p>Esta página constituye la síntesis final del proceso documentado de forma narrativa en el sitio del proyecto. Mientras que el sitio relata la evolución cronológica de decisiones, errores y aprendizajes, este documento presenta de forma condensada y académica el objeto de estudio, las decisiones técnicas adoptadas y los resultados de validación obtenidos.</p>
 </blockquote>
-<hr />
 <h2 id="1-resumen">1. Resumen<a class="headerlink" href="#1-resumen" title="Permanent link">&para;</a></h2>
 <p>El proyecto consistió en la reestructuración integral del diseño de un cargador rápido para vehículos eléctricos cuyo prototipo original presentaba limitaciones estructurales no subsanables mediante modificaciones parciales. Las causas identificadas incluyeron deficiencias en la distribución de carga del gabinete, ingreso de agua en componentes críticos, dificultades de transporte e instalación, y una dependencia significativa de proveedores externos sin control directo sobre el diseño. A esto se sumó un cambio de proveedor de fuentes de alimentación que obligó a redefinir la arquitectura interna del equipo.</p>
 <p>En consecuencia, se descartó la línea de trabajo inicial —que contemplaba la integración de un biorreactor de algas como componente ambiental— y se reorientó el alcance del posgrado hacia un rediseño estructural completo, desarrollado desde cero en Autodesk Fusion 360, bajo los criterios de fabricabilidad, modularidad, robustez estructural y autonomía técnica.</p>
-<hr />
 <h2 id="2-objeto-de-estudio-y-alcance">2. Objeto de estudio y alcance<a class="headerlink" href="#2-objeto-de-estudio-y-alcance" title="Permanent link">&para;</a></h2>
 <h3 id="21-objetivos-del-rediseno">2.1 Objetivos del rediseño<a class="headerlink" href="#21-objetivos-del-rediseno" title="Permanent link">&para;</a></h3>
 <p>El trabajo se planteó los siguientes objetivos específicos:</p>
@@ -1051,7 +1049,6 @@
 <h3 id="22-motivacion">2.2 Motivación<a class="headerlink" href="#22-motivacion" title="Permanent link">&para;</a></h3>
 <p>El análisis del prototipo existente evidenció que las problemáticas no podían resolverse mediante ajustes menores, identificándose como causas principales: fallas estructurales asociadas al peso y la carga del gabinete; ingreso de agua en componentes críticos; dificultades de transporte por dimensiones y distribución de masas; dependencia de proveedores externos sin control sobre el diseño; cambios en los proveedores de fuentes de alimentación que obligaron a reconsiderar el layout interno; y baja disponibilidad de materiales certificados en el interior de Uruguay.</p>
 <p>A partir de este diagnóstico se optó por reiniciar el diseño completo, priorizando fabricabilidad, modularidad, robustez estructural, facilidad de ensamblaje y mantenimiento, capacidad de adaptación futura ante cambios de componentes, y mayor disponibilidad local de materiales y procesos productivos.</p>
-<hr />
 <h2 id="3-desarrollo-tecnico">3. Desarrollo técnico<a class="headerlink" href="#3-desarrollo-tecnico" title="Permanent link">&para;</a></h2>
 <h3 id="31-cambio-de-proveedor-del-sistema-de-potencia">3.1 Cambio de proveedor del sistema de potencia<a class="headerlink" href="#31-cambio-de-proveedor-del-sistema-de-potencia" title="Permanent link">&para;</a></h3>
 <p>Se sustituyó el proveedor original de fuentes DC, Phoenix Contact (módulo CHARX PS-M2/825DC/1000DC, 30 kW, ~27 kg por unidad), por el proveedor Maxwell (módulo MXR100050B, 50 kW, ~23 kg por unidad). Esta migración respondió tanto a consideraciones de costo y disponibilidad comercial en Uruguay como al hecho de que el proyecto original había sido concebido asumiendo abastecimiento desde Brasil.</p>
@@ -1063,7 +1060,6 @@
 <p>Se incorporó un circuito de telemetría con conectividad GSM/datos móviles, orientado a habilitar a futuro un dashboard centralizado de supervisión. Las variables previstas incluyen estado general del equipo, detección de alarmas, energía entregada por sesión, tiempo de carga y estado de comunicación con periféricos.</p>
 <h3 id="34-integracion-con-raspberry-pi">3.4 Integración con Raspberry Pi<a class="headerlink" href="#34-integracion-con-raspberry-pi" title="Permanent link">&para;</a></h3>
 <p>Mediante bus I2C se integró una Raspberry Pi con el software PiSignage y un servidor Apache/PHP local, destinada a funciones de interfaz visual: visualización del estado de carga, indicadores operativos y reproducción de contenido institucional o publicitario en la pantalla del equipo.</p>
-<hr />
 <h2 id="4-caracterizacion-de-materiales-y-diseno-estructural">4. Caracterización de materiales y diseño estructural<a class="headerlink" href="#4-caracterizacion-de-materiales-y-diseno-estructural" title="Permanent link">&para;</a></h2>
 <p>El despiece estructural —compuesto por perfiles L, U, C y tubo cuadrado en acero comercial— totaliza aproximadamente 26.5 m de perfilería y un peso estructural estimado de <strong>44.3 kg</strong>, valor considerado adecuado para equilibrar rigidez, facilidad de transporte y carga sobre los puntos de anclaje.</p>
 <p>Para la validación estructural mediante simulación por elementos finitos (sección 5) se utilizó como material de la estructura <strong>Acero AISI 1015</strong>, con las siguientes propiedades:</p>
@@ -1098,7 +1094,6 @@
 </tbody>
 </table>
 <p>Estos valores son consistentes con la categoría de acero al carbono estructural adoptada como referencia preliminar en etapas tempranas del proyecto (equivalente a ASTM A36/A500/S235), con la diferencia de que corresponden a la caracterización específica del material efectivamente utilizado en el modelo validado, en lugar de un rango genérico de referencia.</p>
-<hr />
 <h2 id="5-validacion-estructural-mediante-analisis-por-elementos-finitos-fea">5. Validación estructural mediante análisis por elementos finitos (FEA)<a class="headerlink" href="#5-validacion-estructural-mediante-analisis-por-elementos-finitos-fea" title="Permanent link">&para;</a></h2>
 <p>Como parte de la validación del soporte de izado de la estructura, se realizó un estudio de tensión estática en Autodesk Fusion 360 sobre el caso de carga máxima de la familia de productos (configuración con tres fuentes de alimentación), que por dominancia estructural cubre la totalidad de las variantes comerciales del equipo (configuraciones de una, dos y tres fuentes).</p>
 <h3 id="51-metodologia">5.1 Metodología<a class="headerlink" href="#51-metodologia" title="Permanent link">&para;</a></h3>
@@ -1147,28 +1142,29 @@
 <h3 id="53-conclusion-del-estudio">5.3 Conclusión del estudio<a class="headerlink" href="#53-conclusion-del-estudio" title="Permanent link">&para;</a></h3>
 <p>El Factor de Seguridad mínimo obtenido (2.25) se ubica dentro del rango objetivo definido (2.0–4.0), con un margen del 12.6% respecto al límite inferior aceptable. La distribución de reacciones entre ambos puntos de anclaje resulta prácticamente simétrica, validando la geometría de izaje propuesta. Bajo los criterios de análisis empleados, no se espera deformación permanente ni falla del componente estructural ante la carga de diseño establecida.</p>
 <p><em>Los informes completos de simulación (Autodesk Fusion 360) se anexan como documentación complementaria — ver sección de Referencias.</em></p>
-<hr />
 <h2 id="6-dificultades-identificadas">6. Dificultades identificadas<a class="headerlink" href="#6-dificultades-identificadas" title="Permanent link">&para;</a></h2>
 <ul>
 <li>El diseño original resultó estructuralmente no recuperable mediante ajustes parciales.</li>
 <li>Los sucesivos cambios de proveedor obligaron a replantear decisiones internas durante el desarrollo, en un contexto donde el proyecto había sido originalmente concebido para abastecimiento desde Brasil, mercado con condiciones de disponibilidad distintas a las de Uruguay.</li>
 <li>La reconstrucción del listado completo de partes demandó más tiempo del previsto inicialmente.</li>
-<li>Fue necesaria la adquisición de nuevas competencias técnicas, en particular soldadura MIG, para sostener la estrategia de fabricación propia.</li>
 <li>Se requirió equilibrar la continuidad estética del producto con una reestructuración interna profunda.</li>
 </ul>
-<hr />
 <h2 id="7-resultados-y-estado-actual">7. Resultados y estado actual<a class="headerlink" href="#7-resultados-y-estado-actual" title="Permanent link">&para;</a></h2>
-<p>Como resultado del proceso se obtuvo un nuevo modelo estructural completo, desarrollado íntegramente en Fusion 360, con un diseño más robusto, modular y mantenible, y con mejor comportamiento frente a transporte e instalación, validado mediante el análisis estructural de izaje descrito en la sección 5. Se logró además mayor autonomía técnica, al contar con control total sobre el modelo CAD para futuros ajustes derivados de cambios de proveedor, y se incorporó capacidad de fabricación propia mediante la adquisición de competencias y equipamiento de soldadura MIG.</p>
-<p>Al cierre de este documento, se encuentran en ejecución las perforaciones del gabinete (ventilación, salida de cables de carga, iluminación externa y soporte del conector CCS2 con iluminación LED WS2812B programable). La fabricación del primer prototipo, originalmente prevista para febrero de 2026, fue reprogramada para mayo de 2026 debido a las dificultades documentadas.</p>
-<hr />
+<p>Como resultado del proceso se obtuvo un nuevo modelo estructural completo, desarrollado íntegramente en Fusion 360, con un diseño más robusto, modular y mantenible, y con mejor comportamiento frente a transporte e instalación, validado mediante el análisis estructural de izaje descrito en la sección 5. Se logró además mayor autonomía técnica, al contar con control total sobre el modelo CAD para futuros ajustes derivados de cambios de proveedor.</p>
+<p>Al cierre de este documento, el diseño estructural y la documentación técnica del
+cargador se encuentran completos y validados, habiéndose concretado la venta de
+<strong>10 unidades</strong> a un cliente. El inicio de la fabricación de la primera serie se
+encuentra condicionado a la formalización del anticipo financiero correspondiente
+por parte del cliente, instancia actualmente en curso. Una vez confirmado dicho
+anticipo, la producción podrá iniciarse de forma inmediata, dado que el diseño,
+los planos técnicos y el listado de materiales se encuentran finalizados.</p>
 <h2 id="8-proximos-pasos">8. Próximos pasos<a class="headerlink" href="#8-proximos-pasos" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Validación del diseño mediante fabricación real.</li>
+<li>Inicio de fabricación de la primera serie (10 unidades) una vez confirmado el anticipo financiero del cliente.</li>
 <li>Ajuste de detalles en función de pruebas físicas.</li>
 <li>Documentación de nuevas iteraciones del proyecto.</li>
 <li>Integración de los aprendizajes derivados del proceso de soldadura al flujo de diseño en Fusion 360.</li>
 </ul>
-<hr />
 <h2 id="9-referencias-y-documentacion-anexa">9. Referencias y documentación anexa<a class="headerlink" href="#9-referencias-y-documentacion-anexa" title="Permanent link">&para;</a></h2>
 <h3 id="91-documento-fuente">9.1 Documento fuente<a class="headerlink" href="#91-documento-fuente" title="Permanent link">&para;</a></h3>
 <ol>
@@ -1177,7 +1173,6 @@
 <h3 id="92-informes-de-simulacion-estructural-anexos">9.2 Informes de simulación estructural (anexos)<a class="headerlink" href="#92-informes-de-simulacion-estructural-anexos" title="Permanent link">&para;</a></h3>
 <ol>
 <li>de León, J. P. (2026). <em>Informe de simulación FEA — Estudio 1: Tensión estática (versión preliminar, v40)</em>. Autodesk Fusion 360 (2703.1.20). Archivo: MOVEV_Final_May_V_1_3_Nayax_Notebook_1 v40. Creado 2026-06-21.</li>
-<li>de León, J. P. (2026). <em>Informe de simulación FEA — Estudio 1: Tensión estática (versión corregida y validada, v41)</em>. Autodesk Fusion 360 (2703.1.20). Archivo: MOVEV_Final_May_V_1_3_Nayax_Notebook_1 v41. Creado 2026-06-21.</li>
 </ol>
 <h3 id="93-repositorio-de-archivos-del-proyecto">9.3 Repositorio de archivos del proyecto<a class="headerlink" href="#93-repositorio-de-archivos-del-proyecto" title="Permanent link">&para;</a></h3>
 <ol>
@@ -1204,7 +1199,7 @@
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2026 16:12:33 UTC">June 21, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2026 16:48:42 UTC">June 21, 2026</span>
     
   </small>
 </div>
