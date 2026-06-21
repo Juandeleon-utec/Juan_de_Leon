@@ -477,7 +477,7 @@ del Acero AISI 1015 utilizado en el modelo CAD y validado mediante simulación p
 elementos finitos en Autodesk Fusion 360, reemplazando la estimación preliminar
 genérica (equivalente ASTM A36/S235) adoptada en una etapa anterior del proyecto,
 previa a la definición final con el proveedor de perfilería.
-
+[PDF Con el resultado de la Simulacion](../proyecto/doc_anexos/Informe%20del%20estudio_fusion_360.pdf)
 
 #### Lista de Piezas y Despiece Estructural con Peso Estimado
 
