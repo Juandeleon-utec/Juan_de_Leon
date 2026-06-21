@@ -30,6 +30,7 @@ nav:
     - MI02: innovacion/mi02.md
     - MI03: innovacion/mi03.md
   - Proyecto Integrador:
+    - Presentación Proyecto: proyecto/Resumen_Proyecto_Cargador_EV.md
     - Proyecto: proyecto/proyecto.md
   - Referencias:
     - web: ref/web.md
