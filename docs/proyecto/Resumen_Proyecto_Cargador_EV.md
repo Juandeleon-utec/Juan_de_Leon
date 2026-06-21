@@ -1,16 +1,15 @@
-# Síntesis Académica del Proyecto
+# Síntesis del Proyecto
 
 ## Rediseño Estructural de Cargador Rápido para Vehículos Eléctricos
 
 **Institución:** UTEC — Universidad Tecnológica del Uruguay
 **Curso:** Posgrado en Fabricación Digital
 **Autor:** Juan Pedro de León
-**Estado del proyecto base:** Borrador 3 con imágenes
-**Última actualización del sitio fuente:** 11-05-2026
+**Estado del proyecto base:** Casi la final...
+**Última actualización del sitio fuente:** 21-06-2026
 
 > Esta página constituye la síntesis final del proceso documentado de forma narrativa en el sitio del proyecto. Mientras que el sitio relata la evolución cronológica de decisiones, errores y aprendizajes, este documento presenta de forma condensada y académica el objeto de estudio, las decisiones técnicas adoptadas y los resultados de validación obtenidos.
 
----
 
 ## 1. Resumen
 
@@ -18,7 +17,6 @@ El proyecto consistió en la reestructuración integral del diseño de un cargad
 
 En consecuencia, se descartó la línea de trabajo inicial —que contemplaba la integración de un biorreactor de algas como componente ambiental— y se reorientó el alcance del posgrado hacia un rediseño estructural completo, desarrollado desde cero en Autodesk Fusion 360, bajo los criterios de fabricabilidad, modularidad, robustez estructural y autonomía técnica.
 
----
 
 ## 2. Objeto de estudio y alcance
 
@@ -41,7 +39,6 @@ El análisis del prototipo existente evidenció que las problemáticas no podía
 
 A partir de este diagnóstico se optó por reiniciar el diseño completo, priorizando fabricabilidad, modularidad, robustez estructural, facilidad de ensamblaje y mantenimiento, capacidad de adaptación futura ante cambios de componentes, y mayor disponibilidad local de materiales y procesos productivos.
 
----
 
 ## 3. Desarrollo técnico
 
@@ -65,7 +62,6 @@ Se incorporó un circuito de telemetría con conectividad GSM/datos móviles, or
 
 Mediante bus I2C se integró una Raspberry Pi con el software PiSignage y un servidor Apache/PHP local, destinada a funciones de interfaz visual: visualización del estado de carga, indicadores operativos y reproducción de contenido institucional o publicitario en la pantalla del equipo.
 
----
 
 ## 4. Caracterización de materiales y diseño estructural
 
@@ -83,7 +79,6 @@ Para la validación estructural mediante simulación por elementos finitos (secc
 
 Estos valores son consistentes con la categoría de acero al carbono estructural adoptada como referencia preliminar en etapas tempranas del proyecto (equivalente a ASTM A36/A500/S235), con la diferencia de que corresponden a la caracterización específica del material efectivamente utilizado en el modelo validado, en lugar de un rango genérico de referencia.
 
----
 
 ## 5. Validación estructural mediante análisis por elementos finitos (FEA)
 
@@ -114,34 +109,33 @@ El Factor de Seguridad mínimo obtenido (2.25) se ubica dentro del rango objetiv
 
 *Los informes completos de simulación (Autodesk Fusion 360) se anexan como documentación complementaria — ver sección de Referencias.*
 
----
-
 ## 6. Dificultades identificadas
 
 - El diseño original resultó estructuralmente no recuperable mediante ajustes parciales.
 - Los sucesivos cambios de proveedor obligaron a replantear decisiones internas durante el desarrollo, en un contexto donde el proyecto había sido originalmente concebido para abastecimiento desde Brasil, mercado con condiciones de disponibilidad distintas a las de Uruguay.
 - La reconstrucción del listado completo de partes demandó más tiempo del previsto inicialmente.
-- Fue necesaria la adquisición de nuevas competencias técnicas, en particular soldadura MIG, para sostener la estrategia de fabricación propia.
 - Se requirió equilibrar la continuidad estética del producto con una reestructuración interna profunda.
 
----
 
 ## 7. Resultados y estado actual
 
-Como resultado del proceso se obtuvo un nuevo modelo estructural completo, desarrollado íntegramente en Fusion 360, con un diseño más robusto, modular y mantenible, y con mejor comportamiento frente a transporte e instalación, validado mediante el análisis estructural de izaje descrito en la sección 5. Se logró además mayor autonomía técnica, al contar con control total sobre el modelo CAD para futuros ajustes derivados de cambios de proveedor, y se incorporó capacidad de fabricación propia mediante la adquisición de competencias y equipamiento de soldadura MIG.
+Como resultado del proceso se obtuvo un nuevo modelo estructural completo, desarrollado íntegramente en Fusion 360, con un diseño más robusto, modular y mantenible, y con mejor comportamiento frente a transporte e instalación, validado mediante el análisis estructural de izaje descrito en la sección 5. Se logró además mayor autonomía técnica, al contar con control total sobre el modelo CAD para futuros ajustes derivados de cambios de proveedor.
 
-Al cierre de este documento, se encuentran en ejecución las perforaciones del gabinete (ventilación, salida de cables de carga, iluminación externa y soporte del conector CCS2 con iluminación LED WS2812B programable). La fabricación del primer prototipo, originalmente prevista para febrero de 2026, fue reprogramada para mayo de 2026 debido a las dificultades documentadas.
-
----
+Al cierre de este documento, el diseño estructural y la documentación técnica del
+cargador se encuentran completos y validados, habiéndose concretado la venta de
+**10 unidades** a un cliente. El inicio de la fabricación de la primera serie se
+encuentra condicionado a la formalización del anticipo financiero correspondiente
+por parte del cliente, instancia actualmente en curso. Una vez confirmado dicho
+anticipo, la producción podrá iniciarse de forma inmediata, dado que el diseño,
+los planos técnicos y el listado de materiales se encuentran finalizados.
 
 ## 8. Próximos pasos
 
-- Validación del diseño mediante fabricación real.
+- Inicio de fabricación de la primera serie (10 unidades) una vez confirmado el anticipo financiero del cliente.
 - Ajuste de detalles en función de pruebas físicas.
 - Documentación de nuevas iteraciones del proyecto.
 - Integración de los aprendizajes derivados del proceso de soldadura al flujo de diseño en Fusion 360.
 
----
 
 ## 9. Referencias y documentación anexa
 
@@ -152,21 +146,20 @@ Al cierre de este documento, se encuentran en ejecución las perforaciones del g
 ### 9.2 Informes de simulación estructural (anexos)
 
 2. de León, J. P. (2026). *Informe de simulación FEA — Estudio 1: Tensión estática (versión preliminar, v40)*. Autodesk Fusion 360 (2703.1.20). Archivo: MOVEV_Final_May_V_1_3_Nayax_Notebook_1 v40. Creado 2026-06-21.
-3. de León, J. P. (2026). *Informe de simulación FEA — Estudio 1: Tensión estática (versión corregida y validada, v41)*. Autodesk Fusion 360 (2703.1.20). Archivo: MOVEV_Final_May_V_1_3_Nayax_Notebook_1 v41. Creado 2026-06-21.
 
 ### 9.3 Repositorio de archivos del proyecto
 
-4. *Cargador_EV_Estructura_v3.f3d* — Autodesk Fusion 360 (editable). Archivo maestro del proyecto, con historial paramétrico, componentes y estructura general del cargador.
-5. *Excel con resumen de piezas y compras* — Formato XLSX. Listado de materiales, cantidades y clasificación por categorías para compra en plaza de hierros y proveedores locales.
-6. *Proyectos eléctricos y PCB* — KiCad (imágenes). Esquemáticos eléctricos, diseño de placas PCB y documentación técnica asociada al sistema electrónico del cargador.
-7. *Tablero de desarrollo del proyecto* — Miro Board (en línea). Espacio de trabajo visual con referencias, ideas, evolución del diseño y documentación complementaria.
+3. *Cargador_EV_Estructura_v3.f3d* — Autodesk Fusion 360 (editable). Archivo maestro del proyecto, con historial paramétrico, componentes y estructura general del cargador.
+4. *Excel con resumen de piezas y compras* — Formato XLSX. Listado de materiales, cantidades y clasificación por categorías para compra en plaza de hierros y proveedores locales.
+5. *Proyectos eléctricos y PCB* — KiCad (imágenes). Esquemáticos eléctricos, diseño de placas PCB y documentación técnica asociada al sistema electrónico del cargador.
+6. *Tablero de desarrollo del proyecto* — Miro Board (en línea). Espacio de trabajo visual con referencias, ideas, evolución del diseño y documentación complementaria.
 
 ### 9.4 Referencias técnicas externas citadas
 
-8. Phoenix Contact. *Módulo de potencia DC CHARX PS-M2/825DC/1000DC/30kW*. Disponible en: https://www.phoenixcontact.com/pt-br/produtos/modulo-de-potencia-dc-charx-ps-m2-825dc-1000dc-30kw-1296467
-9. Maxwell Power. *MXR100050B*. Disponible en: https://www.maxwellpower.cn/productinfo/2413106.html
-10. UNIT — Instituto Uruguayo de Normas Técnicas. *Norma IEC 61851*. Disponible en: https://www.unit.org.uy/normalizacion/norma/100001554
+7. Phoenix Contact. *Módulo de potencia DC CHARX PS-M2/825DC/1000DC/30kW*. Disponible en: https://www.phoenixcontact.com/pt-br/produtos/modulo-de-potencia-dc-charx-ps-m2-825dc-1000dc-30kw-1296467
+8. Maxwell Power. *MXR100050B*. Disponible en: https://www.maxwellpower.cn/productinfo/2413106.html
+9. UNIT — Instituto Uruguayo de Normas Técnicas. *Norma IEC 61851*. Disponible en: https://www.unit.org.uy/normalizacion/norma/100001554
 
 ### 9.5 Herramientas de apoyo declaradas
 
-11. Google Gemini — utilizada para refinamiento de texto, corrección de estilo y gramática de la documentación del sitio del proyecto (declarado bajo esquema de Contribución Cognitiva, CCL).
+10. Google Gemini — utilizada para refinamiento de texto, corrección de estilo y gramática de la documentación del sitio del proyecto (declarado bajo esquema de Contribución Cognitiva, CCL).
