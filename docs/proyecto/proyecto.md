@@ -1,10 +1,11 @@
 # Documentación del Proyecto  
 ## Rediseño estructural de cargador rápido para vehículos eléctricos
 
-> **Estado:** Borrador 3 con imagenes
-> **Actualización:** 11-05-2026
+> **Estado:** Borrador 4 — con documentación de proveedores
+> **Actualización:** 13-06-2026
 > **Curso:** Posgrado en Fabricación Digital  
 > **Autor:** Juan Pedro de León  
+
 
 
 
@@ -59,8 +60,6 @@ priorizando los siguientes criterios:
 
 El hecho de contar con **dibujos técnicos completos y control total del modelo CAD** permite que, ante un cambio definitivo de proveedor de fuentes, los ajustes internos necesarios puedan realizarse de manera autónoma, sin volver a depender de terceros.
 
-<!-- MARCADOR: aquí puede agregarse una imagen comparativa
-     del diseño original vs. el rediseño estructural -->
 
 
 ## Investigación y referencias
@@ -75,8 +74,66 @@ La toma de decisiones estuvo apoyada en distintas fuentes y experiencias, entre 
 - Relevamiento de disponibilidad de materiales en plaza.
 - Uso de herramientas de IA como apoyo conceptual y de redacción (documentado).
 
-<!-- MARCADOR: aquí pueden agregarse enlaces externos,
-     capturas de referencias o esquemas analizados -->
+## Búsqueda de proveedores y proceso de cotización
+
+Una de las realidades más concretas del proyecto fue la dificultad para encontrar proveedores en Uruguay —y especialmente en el interior del país— capaces de trabajar con diseños de esta complejidad. El proceso de cotización evidenció una brecha técnica significativa entre lo que el diseño requería y lo que los talleres locales podían absorber. Esta experiencia es una de las razones concretas que justifican la decisión de aprender soldadura MIG y avanzar hacia la fabricación propia.
+
+### Cotización de fabricación estructural — Tincafil (Rivera)
+
+El primer intento formal de cotización de la fabricación del gabinete metálico se realizó con **Tincafil**, empresa ubicada en Rivera (Pte. Viera 790), con trayectoria en metalmecánica local. El proceso dejó en evidencia una limitación frecuente en talleres del interior: **solo trabajan con archivos 2D en formato DWG** (AutoCAD), sin capacidad para interpretar modelos 3D.
+
+La secuencia fue la siguiente:
+
+| Fecha | Acción |
+| :--- | :--- |
+| **27 de mayo de 2026** | Se envía modelo 3D en formato `.IGES` con indicaciones sobre el modelo: piezas *Chapa Sold* (soldadas al chasis) e *Ind* (tornilladas). Chapa 1,5 mm / CH16 en general, base con espesor diferente. |
+| **2 de junio de 2026** | Tincafil solicita el archivo en formato `.DWG` (2D). |
+| **4 de junio de 2026** | Se explica que un gabinete de esta complejidad no puede interpretarse en 2D. Se ofrece exportar a `.STEP`, `.IGES` o `.STL`. |
+| **4 de junio de 2026** | Tincafil acepta el formato `.STEP` y queda aguardando el archivo para continuar. |
+
+Este intercambio es evidencia concreta de lo que el proyecto mencionaba de manera general: **la dificultad de conseguir proveedores locales capaces de interpretar y cotizar diseños digitales complejos**. La negociación aún no se cerró con un presupuesto formal de fabricación estructural.
+
+[Ver intercambio de emails con Tincafil](<doc_anexos/MOVEV Mail - Cotización gabinete cargador _ MOVEV.pdf>)
+
+### Generación de planos técnicos 2D para proveedores
+
+Como respuesta directa a la limitación de los talleres locales con formatos 3D, se generaron **planos técnicos 2D normalizados** del gabinete directamente desde el modelo Fusion 360, organizados por componente y color de terminación. Estos planos permiten comunicar el diseño a proveedores que no manejan modelos 3D:
+
+| Plano | Componente | Dimensiones principales |
+| :--- | :--- | :--- |
+| **Anexo I — Negro Opaco** | Estructura / chasis (interior) | 847,6 × 2022,73 mm · fondo 350 mm |
+| **Anexo II — Negro Satinado** | Carcasa exterior principal | 642 × 1975,87 mm (estructura 1800,87 mm) |
+| **Anexo III — Azul RAL 5012** | Pieza en fibra de vidrio | 849 × 1975,18 mm · fondo 350 mm |
+| **Anexo IV — Modelo final** | Render del conjunto completo | Vista frontal y lateral en color |
+
+La generación de estos planos implicó un trabajo adicional de documentación técnica que no estaba previsto originalmente, pero que resultó imprescindible para poder avanzar en el proceso de cotización local.
+
+[Descargar Anexo I — Negro Opaco](<doc_anexos/Negro_Opaco.pdf>) | [Descargar Anexo II — Negro Satinado](<doc_anexos/Negro_Satinado.pdf>) | [Descargar Anexo III — Azul RAL 5012](<doc_anexos/RAL5012.pdf>)
+
+### Cotización de terminación superficial — RECUFLON (Tarariras, Colonia)
+
+Mientras la cotización de fabricación estructural continuaba en negociación, se logró avanzar con la etapa de **terminación superficial**. La empresa **RECUFLON** (German Cordariy, Tarariras, Departamento de Colonia) emitió el primer presupuesto formal del proceso, correspondiente al tratamiento de pintura en polvo electrostática sobre la estructura metálica terminada.
+
+**Presupuesto Nro. 20260529_01 — 29 de mayo de 2026**
+
+| Opción | Descripción | Precio por unidad |
+| :--- | :--- | :--- |
+| **Opción 1** | Una mano de pintura electrostática | **USD 525 + IVA** |
+| **Opción 2** | Una mano de fondo + una mano de pintura electrostática | **USD 620 + IVA** |
+
+Los colores aplicados corresponden al esquema definido en los planos técnicos: Negro Opaco (estructura/chasis), Negro Satinado (carcasa exterior) y Azul RAL 5012 (pieza en fibra de vidrio).
+
+Este presupuesto es el **primer documento formal obtenido de un proveedor local** para una etapa específica del proceso de fabricación. Valida la estrategia de **descomponer el proceso en subcontratistas especializados** en lugar de buscar un único proveedor integral que no existe en el mercado local.
+
+[Descargar presupuesto RECUFLON](<doc_anexos/PRESUPUESTO 2026.05.29 MUEBLES C.E..pdf>)
+
+### Conclusión del proceso de cotización
+
+El proceso de búsqueda de proveedores dejó en evidencia tres realidades del mercado local que condicionaron directamente la evolución del diseño y la estrategia del proyecto:
+
+1. **No existe en el interior de Uruguay un proveedor único** capaz de fabricar, tratar y entregar un gabinete industrial de esta complejidad.
+2. **La brecha tecnológica entre el diseño digital y la capacidad de los talleres locales es real**: la mayoría trabaja en 2D y no puede interpretar modelos 3D complejos sin documentación adicional.
+3. **La fabricación propia es la única forma de avanzar** sin depender de un proveedor que no existe, lo que justifica la decisión de aprender soldadura MIG y adquirir equipamiento propio.
 
 
 ## How — ¿Cómo lo hice?
@@ -253,6 +310,21 @@ El rediseño también consideró desde el inicio las condiciones reales de trans
 **Salida para colocacion de tornillo para izado**
 !["Soporte para izado de la estructura"](../images/PROYECTO/anclajes2.png)
 
+#### Plano de instalación en campo — MOV-SIF-001
+
+Se desarrolló un plano de instalación estándar (*Standard Installation Field*, MOV-SIF-001, mayo 2026) que establece las condiciones mínimas de obra para la instalación del cargador en campo:
+
+- Área libre requerida: hasta **500 × 250 cm**.
+- Protection board frontal de **185 cm** de altura.
+- Feeder Pillar con diferencial 400A y SPD (protección contra sobretensiones).
+- Dos luminarias de **40W** sobre poste (izquierda y derecha).
+- Cable duct soterrado con tapa, **mínimo 60 cm de profundidad**.
+- Distancia mínima desde la vereda: **100 cm desde el eje del cargador**.
+
+Este plano formaliza los requisitos de instalación y es el documento que se entrega al cliente o instalador antes de la puesta en marcha en campo.
+
+[Descargar plano MOV-SIF-001](<doc_anexos/MOVEV_Install_1.pdf>)
+
 ### Electrónica y eléctrica
 
 Se reorganizó completamente la disposición interna de la electrónica y la eléctrica:
@@ -262,9 +334,35 @@ Se reorganizó completamente la disposición interna de la electrónica y la el�
 - Separación funcional de zonas sensibles.
 - Diseño preparado para ajustes derivados de cambios de proveedor de fuentes.
 
-<!-- MARCADOR:
-     aquí puede agregarse información futura sobre ajustes reales
-     realizados por cambio de proveedor -->
+#### Plano de control assembly — MOV-GShow-CA
+
+Se desarrolló el plano de *Control Assembly* (MOV-GShow-CA, hoja 1/2, mayo 2026) del modelo GOshow 150kW DC + 22kW AC, que documenta la disposición y distribución completa de todos los componentes internos del gabinete:
+
+| Componente | Descripción |
+| :--- | :--- |
+| MCCB 400A | Interruptor automático principal |
+| Main Bus Bar (AC) | Barra de distribución trifásica AC |
+| Bus Bar DC + / — | Barras de distribución DC positivo y negativo |
+| AC Contactor 400A | Contactora de entrada AC |
+| SPD | Protección contra sobretensiones |
+| Fiber Contactor 40A | Contactor de fibra óptica |
+| MOVEV T2 (22kW) | Módulo de carga AC integrado |
+| MOVEV CCS2 | Módulo del conector de carga DC rápida |
+| vSECC | Controlador central de comunicación vehicular |
+| IMD (BENDER) | Monitor de aislamiento DC |
+| Interface Relay | Relé de interfaz de señales |
+| 12V DC Power Supply | Fuente auxiliar para lógica de control |
+| DC Contactor 400A | Contactora DC principal (apertura por falla IMD) |
+| DC Contactor 600A | Contactora DC secundaria de alta corriente |
+| DC Bus Fuse | Fusibles de protección del bus DC |
+| DC Meter | Medidor de energía DC |
+| Breaker 16A | Interruptor auxiliar de circuitos secundarios |
+| Cage Clamp | Prensacables de entrada/salida |
+| 3× Interconnector | Interconexión entre módulos de potencia |
+
+Este plano es el documento de referencia para el armado interno, la verificación de componentes y las tareas de mantenimiento del equipo.
+
+[Descargar plano Control Assembly MOV-GShow-CA](<doc_anexos/MOVEV_Control_Assembly_1.pdf>)
 
 ### Indicador de carga / status del cargado
 
@@ -336,7 +434,7 @@ con el cargador principal.
 A lo largo del proceso se identificaron varias dificultades relevantes:
 
 - El diseño original no era estructuralmente recuperable.
-- Cambios de proveedores obligaron a replantear decisiones internas, y fue un problema durante todo el proyecto. Este se pense originalmente para Brasil, a donde las opciones son diferentes. Tambien debido al volumen que estamos trabajando no es posible importar componentes para este fin.
+- Cambios de proveedores obligaron a replantear decisiones internas durante todo el proyecto. El cargador fue concebido originalmente para el mercado brasileño, donde las opciones de componentes y fabricación son muy diferentes a las disponibles en Uruguay, y especialmente en el interior del país. El proceso de cotización con talleres locales evidenció una brecha técnica concreta: los proveedores de la región trabajan mayoritariamente con archivos 2D (DWG), sin capacidad de interpretar modelos 3D complejos. Esto obligó a generar planos técnicos normalizados como documentación intermedia. Ningún proveedor local cotizó la fabricación estructural completa del gabinete (ver sección *Búsqueda de proveedores*).
 - Rehacer el listado completo de partes llevó más tiempo del previsto.
 - Necesidad de adquirir nuevas competencias técnicas (soldadura).
 - Balancear continuidad estética con una reestructuración profunda.
@@ -446,22 +544,49 @@ Actualmente se estan realizando todas las perforaciones del gabinete.
 - Documentación visual: tableros en Miro. 
 
 #### Repositorio de Archivos
+
+**Diseño y modelos 3D**
+
 | Archivo | Formato | Descripción | Enlace |
 | :--- | :--- | :--- | :--- |
-| **Cargador_EV_Estructura_v3.f3d** | Fusion 360 (Editable) | Archivo maestro del proyecto con historial paramétrico, componentes y estructura general del cargador. | [Descargar](../anexos/PROYECTO/Movev_Final_componentes.f3d) |
-| **Excel con resumen de piezas y compras** | Archivo XLSX | Listado de materiales, cantidades y clasificación por categorías para compra en plaza de hierros y proveedores locales. | [Descargar](../anexos/PROYECTO/lista_piezas_estructura.xlsx) |
-| **Proyectos eléctricos y PCB** | KiCad(imagenes) | Esquemáticos eléctricos, diseño de placas PCB, documentación técnica y archivos asociados al sistema electrónico del cargador. | [Descargar](../anexos/PROYECTO/kicad_proyectos.zip) |
-| **Tablero de desarrollo del proyecto** | Miro Board (Online) | Espacio de trabajo visual con referencias, ideas, evolución del diseño, organización técnica y documentación complementaria del proyecto. | [Abrir tablero](https://miro.com/app/board/uXjVJ0RGljI=/) |
+| **Cargador_EV_Estructura_v3.f3d** | Fusion 360 | Archivo maestro del proyecto con historial paramétrico, componentes y estructura general del cargador. | [Descargar](../anexos/PROYECTO/Movev_Final_componentes.f3d) |
+| **Modelo final exportado (integración Nayax)** | STEP | Modelo GOshow v1.3 con integración del sistema de pago Nayax, enviado a proveedor para cotización de fabricación. | [Descargar](<doc_anexos/MOVEV_Final_May_V_1_3_Nayax.step>) |
+| **Tablero de desarrollo del proyecto** | Miro Board (Online) | Espacio de trabajo visual con referencias, ideas, evolución del diseño y documentación complementaria. | [Abrir tablero](https://miro.com/app/board/uXjVJ0RGljI=/) |
+
+**Planos técnicos de ingeniería**
+
+| Archivo | Formato | Descripción | Enlace |
+| :--- | :--- | :--- | :--- |
+| **Plano de instalación en campo** | PDF | MOV-SIF-001 — Requerimientos de obra, dimensiones, conexiones y luminarias para instalación del cargador. | [Descargar](<doc_anexos/MOVEV_Install_1.pdf>) |
+| **Plano de control assembly** | PDF | MOV-GShow-CA — Layout interno del GOshow 150kW DC + 22kW AC, componentes y distribución de bandejas. | [Descargar](<doc_anexos/MOVEV_Control_Assembly_1.pdf>) |
+| **Planos técnicos 2D por color** | PDF | Anexos I, II y III: Negro Opaco (estructura), Negro Satinado (carcasa), Azul RAL 5012 (fibra de vidrio). | [Anexo I](<doc_anexos/Negro_Opaco.pdf>) · [Anexo II](<doc_anexos/Negro_Satinado.pdf>) · [Anexo III](<doc_anexos/RAL5012.pdf>) |
+
+**Materiales y compras**
+
+| Archivo | Formato | Descripción | Enlace |
+| :--- | :--- | :--- | :--- |
+| **Excel con resumen de piezas y compras** | XLSX | Listado de materiales, cantidades y clasificación por categorías para compra en plaza. | [Descargar](../anexos/PROYECTO/lista_piezas_estructura.xlsx) |
+| **Proyectos eléctricos y PCB** | KiCad | Esquemáticos eléctricos, diseño de placas PCB y documentación técnica del sistema electrónico. | [Descargar](../anexos/PROYECTO/kicad_proyectos.zip) |
+
+**Documentación de proveedores**
+
+| Archivo | Formato | Descripción | Enlace |
+| :--- | :--- | :--- | :--- |
+| **Presupuesto terminación superficial — RECUFLON** | PDF | Cotización Nro. 20260529_01 para pintura en polvo electrostática. USD 525–620 + IVA por unidad. | [Descargar](<doc_anexos/PRESUPUESTO 2026.05.29 MUEBLES C.E..pdf>) |
+| **Intercambio con Tincafil** | PDF | Correos de cotización de fabricación con taller local de Rivera. Evidencia de la limitación de proveedores locales con formatos 3D. | [Descargar](<doc_anexos/MOVEV Mail - Cotización gabinete cargador _ MOVEV.pdf>) |
 
 
 
 
 ## When — ¿Cuándo lo hice?
 
-- Iteración inicial: primeras semanas del posgrado.
-- Replanteo total del proyecto: módulo actual.
-- Rediseño estructural: desarrollo progresivo durante varias semanas.
-- Fabricacion del primer prototipo , inicio Febrero 2026 , Esta fecha se ha pospuesto debido a los problemas comentados el principio de este documento, esperamos que en mayo de 2026 se pueda comenzar con el armado.
+- **Inicio del posgrado:** Exploración del concepto con biorreactor de algas integrado.
+- **Replanteo del proyecto:** Abandono del biorreactor. Inicio del rediseño estructural desde cero en Fusion 360.
+- **Comienzo del posgrado** Levantamiento de preguntas del proyecto original, problemas, necesidades, relevancia.
+- **Febrero 2026:** Cierre del listado completo de piezas estructurales para compra (07/02/2026).
+- **Mayo 2026:** Inicio de perforaciones y trabajos físicos sobre el gabinete. Generación de planos técnicos 2D (Anexos I–IV) para comunicación con proveedores locales.
+- **Mayo 2026:** Cotización formal de terminación superficial recibida de RECUFLON (Nro. 20260529_01, USD 525–620 por unidad).
+- **Mayo–junio 2026:** Proceso de cotización de fabricación estructural con Tincafil (Rivera). Negociación de formatos 3D (.IGES → .STEP). Sin presupuesto formal de fabricación estructural cerrado a la fecha.
 
 
 
@@ -495,10 +620,7 @@ Los tres aprendizajes clave:
 
 ## Próximos pasos
 
-- Validar el diseño mediante fabricación real. ( al 07/02/2026 se termino la listas de piezas para combrar)
-- Ajustar detalles según pruebas físicas.
-- Documentar nuevas iteraciones. (anexar fotos)
-- Integrar aprendizajes del proceso de soldadura.
+- Fabricar.................
 
 
 
@@ -510,6 +632,16 @@ Documentar este proceso forma parte activa del aprendizaje y no representa un ci
 
 
 ## Referencias citadas en el documento
-- **Cargador Phoenix :** https://www.phoenixcontact.com/pt-br/produtos/modulo-de-potencia-dc-charx-ps-m2-825dc-1000dc-30kw-1296467
-- **Cargador Maxwell:** https://www.maxwellpower.cn/productinfo/2413106.html
-- **Norma  IEC 61851:** https://www.unit.org.uy/normalizacion/norma/100001554
+
+**Componentes y proveedores de potencia**
+- **Fuente DC Phoenix Contact CHARX 30kW:** https://www.phoenixcontact.com/pt-br/produtos/modulo-de-potencia-dc-charx-ps-m2-825dc-1000dc-30kw-1296467
+- **Fuente DC Maxwell MXR100050B (50kW):** https://www.maxwellpower.cn/productinfo/2413106.html
+
+**Normativa**
+- **Norma IEC 61851 (carga conductiva para vehículos eléctricos):** https://www.unit.org.uy/normalizacion/norma/100001554
+
+
+
+**Proveedores locales contactados**
+- **Tincafil — Metalmecánica (Rivera, Uruguay):** imello.tincafil@gmail.com · arodriguez.tincafil@gmail.com · Tel: 4623 1020 / 4622 6760
+- **RECUFLON — Tratamiento superficial y pintura en polvo (Tarariras, Colonia, Uruguay):** recuflon@gmail.com · Tel: +598 99 829 830 · www.recuflon.com.uy
