@@ -454,44 +454,50 @@ solo técnico, sino también estructural y metodológico.
 Aunque estéticamente el cargador conserva similitudes con el modelo anterior,
 internamente se trata de un **producto completamente nuevo**.
 
-### Criterios de Materiales y Resistencia Estructural
+## Criterios de Materiales y Resistencia Estructural
 
-Para la estimación preliminar del comportamiento mecánico de la estructura se adoptó como referencia el uso de **acero al carbono comercial de uso estructural**, equivalente a normas internacionales ampliamente utilizadas en fabricación metálica liviana, tales como **ASTM A36**, **ASTM A500** y equivalentes europeos tipo **S235**.
+Para la estimación del comportamiento mecánico de la estructura se adoptó como
+referencia el uso de acero al carbono comercial de uso estructural, **Acero AISI 1015**
+(acero de bajo contenido de carbono, ~0.15% C), confirmado tras consulta con el
+proveedor y utilizado como material de referencia en la validación por elementos
+finitos del soporte de izado.
 
-Estos valores se utilizaron como base de diseño orientativa, considerando que parte del material disponible en plaza puede no contar con certificación específica de origen.
+### Propiedades mecánicas de referencia adoptadas
 
-#### Propiedades mecánicas de referencia adoptadas
+| Propiedad | Valor |
+|---|---|
+| Densidad del acero | 7.87 g/cm³ |
+| Módulo de elasticidad (E) | 205 GPa |
+| Coeficiente de Poisson | 0.29 |
+| Límite elástico (Fy) | 285 MPa |
+| Resistencia última (Fu) | 385 MPa |
 
-| Propiedad | Valor típico |
-| :--- | :--- |
-| Densidad del acero | 7.85 g/cm³ |
-| Módulo de elasticidad (E) | 200 GPa |
-| Límite elástico (Fy) | 235 – 250 MPa |
-| Resistencia última (Fu) | 370 – 550 MPa |
-
-> **Nota técnica:** Los valores anteriores representan rangos típicos de acero estructural comercial y fueron considerados como referencia para decisiones de diseño, rigidez y fabricación.
-
+**Nota técnica:** los valores anteriores corresponden a la caracterización específica
+del Acero AISI 1015 utilizado en el modelo CAD y validado mediante simulación por
+elementos finitos en Autodesk Fusion 360, reemplazando la estimación preliminar
+genérica (equivalente ASTM A36/S235) adoptada en una etapa anterior del proyecto,
+previa a la definición final con el proveedor de perfilería.
 
 
 #### Lista de Piezas y Despiece Estructural con Peso Estimado
 
-| ID | Nombre de Pieza | Medidas (mm) | Cantidad | Total (m) | Peso aprox. kg/m | Peso total aprox. |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **P1** | Ángulo L 30x25x1.6 | 1800 | 4 | 7.20 | 1.33 | 9.58 kg |
-| **P2** | Ángulo L 30x25x1.6 | 300 | 2 | 0.60 | 1.33 | 0.80 kg |
-| **P3** | Perfil U 50x25x2.0 | 600 | 7 | 4.20 | 2.29 | 9.62 kg |
-| **P4** | Perfil U 50x25x2.0 | 310 | 4 | 1.24 | 2.29 | 2.84 kg |
-| **P5** | Perfil U 50x25x2.0 | 266 | 2 | 0.53 | 2.29 | 1.21 kg |
-| **P6** | Perfil U 50x25x2.0 | 337 | 2 | 0.67 | 2.29 | 1.53 kg |
-| **P7** | Perfil U 50x25x2.0 | 302 | 4 | 1.21 | 2.29 | 2.77 kg |
-| **P8** | Tubo cuadrado 1"x2.0 mm | 250 | 2 | 0.50 | 1.44 | 0.72 kg |
-| **P9** | Perfil C 50x25x2.0 | 656 | 2 | 1.31 | 2.45 | 3.21 kg |
-| **P10** | Ángulo L 30x25x1.6 | 565 | 16 | 9.04 | 1.33 | 12.02 kg |
-|  | **TOTAL GENERAL** |  |  | **26.50 m** |  | **44.30 kg aprox.** |
+| Pieza | Perfil | Largo (mm) | Cantidad | Longitud Total (m) | Peso Lineal (kg/m) | Peso Total (kg) |
+|--------|--------|-----------:|---------:|-------------------:|-------------------:|----------------:|
+| P1 | Ángulo L 30x25x1.6 | 1800 | 4 | 7.20 | 0.67 | 4.82 |
+| P2 | Ángulo L 30x25x1.6 | 300 | 2 | 0.60 | 0.67 | 0.40 |
+| P3 | Perfil U 50x25x1.6 | 600 | 4 | 2.40 | 1.26 | 3.02 |
+| P4 | Perfil U 50x25x1.6 | 310 | 4 | 1.24 | 1.26 | 1.56 |
+| P5 | Perfil U 50x25x1.6 | 266 | 2 | 0.53 | 1.26 | 0.67 |
+| P6 | Perfil U 50x25x1.6 | 337 | 2 | 0.67 | 1.26 | 0.84 |
+| P7 | Perfil U 50x25x1.6 | 302 | 4 | 1.21 | 1.26 | 1.52 |
+| P8 | Tubo cuadrado 1”x2.0 mm | 250 | 2 | 0.50 | 1.45 | 0.72 |
+| P9 | Perfil C 50x25x2.0 | 656 | 2 | 1.31 | 1.57 | 2.06 |
+| P10 | Ángulo L 30x25x1.6 | 565 | 10 | 5.65 | 0.67 | 3.79 |
+| **TOTAL GENERAL** |  |  |  | **21.31 m** |  | **19.40 kg aprox.** |
 
 #### Interpretación estructural
 
-El peso estimado total de la estructura metálica principal se ubica en torno a **44 kg**, valor considerado adecuado para un gabinete de carga rápida de esta categoría, permitiendo un equilibrio entre:
+El peso estimado total de la estructura metálica principal se ubica en torno a **19.4 kg**, valor considerado adecuado para un gabinete de carga rápida de esta categoría, permitiendo un equilibrio entre:
 
 - Rigidez estructural.
 - Facilidad de transporte.
