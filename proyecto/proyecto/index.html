@@ -781,10 +781,9 @@
     Resultados
   </a>
   
-    <nav class="md-nav" aria-label="Resultados">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#criterios-de-materiales-y-resistencia-estructural" class="md-nav__link">
     Criterios de Materiales y Resistencia Estructural
   </a>
@@ -797,7 +796,8 @@
     Propiedades mecánicas de referencia adoptadas
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Propiedades mecánicas de referencia adoptadas">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#lista-de-piezas-y-despiece-estructural-con-peso-estimado" class="md-nav__link">
@@ -1236,10 +1236,9 @@
     Resultados
   </a>
   
-    <nav class="md-nav" aria-label="Resultados">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
+</li>
+      
+        <li class="md-nav__item">
   <a href="#criterios-de-materiales-y-resistencia-estructural" class="md-nav__link">
     Criterios de Materiales y Resistencia Estructural
   </a>
@@ -1252,7 +1251,8 @@
     Propiedades mecánicas de referencia adoptadas
   </a>
   
-</li>
+    <nav class="md-nav" aria-label="Propiedades mecánicas de referencia adoptadas">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#lista-de-piezas-y-despiece-estructural-con-peso-estimado" class="md-nav__link">
@@ -1891,156 +1891,165 @@ solo técnico, sino también estructural y metodológico.</p>
 </ul>
 <p>Aunque estéticamente el cargador conserva similitudes con el modelo anterior,
 internamente se trata de un <strong>producto completamente nuevo</strong>.</p>
-<h3 id="criterios-de-materiales-y-resistencia-estructural">Criterios de Materiales y Resistencia Estructural<a class="headerlink" href="#criterios-de-materiales-y-resistencia-estructural" title="Permanent link">&para;</a></h3>
-<p>Para la estimación preliminar del comportamiento mecánico de la estructura se adoptó como referencia el uso de <strong>acero al carbono comercial de uso estructural</strong>, equivalente a normas internacionales ampliamente utilizadas en fabricación metálica liviana, tales como <strong>ASTM A36</strong>, <strong>ASTM A500</strong> y equivalentes europeos tipo <strong>S235</strong>.</p>
-<p>Estos valores se utilizaron como base de diseño orientativa, considerando que parte del material disponible en plaza puede no contar con certificación específica de origen.</p>
-<h4 id="propiedades-mecanicas-de-referencia-adoptadas">Propiedades mecánicas de referencia adoptadas<a class="headerlink" href="#propiedades-mecanicas-de-referencia-adoptadas" title="Permanent link">&para;</a></h4>
+<h2 id="criterios-de-materiales-y-resistencia-estructural">Criterios de Materiales y Resistencia Estructural<a class="headerlink" href="#criterios-de-materiales-y-resistencia-estructural" title="Permanent link">&para;</a></h2>
+<p>Para la estimación del comportamiento mecánico de la estructura se adoptó como
+referencia el uso de acero al carbono comercial de uso estructural, <strong>Acero AISI 1015</strong>
+(acero de bajo contenido de carbono, ~0.15% C), confirmado tras consulta con el
+proveedor y utilizado como material de referencia en la validación por elementos
+finitos del soporte de izado.</p>
+<h3 id="propiedades-mecanicas-de-referencia-adoptadas">Propiedades mecánicas de referencia adoptadas<a class="headerlink" href="#propiedades-mecanicas-de-referencia-adoptadas" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">Propiedad</th>
-<th style="text-align: left;">Valor típico</th>
+<th>Propiedad</th>
+<th>Valor</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Densidad del acero</td>
-<td style="text-align: left;">7.85 g/cm³</td>
+<td>Densidad del acero</td>
+<td>7.87 g/cm³</td>
 </tr>
 <tr>
-<td style="text-align: left;">Módulo de elasticidad (E)</td>
-<td style="text-align: left;">200 GPa</td>
+<td>Módulo de elasticidad (E)</td>
+<td>205 GPa</td>
 </tr>
 <tr>
-<td style="text-align: left;">Límite elástico (Fy)</td>
-<td style="text-align: left;">235 – 250 MPa</td>
+<td>Coeficiente de Poisson</td>
+<td>0.29</td>
 </tr>
 <tr>
-<td style="text-align: left;">Resistencia última (Fu)</td>
-<td style="text-align: left;">370 – 550 MPa</td>
+<td>Límite elástico (Fy)</td>
+<td>285 MPa</td>
+</tr>
+<tr>
+<td>Resistencia última (Fu)</td>
+<td>385 MPa</td>
 </tr>
 </tbody>
 </table>
-<blockquote>
-<p><strong>Nota técnica:</strong> Los valores anteriores representan rangos típicos de acero estructural comercial y fueron considerados como referencia para decisiones de diseño, rigidez y fabricación.</p>
-</blockquote>
+<p><strong>Nota técnica:</strong> los valores anteriores corresponden a la caracterización específica
+del Acero AISI 1015 utilizado en el modelo CAD y validado mediante simulación por
+elementos finitos en Autodesk Fusion 360, reemplazando la estimación preliminar
+genérica (equivalente ASTM A36/S235) adoptada en una etapa anterior del proyecto,
+previa a la definición final con el proveedor de perfilería.</p>
 <h4 id="lista-de-piezas-y-despiece-estructural-con-peso-estimado">Lista de Piezas y Despiece Estructural con Peso Estimado<a class="headerlink" href="#lista-de-piezas-y-despiece-estructural-con-peso-estimado" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
-<th style="text-align: left;">ID</th>
-<th style="text-align: left;">Nombre de Pieza</th>
-<th style="text-align: left;">Medidas (mm)</th>
-<th style="text-align: left;">Cantidad</th>
-<th style="text-align: left;">Total (m)</th>
-<th style="text-align: left;">Peso aprox. kg/m</th>
-<th style="text-align: left;">Peso total aprox.</th>
+<th>Pieza</th>
+<th>Perfil</th>
+<th style="text-align: right;">Largo (mm)</th>
+<th style="text-align: right;">Cantidad</th>
+<th style="text-align: right;">Longitud Total (m)</th>
+<th style="text-align: right;">Peso Lineal (kg/m)</th>
+<th style="text-align: right;">Peso Total (kg)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;"><strong>P1</strong></td>
-<td style="text-align: left;">Ángulo L 30x25x1.6</td>
-<td style="text-align: left;">1800</td>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">7.20</td>
-<td style="text-align: left;">1.33</td>
-<td style="text-align: left;">9.58 kg</td>
+<td>P1</td>
+<td>Ángulo L 30x25x1.6</td>
+<td style="text-align: right;">1800</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7.20</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">4.82</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>P2</strong></td>
-<td style="text-align: left;">Ángulo L 30x25x1.6</td>
-<td style="text-align: left;">300</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">0.60</td>
-<td style="text-align: left;">1.33</td>
-<td style="text-align: left;">0.80 kg</td>
+<td>P2</td>
+<td>Ángulo L 30x25x1.6</td>
+<td style="text-align: right;">300</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.60</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">0.40</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>P3</strong></td>
-<td style="text-align: left;">Perfil U 50x25x2.0</td>
-<td style="text-align: left;">600</td>
-<td style="text-align: left;">7</td>
-<td style="text-align: left;">4.20</td>
-<td style="text-align: left;">2.29</td>
-<td style="text-align: left;">9.62 kg</td>
+<td>P3</td>
+<td>Perfil U 50x25x1.6</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">2.40</td>
+<td style="text-align: right;">1.26</td>
+<td style="text-align: right;">3.02</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>P4</strong></td>
-<td style="text-align: left;">Perfil U 50x25x2.0</td>
-<td style="text-align: left;">310</td>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">1.24</td>
-<td style="text-align: left;">2.29</td>
-<td style="text-align: left;">2.84 kg</td>
+<td>P4</td>
+<td>Perfil U 50x25x1.6</td>
+<td style="text-align: right;">310</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1.24</td>
+<td style="text-align: right;">1.26</td>
+<td style="text-align: right;">1.56</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>P5</strong></td>
-<td style="text-align: left;">Perfil U 50x25x2.0</td>
-<td style="text-align: left;">266</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">0.53</td>
-<td style="text-align: left;">2.29</td>
-<td style="text-align: left;">1.21 kg</td>
+<td>P5</td>
+<td>Perfil U 50x25x1.6</td>
+<td style="text-align: right;">266</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.53</td>
+<td style="text-align: right;">1.26</td>
+<td style="text-align: right;">0.67</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>P6</strong></td>
-<td style="text-align: left;">Perfil U 50x25x2.0</td>
-<td style="text-align: left;">337</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">0.67</td>
-<td style="text-align: left;">2.29</td>
-<td style="text-align: left;">1.53 kg</td>
+<td>P6</td>
+<td>Perfil U 50x25x1.6</td>
+<td style="text-align: right;">337</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">1.26</td>
+<td style="text-align: right;">0.84</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>P7</strong></td>
-<td style="text-align: left;">Perfil U 50x25x2.0</td>
-<td style="text-align: left;">302</td>
-<td style="text-align: left;">4</td>
-<td style="text-align: left;">1.21</td>
-<td style="text-align: left;">2.29</td>
-<td style="text-align: left;">2.77 kg</td>
+<td>P7</td>
+<td>Perfil U 50x25x1.6</td>
+<td style="text-align: right;">302</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1.21</td>
+<td style="text-align: right;">1.26</td>
+<td style="text-align: right;">1.52</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>P8</strong></td>
-<td style="text-align: left;">Tubo cuadrado 1&rdquo;x2.0 mm</td>
-<td style="text-align: left;">250</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">0.50</td>
-<td style="text-align: left;">1.44</td>
-<td style="text-align: left;">0.72 kg</td>
+<td>P8</td>
+<td>Tubo cuadrado 1”x2.0 mm</td>
+<td style="text-align: right;">250</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0.50</td>
+<td style="text-align: right;">1.45</td>
+<td style="text-align: right;">0.72</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>P9</strong></td>
-<td style="text-align: left;">Perfil C 50x25x2.0</td>
-<td style="text-align: left;">656</td>
-<td style="text-align: left;">2</td>
-<td style="text-align: left;">1.31</td>
-<td style="text-align: left;">2.45</td>
-<td style="text-align: left;">3.21 kg</td>
+<td>P9</td>
+<td>Perfil C 50x25x2.0</td>
+<td style="text-align: right;">656</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.31</td>
+<td style="text-align: right;">1.57</td>
+<td style="text-align: right;">2.06</td>
 </tr>
 <tr>
-<td style="text-align: left;"><strong>P10</strong></td>
-<td style="text-align: left;">Ángulo L 30x25x1.6</td>
-<td style="text-align: left;">565</td>
-<td style="text-align: left;">16</td>
-<td style="text-align: left;">9.04</td>
-<td style="text-align: left;">1.33</td>
-<td style="text-align: left;">12.02 kg</td>
+<td>P10</td>
+<td>Ángulo L 30x25x1.6</td>
+<td style="text-align: right;">565</td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">5.65</td>
+<td style="text-align: right;">0.67</td>
+<td style="text-align: right;">3.79</td>
 </tr>
 <tr>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><strong>TOTAL GENERAL</strong></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><strong>26.50 m</strong></td>
-<td style="text-align: left;"></td>
-<td style="text-align: left;"><strong>44.30 kg aprox.</strong></td>
+<td><strong>TOTAL GENERAL</strong></td>
+<td></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>21.31 m</strong></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"><strong>19.40 kg aprox.</strong></td>
 </tr>
 </tbody>
 </table>
 <h4 id="interpretacion-estructural">Interpretación estructural<a class="headerlink" href="#interpretacion-estructural" title="Permanent link">&para;</a></h4>
-<p>El peso estimado total de la estructura metálica principal se ubica en torno a <strong>44 kg</strong>, valor considerado adecuado para un gabinete de carga rápida de esta categoría, permitiendo un equilibrio entre:</p>
+<p>El peso estimado total de la estructura metálica principal se ubica en torno a <strong>19.4 kg</strong>, valor considerado adecuado para un gabinete de carga rápida de esta categoría, permitiendo un equilibrio entre:</p>
 <ul>
 <li>Rigidez estructural.</li>
 <li>Facilidad de transporte.</li>
@@ -2276,7 +2285,7 @@ Los tres aprendizajes clave:</p>
 <div class="md-source-date">
   <small>
     
-      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 13, 2026 19:28:59 UTC">June 13, 2026</span>
+      Last update: <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="June 21, 2026 16:12:33 UTC">June 21, 2026</span>
     
   </small>
 </div>
