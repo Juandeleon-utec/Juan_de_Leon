@@ -65,7 +65,7 @@ Mediante bus I2C se integró una Raspberry Pi con el software PiSignage y un ser
 
 ## 4. Caracterización de materiales y diseño estructural
 
-El despiece estructural —compuesto por perfiles L, U, C y tubo cuadrado en acero comercial— totaliza aproximadamente 26.5 m de perfilería y un peso estructural estimado de **44.3 kg**, valor considerado adecuado para equilibrar rigidez, facilidad de transporte y carga sobre los puntos de anclaje.
+El despiece estructural —compuesto por perfiles L, U, C y tubo cuadrado en acero comercial— totaliza aproximadamente 21.3 m de perfilería y un peso estructural estimado de **19.4 kg**, valor considerado adecuado para equilibrar rigidez, facilidad de transporte y carga sobre los puntos de anclaje.
 
 Para la validación estructural mediante simulación por elementos finitos (sección 5) se utilizó como material de la estructura **Acero AISI 1015**, con las siguientes propiedades:
 
@@ -77,7 +77,7 @@ Para la validación estructural mediante simulación por elementos finitos (secc
 | Límite de elasticidad (Fy) | 285 MPa |
 | Resistencia máxima a tracción (Fu) | 385 MPa |
 
-Estos valores son consistentes con la categoría de acero al carbono estructural adoptada como referencia preliminar en etapas tempranas del proyecto (equivalente a ASTM A36/A500/S235), con la diferencia de que corresponden a la caracterización específica del material efectivamente utilizado en el modelo validado, en lugar de un rango genérico de referencia.
+Los valores anteriores corresponden a la caracterización específica del Acero AISI 1015 utilizado en el modelo CAD y validado mediante simulación por elementos finitos en Autodesk Fusion 360.
 
 
 ## 5. Validación estructural mediante análisis por elementos finitos (FEA)
