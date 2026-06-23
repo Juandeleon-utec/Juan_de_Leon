@@ -129,6 +129,8 @@ por parte del cliente, instancia actualmente en curso. Una vez confirmado dicho
 anticipo, la producción podrá iniciarse de forma inmediata, dado que el diseño,
 los planos técnicos y el listado de materiales se encuentran finalizados.
 
+[Video del cargador -- Renderizado -- ](https://youtu.be/vlS2N4JDK1U)
+
 ## 8. Próximos pasos
 
 - Inicio de fabricación de la primera serie (10 unidades) una vez confirmado el anticipo financiero del cliente.
