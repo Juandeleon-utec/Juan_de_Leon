@@ -6,7 +6,7 @@
 **Curso:** Posgrado en Fabricación Digital
 **Autor:** Juan Pedro de León
 **Estado del proyecto base:** Casi la final...
-**Última actualización del sitio fuente:** 21-06-2026
+**Última actualización del sitio fuente:** 23-06-2026
 
 > Esta página constituye la síntesis final del proceso documentado de forma narrativa en el sitio del proyecto. Mientras que el sitio relata la evolución cronológica de decisiones, errores y aprendizajes, este documento presenta de forma condensada y académica el objeto de estudio, las decisiones técnicas adoptadas y los resultados de validación obtenidos.
 
@@ -130,6 +130,7 @@ anticipo, la producción podrá iniciarse de forma inmediata, dado que el diseñ
 los planos técnicos y el listado de materiales se encuentran finalizados.
 
 [Video del cargador -- Renderizado -- ](https://youtu.be/vlS2N4JDK1U)
+[Archivo de PDF con la presentación]( ../anexos/proyecto/Cargador_EV_Presentacion_Final.pdf )
 
 ## 8. Próximos pasos
 
