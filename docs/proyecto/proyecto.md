@@ -1,7 +1,7 @@
 # Documentación del Proyecto  
 ## Rediseño estructural de cargador rápido para vehículos eléctricos
 
-> **Estado:** Borrador 4 — con documentación de proveedores
+> **Estado:** Pre-Entrega — con documentación de proveedores
 > **Actualización:** 13-06-2026
 > **Curso:** Posgrado en Fabricación Digital  
 > **Autor:** Juan Pedro de León  
