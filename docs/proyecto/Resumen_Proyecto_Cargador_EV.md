@@ -6,7 +6,7 @@
 **Curso:** Posgrado en Fabricación Digital
 **Autor:** Juan Pedro de León
 **Estado del proyecto base:** Casi la final...
-**Última actualización del sitio fuente:** 23-06-2026
+**Última actualización del sitio fuente:** 26-06-2026
 
 > Esta página constituye la síntesis final del proceso documentado de forma narrativa en el sitio del proyecto. Mientras que el sitio relata la evolución cronológica de decisiones, errores y aprendizajes, este documento presenta de forma condensada y académica el objeto de estudio, las decisiones técnicas adoptadas y los resultados de validación obtenidos.
 

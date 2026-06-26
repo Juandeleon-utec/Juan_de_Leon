@@ -2,7 +2,7 @@
 ## Rediseño estructural de cargador rápido para vehículos eléctricos
 
 > **Estado:** Pre-Entrega — con documentación de proveedores
-> **Actualización:** 13-06-2026
+> **Actualización:** 26-06-2026
 > **Curso:** Posgrado en Fabricación Digital  
 > **Autor:** Juan Pedro de León  
 
