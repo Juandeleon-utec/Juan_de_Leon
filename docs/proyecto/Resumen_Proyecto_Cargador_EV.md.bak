@@ -2,15 +2,14 @@
 
 ## Rediseño Estructural de Cargador Rápido para Vehículos Eléctricos
 
-**Institución:** UTEC — Universidad Tecnológica del Uruguay  
-**Curso:** Posgrado en Fabricación Digital  
-**Autor:** Juan Pedro de León  
-**Estado:** Cierre del proyecto — 26 de junio de 2026  
-**Última actualización:** 26-06-2026
+**Institución:** UTEC — Universidad Tecnológica del Uruguay
+**Curso:** Posgrado en Fabricación Digital
+**Autor:** Juan Pedro de León
+**Estado del proyecto base:** Casi la final...
+**Última actualización del sitio fuente:** 26-06-2026
 
 > Esta página constituye la síntesis final del proceso documentado de forma narrativa en el sitio del proyecto. Mientras que el sitio relata la evolución cronológica de decisiones, errores y aprendizajes, este documento presenta de forma condensada y académica el objeto de estudio, las decisiones técnicas adoptadas y los resultados de validación obtenidos.
 
----
 
 ## 1. Resumen
 
@@ -18,7 +17,6 @@ El proyecto consistió en la reestructuración integral del diseño de un cargad
 
 En consecuencia, se descartó la línea de trabajo inicial —que contemplaba la integración de un biorreactor de algas como componente ambiental— y se reorientó el alcance del posgrado hacia un rediseño estructural completo, desarrollado desde cero en Autodesk Fusion 360, bajo los criterios de fabricabilidad, modularidad, robustez estructural y autonomía técnica.
 
----
 
 ## 2. Objeto de estudio y alcance
 
@@ -37,21 +35,18 @@ El trabajo se planteó los siguientes objetivos específicos:
 
 ### 2.2 Motivación
 
-El análisis del prototipo existente evidenció que las problemáticas no podían resolverse mediante ajustes menores. Las causas principales identificadas fueron: fallas estructurales asociadas al peso y la carga del gabinete; ingreso de agua en componentes críticos; dificultades de transporte por dimensiones y distribución de masas; dependencia de proveedores externos sin control sobre el diseño; cambios en los proveedores de fuentes de alimentación que obligaron a reconsiderar el layout interno; y baja disponibilidad de materiales certificados en el interior de Uruguay.
+El análisis del prototipo existente evidenció que las problemáticas no podían resolverse mediante ajustes menores, identificándose como causas principales: fallas estructurales asociadas al peso y la carga del gabinete; ingreso de agua en componentes críticos; dificultades de transporte por dimensiones y distribución de masas; dependencia de proveedores externos sin control sobre el diseño; cambios en los proveedores de fuentes de alimentación que obligaron a reconsiderar el layout interno; y baja disponibilidad de materiales certificados en el interior de Uruguay.
 
 A partir de este diagnóstico se optó por reiniciar el diseño completo, priorizando fabricabilidad, modularidad, robustez estructural, facilidad de ensamblaje y mantenimiento, capacidad de adaptación futura ante cambios de componentes, y mayor disponibilidad local de materiales y procesos productivos.
 
----
 
 ## 3. Desarrollo técnico
 
 ### 3.1 Cambio de proveedor del sistema de potencia
 
-Se sustituyó el proveedor original de fuentes DC, Phoenix Contact (módulo CHARX PS-M2/825DC/1000DC, 30 kW, ~27 kg por unidad), por el proveedor Maxwell (módulo MXR100050B, 52 kW, ~23 kg por unidad). Esta migración respondió tanto a consideraciones de costo y disponibilidad comercial en Uruguay como al hecho de que el proyecto original había sido concebido asumiendo abastecimiento desde Brasil.
+Se sustituyó el proveedor original de fuentes DC, Phoenix Contact (módulo CHARX PS-M2/825DC/1000DC, 30 kW, ~27 kg por unidad), por el proveedor Maxwell (módulo MXR100050B, 50 kW, ~23 kg por unidad). Esta migración respondió tanto a consideraciones de costo y disponibilidad comercial en Uruguay como al hecho de que el proyecto original había sido concebido asumiendo abastecimiento desde Brasil.
 
-La nueva plataforma permite configuraciones de 52, 104 y 156 kW utilizando 3 fuentes en lugar de 4, generando beneficios en la relación costo/potencia instalada, reducción del peso total del equipo, mayor espacio interno disponible, mejor circulación de aire y mayor facilidad de mantenimiento.
-
-**Evolución futura (segundo semestre 2026):** se está evaluando la incorporación de fuentes UUGrenPower de 62,5 kW por unidad, lo que permitiría alcanzar 125 kW con solo 2 módulos, simplificando el ensamblaje y mejorando la propuesta comercial. Al cierre del proyecto esta línea se encuentra en estudio y no forma parte del diseño validado.
+La nueva plataforma permite configuraciones de 50, 100 y 150 kW utilizando 3 fuentes en lugar de 4, lo que generó beneficios derivados en la relación costo/potencia instalada, una reducción del peso total del equipo, mayor espacio interno disponible, mejor circulación de aire y mayor facilidad de mantenimiento.
 
 ### 3.2 Sustitución del controlador principal y adecuación normativa
 
@@ -67,11 +62,10 @@ Se incorporó un circuito de telemetría con conectividad GSM/datos móviles, or
 
 Mediante bus I2C se integró una Raspberry Pi con el software PiSignage y un servidor Apache/PHP local, destinada a funciones de interfaz visual: visualización del estado de carga, indicadores operativos y reproducción de contenido institucional o publicitario en la pantalla del equipo.
 
----
 
 ## 4. Caracterización de materiales y diseño estructural
 
-El despiece estructural —compuesto por perfiles L, U, C y tubo cuadrado en acero comercial— totaliza **21.31 m de perfilería** y un peso estructural estimado de **19.4 kg**, valor considerado adecuado para equilibrar rigidez, facilidad de transporte y carga sobre los puntos de anclaje.
+El despiece estructural —compuesto por perfiles L, U, C y tubo cuadrado en acero comercial— totaliza aproximadamente 21.3 m de perfilería y un peso estructural estimado de **19.4 kg**, valor considerado adecuado para equilibrar rigidez, facilidad de transporte y carga sobre los puntos de anclaje.
 
 Para la validación estructural mediante simulación por elementos finitos (sección 5) se utilizó como material de la estructura **Acero AISI 1015**, con las siguientes propiedades:
 
@@ -83,20 +77,19 @@ Para la validación estructural mediante simulación por elementos finitos (secc
 | Límite de elasticidad (Fy) | 285 MPa |
 | Resistencia máxima a tracción (Fu) | 385 MPa |
 
-Los valores anteriores corresponden a la caracterización específica del Acero AISI 1015 utilizado en el modelo CAD, confirmado tras consulta con el proveedor y validado mediante simulación por elementos finitos en Autodesk Fusion 360.
+Los valores anteriores corresponden a la caracterización específica del Acero AISI 1015 utilizado en el modelo CAD y validado mediante simulación por elementos finitos en Autodesk Fusion 360.
 
----
 
 ## 5. Validación estructural mediante análisis por elementos finitos (FEA)
 
-Como parte de la validación del soporte de izado de la estructura, se realizó un estudio de tensión estática en Autodesk Fusion 360 sobre el caso de carga máxima de la familia de productos (configuración con tres fuentes de alimentación), que por dominancia estructural cubre la totalidad de las variantes comerciales del equipo.
+Como parte de la validación del soporte de izado de la estructura, se realizó un estudio de tensión estática en Autodesk Fusion 360 sobre el caso de carga máxima de la familia de productos (configuración con tres fuentes de alimentación), que por dominancia estructural cubre la totalidad de las variantes comerciales del equipo (configuraciones de una, dos y tres fuentes).
 
 ### 5.1 Metodología
 
 - Peso real total del cargador: 112 kg.
 - Factor de izaje aplicado sobre la carga real: 1.5, conforme a criterios habituales de diseño de dispositivos de izaje.
-- Aplicación de carga diferenciada por origen: peso propio de la estructura modelada mediante gravedad factorizada (14.71 m/s²), y peso de componentes no modelados mediante cuatro fuerzas puntuales de 350 N aplicadas en los parantes verticales de transmisión de carga.
-- Restricciones: dos puntos fijos representando los anclajes reales de izaje.
+- Aplicación de carga diferenciada por origen: peso propio de la estructura modelada mediante gravedad factorizada (14.71 m/s²), y peso de componentes no modelados como sólidos (fuentes, cableado, gabinete) mediante cuatro fuerzas puntuales de 350 N aplicadas en los parantes verticales de transmisión de carga.
+- Restricciones: dos puntos fijos, representando los anclajes reales de izaje de la estructura.
 - Material: Acero AISI 1015 (límite de fluencia 285 MPa).
 
 ### 5.2 Resultados
@@ -114,65 +107,62 @@ Como parte de la validación del soporte de izado de la estructura, se realizó 
 
 El Factor de Seguridad mínimo obtenido (2.25) se ubica dentro del rango objetivo definido (2.0–4.0), con un margen del 12.6% respecto al límite inferior aceptable. La distribución de reacciones entre ambos puntos de anclaje resulta prácticamente simétrica, validando la geometría de izaje propuesta. Bajo los criterios de análisis empleados, no se espera deformación permanente ni falla del componente estructural ante la carga de diseño establecida.
 
-*Los informes completos de simulación (Autodesk Fusion 360) se anexan como documentación complementaria.*
-
----
+*Los informes completos de simulación (Autodesk Fusion 360) se anexan como documentación complementaria — ver sección de Referencias.*
 
 ## 6. Dificultades identificadas
 
 - El diseño original resultó estructuralmente no recuperable mediante ajustes parciales.
 - Los sucesivos cambios de proveedor obligaron a replantear decisiones internas durante el desarrollo, en un contexto donde el proyecto había sido originalmente concebido para abastecimiento desde Brasil, mercado con condiciones de disponibilidad distintas a las de Uruguay.
-- La brecha tecnológica entre el diseño digital y la capacidad de los talleres locales es concreta: la mayoría trabaja con archivos 2D (DWG) y no puede interpretar modelos 3D complejos. Esto obligó a generar planos técnicos normalizados como documentación intermedia, trabajo adicional no previsto originalmente.
 - La reconstrucción del listado completo de partes demandó más tiempo del previsto inicialmente.
 - Se requirió equilibrar la continuidad estética del producto con una reestructuración interna profunda.
 
----
 
 ## 7. Resultados y estado actual
 
 Como resultado del proceso se obtuvo un nuevo modelo estructural completo, desarrollado íntegramente en Fusion 360, con un diseño más robusto, modular y mantenible, y con mejor comportamiento frente a transporte e instalación, validado mediante el análisis estructural de izaje descrito en la sección 5. Se logró además mayor autonomía técnica, al contar con control total sobre el modelo CAD para futuros ajustes derivados de cambios de proveedor.
 
-Al cierre del proyecto (26 de junio de 2026), el diseño estructural y la documentación técnica se encuentran completos y validados, habiéndose concretado la venta de **10 unidades** a un cliente. El inicio de la fabricación de la primera serie se encuentra condicionado a la formalización del anticipo financiero correspondiente por parte del cliente, instancia actualmente en curso. Una vez confirmado dicho anticipo, la producción podrá iniciarse de forma inmediata, dado que el diseño, los planos técnicos y el listado de materiales se encuentran finalizados.
+Al cierre de este documento, el diseño estructural y la documentación técnica del
+cargador se encuentran completos y validados, habiéndose concretado la venta de
+**10 unidades** a un cliente. El inicio de la fabricación de la primera serie se
+encuentra condicionado a la formalización del anticipo financiero correspondiente
+por parte del cliente, instancia actualmente en curso. Una vez confirmado dicho
+anticipo, la producción podrá iniciarse de forma inmediata, dado que el diseño,
+los planos técnicos y el listado de materiales se encuentran finalizados.
 
-[Video del cargador — Renderizado](https://youtu.be/vlS2N4JDK1U)  
-[Archivo PDF con la presentación](../anexos/proyecto/Cargador_EV_Presentacion_Final.pdf)
-
----
+[Video del cargador -- Renderizado -- ](https://youtu.be/vlS2N4JDK1U)
+[Archivo de PDF con la presentación]( ../anexos/proyecto/Cargador_EV_Presentacion_Final.pdf )
 
 ## 8. Próximos pasos
 
 - Inicio de fabricación de la primera serie (10 unidades) una vez confirmado el anticipo financiero del cliente.
-- Ajuste de detalles en función de pruebas físicas del primer prototipo fabricado.
+- Ajuste de detalles en función de pruebas físicas.
 - Documentación de nuevas iteraciones del proyecto.
 - Integración de los aprendizajes derivados del proceso de soldadura al flujo de diseño en Fusion 360.
-- Evaluación de la línea UUGrenPower para configuración de 2 fuentes de 62,5 kW (segundo semestre 2026).
 
----
 
 ## 9. Referencias y documentación anexa
 
 ### 9.1 Documento fuente
 
-1. de León, J. P. (2026). *Documentación del Proyecto — Rediseño estructural de cargador rápido para vehículos eléctricos*. Posgrado en Fabricación Digital, UTEC. Cierre del proyecto: 26-06-2026.
+1. de León, J. P. (2026). *Documentación del Proyecto — Rediseño estructural de cargador rápido para vehículos eléctricos*. Posgrado en Fabricación Digital, UTEC. Borrador 3 con imágenes, actualización 11-05-2026.
 
 ### 9.2 Informes de simulación estructural (anexos)
 
 2. de León, J. P. (2026). *Informe de simulación FEA — Estudio 1: Tensión estática (versión preliminar, v40)*. Autodesk Fusion 360 (2703.1.20). Archivo: MOVEV_Final_May_V_1_3_Nayax_Notebook_1 v40. Creado 2026-06-21.
-3. de León, J. P. (2026). *Informe de simulación FEA — Estudio 1: Tensión estática (versión corregida y validada, v41)*. Autodesk Fusion 360 (2703.1.20). Archivo: MOVEV_Final_May_V_1_3_Nayax_Notebook_1 v41. Creado 2026-06-21.
 
 ### 9.3 Repositorio de archivos del proyecto
 
-4. *Cargador_EV_Estructura_v3.f3d* — Autodesk Fusion 360 (editable). Archivo maestro del proyecto, con historial paramétrico, componentes y estructura general del cargador.
-5. *Excel con resumen de piezas y compras* — Formato XLSX. Listado de materiales, cantidades y clasificación por categorías para compra en plaza.
-6. *Proyectos eléctricos y PCB* — KiCad. Esquemáticos eléctricos, diseño de placas PCB y documentación técnica del sistema electrónico.
-7. *Tablero de desarrollo del proyecto* — Miro Board (en línea). Espacio de trabajo visual con referencias, ideas, evolución del diseño y documentación complementaria.
+3. *Cargador_EV_Estructura_v3.f3d* — Autodesk Fusion 360 (editable). Archivo maestro del proyecto, con historial paramétrico, componentes y estructura general del cargador.
+4. *Excel con resumen de piezas y compras* — Formato XLSX. Listado de materiales, cantidades y clasificación por categorías para compra en plaza de hierros y proveedores locales.
+5. *Proyectos eléctricos y PCB* — KiCad (imágenes). Esquemáticos eléctricos, diseño de placas PCB y documentación técnica asociada al sistema electrónico del cargador.
+6. *Tablero de desarrollo del proyecto* — Miro Board (en línea). Espacio de trabajo visual con referencias, ideas, evolución del diseño y documentación complementaria.
 
 ### 9.4 Referencias técnicas externas citadas
 
-8. Phoenix Contact. *Módulo de potencia DC CHARX PS-M2/825DC/1000DC/30kW*. Disponible en: https://www.phoenixcontact.com/pt-br/produtos/modulo-de-potencia-dc-charx-ps-m2-825dc-1000dc-30kw-1296467
-9. Maxwell Power. *MXR100050B*. Disponible en: https://www.maxwellpower.cn/productinfo/2413106.html
-10. UNIT — Instituto Uruguayo de Normas Técnicas. *Norma IEC 61851*. Disponible en: https://www.unit.org.uy/normalizacion/norma/100001554
+7. Phoenix Contact. *Módulo de potencia DC CHARX PS-M2/825DC/1000DC/30kW*. Disponible en: https://www.phoenixcontact.com/pt-br/produtos/modulo-de-potencia-dc-charx-ps-m2-825dc-1000dc-30kw-1296467
+8. Maxwell Power. *MXR100050B*. Disponible en: https://www.maxwellpower.cn/productinfo/2413106.html
+9. UNIT — Instituto Uruguayo de Normas Técnicas. *Norma IEC 61851*. Disponible en: https://www.unit.org.uy/normalizacion/norma/100001554
 
 ### 9.5 Herramientas de apoyo declaradas
 
-11. Google Gemini — utilizada para refinamiento de texto, corrección de estilo y gramática de la documentación del sitio del proyecto (declarado bajo esquema de Contribución Cognitiva, CCL).
+10. Google Gemini — utilizada para refinamiento de texto, corrección de estilo y gramática de la documentación del sitio del proyecto (declarado bajo esquema de Contribución Cognitiva, CCL).

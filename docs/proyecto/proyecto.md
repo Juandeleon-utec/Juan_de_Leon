@@ -1,13 +1,12 @@
 # Documentación del Proyecto  
 ## Rediseño estructural de cargador rápido para vehículos eléctricos
 
-> **Estado:** Pre-Entrega — con documentación de proveedores
-> **Actualización:** 26-06-2026
+> **Estado:** Pre-Entrega — con documentación de proveedores  
+> **Actualización:** 26-06-2026  
 > **Curso:** Posgrado en Fabricación Digital  
 > **Autor:** Juan Pedro de León  
 
-
-
+---
 
 ## Introducción
 
@@ -17,6 +16,7 @@ En una etapa inicial del posgrado se exploró la posibilidad de integrar un bior
 
 Esta documentación registra ese recorrido: decisiones, errores, cambios de rumbo y aprendizajes, con foco en el **rediseño estructural, la fabricación digital, la modularidad y la autonomía técnica**.
 
+---
 
 ## What — ¿Qué hice?
 
@@ -32,13 +32,11 @@ Realicé una **reestructuración completa del diseño estructural** de un cargad
 - Mantener continuidad estética con el modelo anterior.
 - Adaptar el producto a nuevas configuraciones de potencia y cambios de proveedores estratégicos.
 
-
+---
 
 ## Why — ¿Por qué lo hice así?
 
-El proyecto original evidenció fallas que no podían resolverse mediante ajustes menores. 
-A partir del análisis del prototipo existente surgieron problemáticas estructurales y de proceso que
-hicieron evidente la necesidad de un replanteo completo del diseño:
+El proyecto original evidenció fallas que no podían resolverse mediante ajustes menores. A partir del análisis del prototipo existente surgieron problemáticas estructurales y de proceso que hicieron evidente la necesidad de un replanteo completo del diseño:
 
 - Problemas estructurales asociados al peso y a la carga del gabinete.
 - Ingreso de agua en componentes críticos.
@@ -47,8 +45,7 @@ hicieron evidente la necesidad de un replanteo completo del diseño:
 - Cambios en los proveedores de las fuentes de alimentación, lo que obligó a reconsiderar el layout interno.
 - Dificultad para conseguir determinados materiales en Uruguay y especialmente en el interior del país.
 
-Ante este escenario, la decisión fue **no “parchar” el diseño existente**, sino **reiniciarlo completamente**,
-priorizando los siguientes criterios:
+Ante este escenario, la decisión fue **no "parchar" el diseño existente**, sino **reiniciarlo completamente**, priorizando los siguientes criterios:
 
 - Fabricabilidad.
 - Modularidad.
@@ -57,10 +54,9 @@ priorizando los siguientes criterios:
 - Capacidad de adaptación futura ante cambios de componentes.
 - Mayor disponibilidad local de materiales y procesos productivos.
 
-
 El hecho de contar con **dibujos técnicos completos y control total del modelo CAD** permite que, ante un cambio definitivo de proveedor de fuentes, los ajustes internos necesarios puedan realizarse de manera autónoma, sin volver a depender de terceros.
 
-
+---
 
 ## Investigación y referencias
 
@@ -72,7 +68,9 @@ La toma de decisiones estuvo apoyada en distintas fuentes y experiencias, entre 
 - Evaluación de cargas estructurales y distribución de peso.
 - Consultas técnicas con proveedores.
 - Relevamiento de disponibilidad de materiales en plaza.
-- Uso de herramientas de IA como apoyo conceptual y de redacción (documentado).
+- Uso de herramientas de inteligencia artificial como apoyo conceptual y de redacción (documentado en la sección CCL).
+
+---
 
 ## Búsqueda de proveedores y proceso de cotización
 
@@ -91,7 +89,7 @@ La secuencia fue la siguiente:
 | **4 de junio de 2026** | Se explica que un gabinete de esta complejidad no puede interpretarse en 2D. Se ofrece exportar a `.STEP`, `.IGES` o `.STL`. |
 | **4 de junio de 2026** | Tincafil acepta el formato `.STEP` y queda aguardando el archivo para continuar. |
 
-Este intercambio es evidencia concreta de lo que el proyecto mencionaba de manera general: **la dificultad de conseguir proveedores locales capaces de interpretar y cotizar diseños digitales complejos**. La negociación aún no se cerró con un presupuesto formal de fabricación estructural.
+Este intercambio es evidencia concreta de lo que el proyecto mencionaba de manera general: **la dificultad de conseguir proveedores locales capaces de interpretar y cotizar diseños digitales complejos**. La negociación no se cerró con un presupuesto formal de fabricación estructural al cierre del proyecto.
 
 [Ver intercambio de emails con Tincafil](<doc_anexos/MOVEV Mail - Cotización gabinete cargador _ MOVEV.pdf>)
 
@@ -135,13 +133,13 @@ El proceso de búsqueda de proveedores dejó en evidencia tres realidades del me
 2. **La brecha tecnológica entre el diseño digital y la capacidad de los talleres locales es real**: la mayoría trabaja en 2D y no puede interpretar modelos 3D complejos sin documentación adicional.
 3. **La fabricación propia es la única forma de avanzar** sin depender de un proveedor que no existe, lo que justifica la decisión de aprender soldadura MIG y adquirir equipamiento propio.
 
+---
 
 ## How — ¿Cómo lo hice?
 
 ### Rediseño estructural
 
-El proceso comenzó con el modelado completo del cargador desde cero en **Fusion 360**, 
-abandonando el modelo anterior, dentro de algunas limitaciónes que por temas económicos dificultaban un cambio radical, por lo que nos obligo a tratar de mantener algunas caracteristicas externas pero si replanteando la arquitectura interna del equipo.
+El proceso comenzó con el modelado completo del cargador desde cero en **Fusion 360**, abandonando el modelo anterior. Dentro de algunas limitaciones económicas que dificultaban un cambio radical, se optó por mantener algunas características externas pero replanteando completamente la arquitectura interna del equipo.
 
 - Nueva lógica de armado por subconjuntos.
 - Separación clara entre:
@@ -160,9 +158,9 @@ Se reorganizó completamente la disposición interna de los sistemas eléctricos
 - Mejor ordenamiento interno del cableado.
 - Separación funcional de zonas sensibles.
 - Diseño preparado para futuros ajustes derivados de cambios de proveedor.
-- Se anexa al diseño un plano electrico, que esta **en desarrollo** en este momento.
+- Se anexa al diseño un plano eléctrico que se encuentra **en desarrollo** al cierre del proyecto.
 
-![Imagen del plano electrico](../images/PROYECTO/circuito_electrico.jpeg)
+![Imagen del plano eléctrico](../images/PROYECTO/circuito_electrico.jpeg)
 
 #### Punto 1: Redefinición del sistema de potencia por cambio de proveedor
 
@@ -170,43 +168,43 @@ Ante la necesidad de sustituir el proveedor original de fuentes DC, inicialmente
 
 Sin embargo, se trataba de una solución de costo elevado y con escasa o nula representación comercial en Uruguay para la línea específica de cargadores vehiculares. Cabe destacar que el proyecto original había sido concebido considerando abastecimiento desde Brasil, país donde **Phoenix Contact** sí cuenta con presencia consolidada.
 
-Posteriormente se migró a un nuevo proveedor chino, **Maxwell**, cuya fuente base DC es de **50 kW**, modelo [MXR100050B](https://www.maxwellpower.cn/productinfo/2413106.html). Esta nueva plataforma permite configuraciones de **50, 100 y 150 kW**, siendo este último el valor máximo previsto antes de requerir refrigeración líquida en el cable de carga.
+Posteriormente se migró a un nuevo proveedor chino, **Maxwell**, cuya fuente base DC es de **52 kW**, modelo [MXR100050B](https://www.maxwellpower.cn/productinfo/2413106.html). Esta nueva plataforma permite configuraciones de **52, 104 y 156 kW**, siendo este último el valor máximo previsto antes de requerir refrigeración líquida en el cable de carga.
 
-Este cambio impactó directamente en el rediseño interno del gabinete, ya que la estructura pasa a alojar **3 fuentes en lugar de 4**. También resulta relevante la diferencia de peso entre ambos modelos: mientras la fuente de **30 kW** posee un peso aproximado de **27 kg**, la de **50 kW** pesa aproximadamente **23 kg** por unidad.
+Este cambio impactó directamente en el rediseño interno del gabinete, ya que la estructura pasa a alojar **3 fuentes en lugar de 4**. También resulta relevante la diferencia de peso entre ambos modelos: mientras la fuente de **30 kW** posee un peso aproximado de **27 kg**, la de **52 kW** pesa aproximadamente **23 kg** por unidad.
 
 La combinación de estos factores generó mejoras adicionales de diseño y operación:
 
-- **Mejora en la relación costo / potencia instalada del sistema**  
-  Si bien el precio unitario de cada fuente se mantiene en valores similares respecto al proveedor anterior, la mejora aparece en la capacidad entregada por módulo. Anteriormente cada fuente aportaba **30 kW**, mientras que ahora cada unidad entrega **50 kW** por un costo equivalente. Esto genera una relación **USD/kW significativamente más favorable**, permitiendo aumentar la potencia total del cargador sin incrementar proporcionalmente la inversión en fuentes de alimentación.
+- **Mejora en la relación costo/potencia instalada del sistema:** cada fuente pasó de aportar 30 kW a entregar 52 kW por un costo equivalente, generando una relación USD/kW significativamente más favorable.
+- **Reducción del peso total del equipo:** el sistema anterior requería hasta cuatro módulos de 27 kg; la nueva configuración usa tres unidades de 23 kg para alcanzar mayor potencia total.
+- **Mayor espacio interno disponible:** al necesitar una fuente menos, se libera volumen útil para replantear la distribución de bandejas, cableado y componentes auxiliares.
+- **Mejora en la ventilación y circulación de aire:** con menos fuentes instaladas en el mismo gabinete se generan mayores zonas libres para el desplazamiento del aire, reduciendo puntos calientes.
+- **Mayor simplicidad para mantenimiento futuro:** más espacio interno facilita inspección, reemplazo de piezas, ajuste de conexiones y diagnóstico de fallas.
 
-- **Reducción del peso total del equipo**  
-  El sistema anterior contemplaba fuentes de **30 kW** con un peso aproximado de **27 kg por unidad**, pudiendo instalar hasta cuatro módulos. La nueva configuración utiliza fuentes de **50 kW** de aproximadamente **23 kg cada una**, requiriendo solo tres unidades para alcanzar **150 kW**. Como resultado, se obtiene una reducción considerable del peso total instalado, mejorando maniobrabilidad, transporte, montaje y exigencias estructurales del gabinete.
+#### Evolución futura del sistema de potencia — UUGrenPower (segundo semestre 2026)
 
-- **Mayor espacio interno disponible y mejor reorganización del layout**  
-  Al necesitar una fuente menos y manteniendo dimensiones externas similares entre ambos modelos, se libera volumen útil dentro del gabinete. Ese espacio adicional permite replantear la distribución interna de bandejas, cableado, protecciones y componentes auxiliares, logrando un diseño más ordenado, accesible y técnicamente eficiente.
+Como línea de desarrollo proyectada para el segundo semestre de 2026, se está evaluando la incorporación de fuentes de la marca **UUGrenPower**, con módulos de **62,5 kW** por unidad. Esta configuración permitiría alcanzar **125 kW** utilizando únicamente **2 fuentes**, simplificando el ensamblaje y reduciendo la cantidad de componentes internos respecto a la configuración actual de 3 fuentes Maxwell.
 
-- **Mejora en la ventilación y circulación de aire**  
-  Debido a que el tamaño general del gabinete prácticamente no se modificó, pero la cantidad de fuentes internas se redujo, se generan mayores zonas libres para el desplazamiento del aire. Esto favorece la circulación natural y forzada, disminuye puntos calientes internos y mejora el desempeño térmico general del cargador.
+Esta estrategia responde a una realidad comercial concreta: la configuración de 3 fuentes resulta más difícil de comercializar en el mercado actual, por lo que la reducción a 2 fuentes de mayor potencia unitaria representa una ventaja tanto en costo de ensamblaje como en propuesta de valor al cliente.
 
-- **Mayor simplicidad para mantenimiento futuro**  
-  La disponibilidad de más espacio libre en el interior evita que los componentes queden excesivamente compactados. Esto facilita tareas de inspección, limpieza, reemplazo de piezas, ajuste de conexiones y diagnóstico de fallas. En consecuencia, el mantenimiento correctivo y preventivo resulta más rápido, seguro y menos costoso a largo plazo.
+Al cierre del proyecto (26 de junio de 2026), esta línea se encuentra **en estudio** y no forma parte del diseño validado. Su incorporación requerirá una nueva iteración de diseño interno y validación estructural.
 
-#### Punto 2: Sustitución del PLC principal y adecuación a requisitos normativos
+| Proveedor | Modelo | Potencia unitaria | Config. máxima | Estado |
+| :--- | :--- | :--- | :--- | :--- |
+| Phoenix Contact | CHARX PS-M2 | 30 kW | 4 fuentes · 120 kW | Descartado |
+| Maxwell | MXR100050B | 52 kW | 3 fuentes · 156 kW | **Actual** |
+| UUGrenPower | — | 62,5 kW | 2 fuentes · 125 kW | En estudio |
 
+!["Evolución de proveedores de fuentes de potencia DC"](../images/PROYECTO/evolucion_proveedores_potencia.png)
+
+#### Punto 2: Sustitución del controlador principal y adecuación normativa
 
 Como parte del rediseño eléctrico y funcional del cargador, se resolvió sustituir el controlador originalmente previsto, **Phoenix Contact EVPLC**, por el controlador **Vector vSECC.single**. Esta decisión respondió a la necesidad de avanzar hacia una arquitectura más alineada con estándares internacionales aplicables a infraestructura de carga rápida y con mayores posibilidades de certificación futura.
 
-El equipo **vSECC.single** está concebido específicamente como controlador central para estaciones de carga AC/DC de un punto de carga, gestionando la comunicación entre el vehículo, backend, electrónica de potencia, medidores de energía y periféricos. Además, declara compatibilidad con protocolos y normas relevantes como **IEC 61851**.
-
-La migración al controlador de **Vector** también permitió una integración más robusta con dispositivos de seguridad y medición exigidos en determinados mercados o procesos de homologación.
+El equipo **vSECC.single** está concebido específicamente como controlador central para estaciones de carga AC/DC de un punto de carga, gestionando la comunicación entre el vehículo, backend, electrónica de potencia, medidores de energía y periféricos. Declara compatibilidad con protocolos y normas relevantes como **IEC 61851**.
 
 #### Integración con IMD (Insulation Monitoring Device)
 
-Una de las mejoras más relevantes fue la incorporación de un **IMD** (*Insulation Monitoring Device*), dispositivo encargado de supervisar fallas de aislamiento o derivaciones a tierra en el sistema DC de alta tensión.
-
-En términos prácticos, su función es comparable a una protección diferencial industrial o residencial, pero diseñada para trabajar sobre líneas de **corriente continua de hasta 1000 VDC**, condición habitual en cargadores rápidos modernos.
-
-El **vSECC.single** contempla integración con periféricos mediante buses industriales y arquitectura modular, incluyendo dispositivos externos como IMD y medidores.
+Una de las mejoras más relevantes fue la incorporación de un **IMD** (*Insulation Monitoring Device*), dispositivo encargado de supervisar fallas de aislamiento o derivaciones a tierra en el sistema DC de alta tensión. Su función es comparable a una protección diferencial industrial, pero diseñada para trabajar sobre líneas de **corriente continua de hasta 1000 VDC**.
 
 Cuando el IMD detecta una fuga a tierra, pérdida de aislamiento o condición insegura:
 
@@ -218,19 +216,11 @@ Cuando el IMD detecta una fuga a tierra, pérdida de aislamiento o condición in
 
 #### Incorporación de contactora principal de 400 A
 
-Debido a esta nueva lógica de seguridad, fue necesario incorporar una **contactora DC de 400 A**, encargada de conectar y desconectar la etapa de potencia principal.
+Debido a esta lógica de seguridad, fue necesario incorporar una **contactora DC de 400 A**, encargada de conectar y desconectar la etapa de potencia principal. El criterio adoptado consiste en que, ante una falla, **se desconectan únicamente las fuentes de energía**, mientras que el controlador permanece operativo, permitiendo guardar registros, informar códigos de error al backend y facilitar el diagnóstico posterior.
 
-El criterio adoptado consiste en que, ante una falla, **se desconectan únicamente las fuentes de energía**, mientras que el PLC/controlador permanece operativo. Esto resulta especialmente valioso porque permite:
+#### Beneficios obtenidos con el cambio de controlador
 
-- Guardar registros de eventos (*logs*).
-- Informar códigos de error al backend.
-- Determinar si la falla fue por fuga a tierra, cortocircuito u otra condición.
-- Facilitar tareas de mantenimiento y diagnóstico posterior.
-- Evitar reinicios innecesarios del sistema de control.
-
-#### Beneficios obtenidos con el cambio de PLC
-
-- Mayor alineación normativa internacional** para infraestructura de carga rápida.
+- Mayor alineación normativa internacional para infraestructura de carga rápida.
 - Arquitectura preparada para certificaciones futuras.
 - Integración nativa con medidores de energía e IMD.
 - Mayor capacidad de diagnóstico remoto y local.
@@ -240,9 +230,7 @@ El criterio adoptado consiste en que, ante una falla, **se desconectan únicamen
 
 #### Punto 3: Sistema de monitoreo remoto y conectividad GSM
 
-Como parte de la evolución funcional del cargador, se incorporó un circuito de comunicación dedicado que permite enviar información operativa del equipo mediante red **GSM / datos móviles** hacia una plataforma centralizada de monitoreo.
-
-El objetivo de esta arquitectura es disponer, a futuro, de un **dashboard web** desde el cual sea posible supervisar el estado general de cada cargador instalado en campo, facilitando tareas de operación, mantenimiento y diagnóstico remoto.
+Se incorporó un circuito de comunicación dedicado que permite enviar información operativa del equipo mediante red **GSM/datos móviles** hacia una plataforma centralizada de monitoreo. El objetivo es disponer, a futuro, de un **dashboard web** para supervisar el estado general de cada cargador instalado en campo.
 
 Entre las variables previstas para monitoreo se incluyen:
 
@@ -251,49 +239,21 @@ Entre las variables previstas para monitoreo se incluyen:
 - Energía entregada durante cada sesión de carga.
 - Tiempo transcurrido de carga.
 - Estado de comunicación con periféricos.
-- Información provista por el PLC durante el proceso de carga.
-- Nivel estimado de batería del vehículo, cuando el protocolo del vehículo lo permita.
-
-El circuito de telemetría se comunica con el PLC principal, permitiendo consolidar información técnica y operativa en tiempo real.
-
-Los beneficios esperados de esta incorporación son:
-
-- Supervisión remota de equipos distribuidos geográficamente.
-- Reducción de tiempos de respuesta ante fallas.
-- Registro histórico de sesiones de carga.
-- Mejora en mantenimiento preventivo.
-- Base tecnológica para futura red comercial de cargadores.
+- Nivel estimado de batería del vehículo, cuando el protocolo lo permita.
 
 #### Punto 4: Integración con Raspberry Pi y sistema de interfaz visual
 
-En paralelo al sistema de monitoreo remoto, se desarrolló una integración secundaria mediante bus **I2C** hacia una **Raspberry Pi**, encargada de funciones visuales e interacción complementaria con el usuario.
+En paralelo al sistema de monitoreo remoto, se desarrolló una integración mediante bus **I2C** hacia una **Raspberry Pi**, encargada de funciones visuales e interacción con el usuario. Ejecuta el software **PiSignage** para gestión de contenidos multimedia, complementado con un servidor Apache/PHP para publicación de contenido propio.
 
-La Raspberry Pi ejecuta el software **PiSignage**, utilizado habitualmente para cartelería digital y gestión de contenidos multimedia. Sobre esta plataforma se adaptó parte de la pantalla del cargador para combinar información comercial con datos operativos del equipo.
-Se le anexo un servidor Apache con PHP para la publicacion de contenido propio.
+Entre las funciones previstas:
 
-Entre las funciones previstas se incluyen:
-
-- Visualización de tiempo de carga transcurrido.
-- Estado actual del proceso de carga.
+- Visualización de tiempo de carga transcurrido y estado del proceso.
 - Indicadores operativos del equipo.
 - Reproducción de videos publicitarios o institucionales.
 - Mensajes informativos al usuario.
 - Contenido dinámico configurable de forma remota.
 
-Esta solución permite aprovechar una misma pantalla para funciones técnicas y comerciales, mejorando la experiencia de usuario y agregando valor al punto de carga.
-
-Los principales beneficios de esta integración son:
-
-- Mejor aprovechamiento del hardware visual existente.
-- Capacidad publicitaria del cargador.
-- Comunicación directa con el usuario final.
-- Flexibilidad para futuras ampliaciones de software.
-- Separación entre lógica crítica de carga y sistema multimedia.  
-
-
-<!-- MARCADOR IMAGEN:
-     capturas del modelo 3D, explosiones, subconjuntos o detalles estructurales -->
-
+!["Arquitectura del sistema eléctrico del cargador EV"](../images/PROYECTO/arquitectura_sistema_electrico.png)
 
 ### Transporte e instalación
 
@@ -304,11 +264,12 @@ El rediseño también consideró desde el inicio las condiciones reales de trans
 - Diseño pensado para manipulación, izaje y montaje en sitio.
 
 **Soporte para izado de la estructura**
+
 !["Soporte para izado de la estructura"](../images/PROYECTO/Iluminacion_y_anclajes.png)
 
+**Salida para colocación de tornillo de izado**
 
-**Salida para colocacion de tornillo para izado**
-!["Soporte para izado de la estructura"](../images/PROYECTO/anclajes2.png)
+!["Salida para tornillo de izado"](../images/PROYECTO/anclajes2.png)
 
 #### Plano de instalación en campo — MOV-SIF-001
 
@@ -316,27 +277,16 @@ Se desarrolló un plano de instalación estándar (*Standard Installation Field*
 
 - Área libre requerida: hasta **500 × 250 cm**.
 - Protection board frontal de **185 cm** de altura.
-- Feeder Pillar con diferencial 400A y SPD (protección contra sobretensiones).
-- Dos luminarias de **40W** sobre poste (izquierda y derecha).
+- Feeder Pillar con diferencial 400 A y SPD (protección contra sobretensiones).
+- Dos luminarias de **40 W** sobre poste (izquierda y derecha).
 - Cable duct soterrado con tapa, **mínimo 60 cm de profundidad**.
 - Distancia mínima desde la vereda: **100 cm desde el eje del cargador**.
 
-Este plano formaliza los requisitos de instalación y es el documento que se entrega al cliente o instalador antes de la puesta en marcha en campo.
-
 [Descargar plano MOV-SIF-001](<doc_anexos/MOVEV_Install_1.pdf>)
-
-### Electrónica y eléctrica
-
-Se reorganizó completamente la disposición interna de la electrónica y la eléctrica:
-
-- Creación de bandejas específicas para potencia y control.
-- Mejor ordenamiento interno del cableado.
-- Separación funcional de zonas sensibles.
-- Diseño preparado para ajustes derivados de cambios de proveedor de fuentes.
 
 #### Plano de control assembly — MOV-GShow-CA
 
-Se desarrolló el plano de *Control Assembly* (MOV-GShow-CA, hoja 1/2, mayo 2026) del modelo GOshow 150kW DC + 22kW AC, que documenta la disposición y distribución completa de todos los componentes internos del gabinete:
+Se desarrolló el plano de *Control Assembly* (MOV-GShow-CA, hoja 1/2, mayo 2026) del modelo GOshow 150 kW DC + 22 kW AC, que documenta la disposición y distribución completa de todos los componentes internos del gabinete:
 
 | Componente | Descripción |
 | :--- | :--- |
@@ -360,24 +310,16 @@ Se desarrolló el plano de *Control Assembly* (MOV-GShow-CA, hoja 1/2, mayo 2026
 | Cage Clamp | Prensacables de entrada/salida |
 | 3× Interconnector | Interconexión entre módulos de potencia |
 
-Este plano es el documento de referencia para el armado interno, la verificación de componentes y las tareas de mantenimiento del equipo.
-
 [Descargar plano Control Assembly MOV-GShow-CA](<doc_anexos/MOVEV_Control_Assembly_1.pdf>)
 
-### Indicador de carga / status del cargado
+### Indicador de carga / estado del cargador
 
-Se diseño un difusor el led para indicar el estatus de cada uno de los cargadores, ya que el modelo cuenta con 2 opciones.
-
-- Se diseño dentro del propio esquema de fusion y se lo imprimira en PETG por su resistencia mecanica y mejor resistencia al agua.
-- El compponente sera pegado a la superficie de fibra para evitar la entrada de agua al cargador.
-- Todos los archivos exportados, tanto PDF , STL, Gcode, se encuentran en el apartado de documentación del proyecto.
+Se diseñó un difusor de LED para indicar el estado de cada uno de los cargadores, dado que el modelo cuenta con 2 opciones de carga. El componente se imprimirá en PETG por su resistencia mecánica y mejor tolerancia a la humedad, y será adherido a la superficie de fibra para evitar el ingreso de agua al gabinete. Todos los archivos exportados (PDF, STL, Gcode) se encuentran en el apartado de documentación del proyecto.
 
 **Indicador de estado de carga - PS047**
-!["Soporte para izado de la estructura"](../images/PROYECTO/luces_1.png)
-!["Soporte para izado de la estructura"](../images/PROYECTO/luces_2.png)
 
-<!-- MARCADOR IMAGEN:
-     cortes del modelo mostrando flujos de aire o zonas vedadas -->
+!["Indicador de estado - vista 1"](../images/PROYECTO/luces_1.png)
+!["Indicador de estado - vista 2"](../images/PROYECTO/luces_2.png)
 
 ### Ventilación y vedaciones
 
@@ -388,15 +330,9 @@ Se trabajó especialmente en los sistemas de ventilación y sellado del gabinete
 - Optimización de vedaciones para uso exterior.
 - Reducción de puntos críticos de ingreso de agua.
 
-<!-- MARCADOR IMAGEN:
-     cortes del modelo mostrando flujos de aire o zonas vedadas -->
-
-
 ### Formación y adquisición de herramientas
 
-Con el objetivo de **poder fabricar y ensamblar el gabinete de forma autónoma**, 
-comencé un **curso de soldadura**, enfocado en soldadura MIG. En paralelo, se adquirió
-una **soldadora MIG**, lo que habilita:
+Con el objetivo de **poder fabricar y ensamblar el gabinete de forma autónoma**, se inició un **curso de soldadura** con foco en soldadura MIG. En paralelo, se adquirió una **soldadora MIG**, lo que habilita:
 
 - Fabricar estructuras propias.
 - Prototipar sin depender de terceros.
@@ -405,62 +341,48 @@ una **soldadora MIG**, lo que habilita:
 
 Esta etapa fue clave para comprender la relación directa entre diseño digital y fabricación física.
 
-<!-- MARCADOR IMAGEN:
-     fotos del curso, prácticas de soldadura o preparación del taller -->
-
-
-
 ### Trabajos paralelos y primeras experiencias constructivas
 
-Durante el desarrollo del proyecto también se trabajó en otros modelos de cargadores,
-lo que permitió adquirir experiencia práctica en procesos constructivos.
-
-En particular:
+Durante el desarrollo del proyecto también se trabajó en otros modelos de cargadores, lo que permitió adquirir experiencia práctica en procesos constructivos. En particular:
 
 - Diseño y fabricación de un tótem/pedestal.
 - Construcción en ACM, con perforaciones y cortes para componentes internos.
 - Aplicación de vinilo de corte como terminación gráfica.
 
-Estos trabajos funcionaron como un primer acercamiento real a la construcción,
-permitiendo validar criterios de diseño, materiales y procesos antes de avanzar
-con el cargador principal.
+Estos trabajos funcionaron como un primer acercamiento real a la construcción, permitiendo validar criterios de diseño, materiales y procesos antes de avanzar con el cargador principal.
 
-<!-- MARCADOR IMAGEN:
-     fotos del tótem, proceso de perforado y aplicación de vinilo -->
-
+---
 
 ## Dificultades encontradas
 
 A lo largo del proceso se identificaron varias dificultades relevantes:
 
 - El diseño original no era estructuralmente recuperable.
-- Cambios de proveedores obligaron a replantear decisiones internas durante todo el proyecto. El cargador fue concebido originalmente para el mercado brasileño, donde las opciones de componentes y fabricación son muy diferentes a las disponibles en Uruguay, y especialmente en el interior del país. El proceso de cotización con talleres locales evidenció una brecha técnica concreta: los proveedores de la región trabajan mayoritariamente con archivos 2D (DWG), sin capacidad de interpretar modelos 3D complejos. Esto obligó a generar planos técnicos normalizados como documentación intermedia. Ningún proveedor local cotizó la fabricación estructural completa del gabinete (ver sección *Búsqueda de proveedores*).
+- Los cambios de proveedores obligaron a replantear decisiones internas durante todo el proyecto. El cargador fue concebido originalmente para el mercado brasileño, donde las opciones de componentes y fabricación son muy diferentes a las disponibles en Uruguay, y especialmente en el interior del país.
+- El proceso de cotización con talleres locales evidenció una brecha técnica concreta: los proveedores de la región trabajan mayoritariamente con archivos 2D (DWG), sin capacidad de interpretar modelos 3D complejos. Esto obligó a generar planos técnicos normalizados como documentación intermedia. Ningún proveedor local cotizó la fabricación estructural completa del gabinete al cierre del proyecto (ver sección *Búsqueda de proveedores*).
 - Rehacer el listado completo de partes llevó más tiempo del previsto.
-- Necesidad de adquirir nuevas competencias técnicas (soldadura).
-- Balancear continuidad estética con una reestructuración profunda.
+- La necesidad de adquirir nuevas competencias técnicas (soldadura MIG) implicó una curva de aprendizaje adicional no contemplada inicialmente.
+- Balancear la continuidad estética del producto con una reestructuración interna profunda.
 
-Estas dificultades fueron determinantes para comprender que el problema no era
-solo técnico, sino también estructural y metodológico.
+Estas dificultades fueron determinantes para comprender que el problema no era solo técnico, sino también estructural y metodológico.
 
+---
 
 ## Resultados
 
 - Nuevo modelo estructural completo desarrollado en Fusion 360.
 - Diseño más robusto, modular y mantenible.
 - Mejor comportamiento frente a transporte e instalación.
-- Base sólida para futuras iteraciones.
+- Base sólida para futuras iteraciones y cambios de proveedor.
 - Mayor autonomía técnica y control del proceso productivo.
 
-Aunque estéticamente el cargador conserva similitudes con el modelo anterior,
-internamente se trata de un **producto completamente nuevo**.
+Aunque estéticamente el cargador conserva similitudes con el modelo anterior, internamente se trata de un **producto completamente nuevo**.
+
+---
 
 ## Criterios de Materiales y Resistencia Estructural
 
-Para la estimación del comportamiento mecánico de la estructura se adoptó como
-referencia el uso de acero al carbono comercial de uso estructural, **Acero AISI 1015**
-(acero de bajo contenido de carbono, ~0.15% C), confirmado tras consulta con el
-proveedor y utilizado como material de referencia en la validación por elementos
-finitos del soporte de izado.
+Para la estimación del comportamiento mecánico de la estructura se adoptó como referencia el uso de acero al carbono comercial de uso estructural, **Acero AISI 1015** (acero de bajo contenido de carbono, ~0.15% C), confirmado tras consulta con el proveedor y utilizado como material de referencia en la validación por elementos finitos del soporte de izado.
 
 ### Propiedades mecánicas de referencia adoptadas
 
@@ -472,14 +394,11 @@ finitos del soporte de izado.
 | Límite elástico (Fy) | 285 MPa |
 | Resistencia última (Fu) | 385 MPa |
 
-**Nota técnica:** los valores anteriores corresponden a la caracterización específica
-del Acero AISI 1015 utilizado en el modelo CAD y validado mediante simulación por
-elementos finitos en Autodesk Fusion 360, reemplazando la estimación preliminar
-genérica (equivalente ASTM A36/S235) adoptada en una etapa anterior del proyecto,
-previa a la definición final con el proveedor de perfilería.
-[PDF Con el resultado de la Simulacion](../proyecto/doc_anexos/Informe%20del%20estudio_fusion_360.pdf)
+**Nota técnica:** los valores anteriores corresponden a la caracterización específica del Acero AISI 1015 utilizado en el modelo CAD y validado mediante simulación por elementos finitos en Autodesk Fusion 360, reemplazando la estimación preliminar genérica (equivalente ASTM A36/S235) adoptada en una etapa anterior del proyecto, previa a la definición final con el proveedor de perfilería.
 
-#### Lista de Piezas y Despiece Estructural con Peso Estimado
+[PDF con el resultado de la simulación](../proyecto/doc_anexos/Informe%20del%20estudio_fusion_360.pdf)
+
+### Lista de Piezas y Despiece Estructural con Peso Estimado
 
 | Pieza | Perfil | Largo (mm) | Cantidad | Longitud Total (m) | Peso Lineal (kg/m) | Peso Total (kg) |
 |--------|--------|-----------:|---------:|-------------------:|-------------------:|----------------:|
@@ -490,22 +409,16 @@ previa a la definición final con el proveedor de perfilería.
 | P5 | Perfil U 50x25x1.6 | 266 | 2 | 0.53 | 1.26 | 0.67 |
 | P6 | Perfil U 50x25x1.6 | 337 | 2 | 0.67 | 1.26 | 0.84 |
 | P7 | Perfil U 50x25x1.6 | 302 | 4 | 1.21 | 1.26 | 1.52 |
-| P8 | Tubo cuadrado 1”x2.0 mm | 250 | 2 | 0.50 | 1.45 | 0.72 |
+| P8 | Tubo cuadrado 1"x2.0 mm | 250 | 2 | 0.50 | 1.45 | 0.72 |
 | P9 | Perfil C 50x25x2.0 | 656 | 2 | 1.31 | 1.57 | 2.06 |
 | P10 | Ángulo L 30x25x1.6 | 565 | 10 | 5.65 | 0.67 | 3.79 |
-| **TOTAL GENERAL** |  |  |  | **21.31 m** |  | **19.40 kg aprox.** |
+| **TOTAL GENERAL** | | | | **21.31 m** | | **19.40 kg aprox.** |
 
-#### Interpretación estructural
+### Interpretación estructural
 
-El peso estimado total de la estructura metálica principal se ubica en torno a **19.4 kg**, valor considerado adecuado para un gabinete de carga rápida de esta categoría, permitiendo un equilibrio entre:
+El peso estimado total de la estructura metálica principal se ubica en torno a **19.4 kg**, valor considerado adecuado para un gabinete de carga rápida de esta categoría, permitiendo un equilibrio entre rigidez estructural, facilidad de transporte, menor carga sobre bases de anclaje, buen comportamiento frente a vibraciones y facilidad de manipulación durante el ensamblaje.
 
-- Rigidez estructural.
-- Facilidad de transporte.
-- Menor carga sobre bases de anclaje.
-- Buen comportamiento frente a vibraciones.
-- Facilidad de manipulación durante ensamblaje.
-
-#### Criterios adoptados de fabricación
+### Criterios adoptados de fabricación
 
 - Material pensado para corte, perforado y soldadura MIG.
 - Perfiles comerciales disponibles en plaza local.
@@ -513,65 +426,73 @@ El peso estimado total de la estructura metálica principal se ubica en torno a 
 - Diseño optimizado para futuras reparaciones o modificaciones.
 - Relación favorable entre resistencia mecánica y costo.
 
-#### Observación técnica
+### Validación estructural mediante análisis por elementos finitos (FEA)
 
-En futuras iteraciones del proyecto puede incorporarse análisis por elementos finitos (FEA) en Fusion 360 para validar:
+Se realizó un análisis de tensión estática en Autodesk Fusion 360 sobre el caso de carga máxima (configuración con tres fuentes de alimentación), que por dominancia estructural cubre el 100% de las variantes comerciales del equipo.
 
-- Deformación máxima.
-- Concentración de tensiones.
-- Seguridad en puntos de izaje.
-- Respuesta a cargas de transporte.
-- Resistencia a esfuerzos dinámicos por uso exterior.
+**Metodología aplicada:**
+- Peso real total del cargador: 112 kg.
+- Factor de izaje aplicado: 1.5.
+- Carga diferenciada: gravedad factorizada (14.71 m/s²) para la estructura modelada, y cuatro fuerzas puntuales de 350 N en los parantes verticales para los componentes no modelados.
+- Dos puntos fijos representando los anclajes reales de izaje.
 
-#### Estado actual del diseño  - 05-26
-Actualmente se estan realizando todas las perforaciones del gabinete.
-!["Soporte para izado de la estructura"](../images/PROYECTO/gabinete_10_05_26.jpeg)
+**Resultados obtenidos:**
 
-**Entre Ellas:**
+| Parámetro | Valor |
+|---|---|
+| Factor de Seguridad mínimo | 2.253 |
+| Rango objetivo | 2.0 – 4.0 |
+| Tensión de von Mises máxima | 126.5 MPa |
+| Desplazamiento máximo | 0.96 mm |
+| Reacción punto de anclaje 1 | 832.0 N |
+| Reacción punto de anclaje 2 | 832.4 N |
 
-  - Perforaciones de aletado para refrigeración y circulación de aire dentro del gabinete.   
-  - Salidas de cables de carga.
-  - Perforacion para incorporar iluminacion externa.
-  - Cambio del soporte del conector CCS2, por uno con iluminacion led, con leds WS2812B programables, que pasaran a substituir el modulo que era impreso en 3D (PS047)
+El Factor de Seguridad obtenido (2.25) se ubica dentro del rango objetivo, con un margen del 12.6% sobre el límite inferior. Las reacciones en ambos puntos de anclaje resultan prácticamente simétricas, validando la geometría de izaje propuesta.
 
+### Estado actual al cierre del proyecto (26 de junio de 2026)
 
-<!-- MARCADOR FUTURO:
-     aquí puede incorporarse documentación del prototipo físico construido -->
+El diseño estructural y la documentación técnica del cargador se encuentran completos y validados. Se han concretado **10 unidades vendidas** a un cliente. El inicio de la fabricación de la primera serie está condicionado a la formalización del anticipo financiero correspondiente, instancia que se encuentra en curso al cierre de este documento.
 
+!["Estado del gabinete al cierre del proyecto"](../images/PROYECTO/gabinete_10_05_26.jpeg)
 
+**Trabajos realizados sobre el gabinete:**
 
+- Perforaciones de aletado para refrigeración y circulación de aire.
+- Salidas de cables de carga.
+- Perforación para incorporar iluminación externa.
+- Cambio del soporte del conector CCS2 por uno con iluminación LED (WS2812B programables), que reemplaza el módulo impreso en 3D (PS047).
 
-
+---
 
 ## Where — ¿Dónde están los archivos?
 
 - Modelos editables: Fusion 360.
 - Exportaciones: renders, esquemas, capturas.
-- Documentación visual: tableros en Miro. 
+- Documentación visual: tableros en Miro.
 
-#### Repositorio de Archivos
+### Repositorio de Archivos
 
 **Diseño y modelos 3D**
 
 | Archivo | Formato | Descripción | Enlace |
 | :--- | :--- | :--- | :--- |
 | **Cargador_EV_Estructura_v3.f3d** | Fusion 360 | Archivo maestro del proyecto con historial paramétrico, componentes y estructura general del cargador. | [Descargar](../anexos/PROYECTO/Movev_Final_componentes.f3d) |
-| **Modelo final exportado (integración Nayax)** | STEP | Modelo GOshow v1.3 con integración del sistema de pago Nayax, enviado a proveedor para cotización de fabricación. | [Descargar](<doc_anexos/MOVEV_Final_May_V_1_3_Nayax.step>) |
-| **Tablero de desarrollo del proyecto** | Miro Board (Online) | Espacio de trabajo visual con referencias, ideas, evolución del diseño y documentación complementaria. | [Abrir tablero](https://miro.com/app/board/uXjVJ0RGljI=/) |
+| **Modelo final exportado (integración Nayax)** | STEP | Modelo GOshow v1.3 con integración del sistema de pago Nayax, enviado a proveedor para cotización. | [Descargar](<doc_anexos/MOVEV_Final_May_V_1_3_Nayax.step>) |
+| **Tablero de desarrollo del proyecto** | Miro Board (online) | Espacio de trabajo visual con referencias, ideas, evolución del diseño y documentación complementaria. | [Abrir tablero](https://miro.com/app/board/uXjVJ0RGljI=/) |
 
 **Planos técnicos de ingeniería**
 
 | Archivo | Formato | Descripción | Enlace |
 | :--- | :--- | :--- | :--- |
-| **Plano de instalación en campo** | PDF | MOV-SIF-001 — Requerimientos de obra, dimensiones, conexiones y luminarias para instalación del cargador. | [Descargar](<doc_anexos/MOVEV_Install_1.pdf>) |
-| **Plano de control assembly** | PDF | MOV-GShow-CA — Layout interno del GOshow 150kW DC + 22kW AC, componentes y distribución de bandejas. | [Descargar](<doc_anexos/MOVEV_Control_Assembly_1.pdf>) |
-| **Planos técnicos 2D por color** | PDF | Anexos I, II y III: Negro Opaco (estructura), Negro Satinado (carcasa), Azul RAL 5012 (fibra de vidrio). | [Anexo I](<doc_anexos/Negro_Opaco.pdf>) · [Anexo II](<doc_anexos/Negro_Satinado.pdf>) · [Anexo III](<doc_anexos/RAL5012.pdf>) |
+| **Plano de instalación en campo** | PDF | MOV-SIF-001 — Requerimientos de obra, dimensiones, conexiones y luminarias. | [Descargar](<doc_anexos/MOVEV_Install_1.pdf>) |
+| **Plano de control assembly** | PDF | MOV-GShow-CA — Layout interno del GOshow 150 kW DC + 22 kW AC. | [Descargar](<doc_anexos/MOVEV_Control_Assembly_1.pdf>) |
+| **Planos técnicos 2D por color** | PDF | Anexos I, II y III: Negro Opaco, Negro Satinado, Azul RAL 5012. | [Anexo I](<doc_anexos/Negro_Opaco.pdf>) · [Anexo II](<doc_anexos/Negro_Satinado.pdf>) · [Anexo III](<doc_anexos/RAL5012.pdf>) |
 
 **Materiales y compras**
 
 | Archivo | Formato | Descripción | Enlace |
 | :--- | :--- | :--- | :--- |
-| **Excel con resumen de piezas y compras** | XLSX | Listado de materiales, cantidades y clasificación por categorías para compra en plaza. | [Descargar](../anexos/PROYECTO/lista_piezas_estructura.xlsx) |
+| **Excel con resumen de piezas y compras** | XLSX | Listado de materiales, cantidades y clasificación por categorías. | [Descargar](../anexos/PROYECTO/lista_piezas_estructura.xlsx) |
 | **Proyectos eléctricos y PCB** | KiCad | Esquemáticos eléctricos, diseño de placas PCB y documentación técnica del sistema electrónico. | [Descargar](../anexos/PROYECTO/kicad_proyectos.zip) |
 
 **Documentación de proveedores**
@@ -579,74 +500,80 @@ Actualmente se estan realizando todas las perforaciones del gabinete.
 | Archivo | Formato | Descripción | Enlace |
 | :--- | :--- | :--- | :--- |
 | **Presupuesto terminación superficial — RECUFLON** | PDF | Cotización Nro. 20260529_01 para pintura en polvo electrostática. USD 525–620 + IVA por unidad. | [Descargar](<doc_anexos/PRESUPUESTO 2026.05.29 MUEBLES C.E..pdf>) |
-| **Intercambio con Tincafil** | PDF | Correos de cotización de fabricación con taller local de Rivera. Evidencia de la limitación de proveedores locales con formatos 3D. | [Descargar](<doc_anexos/MOVEV Mail - Cotización gabinete cargador _ MOVEV.pdf>) |
+| **Intercambio con Tincafil** | PDF | Correos de cotización de fabricación con taller local de Rivera. | [Descargar](<doc_anexos/MOVEV Mail - Cotización gabinete cargador _ MOVEV.pdf>) |
 
-
-
+---
 
 ## When — ¿Cuándo lo hice?
 
-- **Inicio del posgrado:** Exploración del concepto con biorreactor de algas integrado.
-- **Replanteo del proyecto:** Abandono del biorreactor. Inicio del rediseño estructural desde cero en Fusion 360.
-- **Comienzo del posgrado** Levantamiento de preguntas del proyecto original, problemas, necesidades, relevancia.
-- **Febrero 2026:** Cierre del listado completo de piezas estructurales para compra (07/02/2026).
-- **Mayo 2026:** Inicio de perforaciones y trabajos físicos sobre el gabinete. Generación de planos técnicos 2D (Anexos I–IV) para comunicación con proveedores locales.
-- **Mayo 2026:** Cotización formal de terminación superficial recibida de RECUFLON (Nro. 20260529_01, USD 525–620 por unidad).
-- **Mayo–junio 2026:** Proceso de cotización de fabricación estructural con Tincafil (Rivera). Negociación de formatos 3D (.IGES → .STEP). Sin presupuesto formal de fabricación estructural cerrado a la fecha.
+| Período | Hito |
+| :--- | :--- |
+| **Inicio del posgrado** | Exploración del concepto con biorreactor de algas integrado. |
+| **Replanteo del proyecto** | Abandono del biorreactor. Inicio del rediseño estructural desde cero en Fusion 360. |
+| **Comienzo del posgrado** | Levantamiento de problemas del proyecto original, necesidades y relevancia. |
+| **Febrero 2026** | Cierre del listado completo de piezas estructurales para compra (07/02/2026). |
+| **Mayo 2026** | Inicio de perforaciones y trabajos físicos sobre el gabinete. Generación de planos técnicos 2D (Anexos I–IV). |
+| **Mayo 2026** | Cotización formal de terminación superficial recibida de RECUFLON (Nro. 20260529_01, USD 525–620 por unidad). |
+| **Mayo–junio 2026** | Proceso de cotización de fabricación estructural con Tincafil (Rivera). Sin presupuesto formal cerrado al cierre del proyecto. |
+| **Junio 2026** | Validación estructural FEA completada. Venta de 10 unidades concretada. |
+| **26 de junio de 2026** | Cierre formal del proyecto de posgrado. |
 
+!["Línea de tiempo del proyecto — Rediseño cargador rápido EV"](../images/PROYECTO/timeline_proyecto_cargador_ev.png)
 
+---
 
-### Declaración de Contribución Cognitiva (CCL)
+## Declaración de Contribución Cognitiva (CCL)
 
 De acuerdo con los estándares de ética del posgrado, se etiqueta la autoría del trabajo bajo el siguiente esquema:
 
-| Categoria de contribución | Tarea / Proceso | Herramienta |
+| Categoría de contribución | Tarea / Proceso | Herramienta |
 | :--- | :--- | :--- |
-| **Idea, estructuración y diseño tecnico** | Diseño y modelado 3D en Fusion 360, toma de decisiones estructurales, lógica de fabricación y práctica de soldadura MIG. | Autor |
-| **Refinamiento de texto** | Estructuración del relato, corrección de estilo y gramática de la documentación, traducción de términos técnicos.**(*)** | Google Gemini |
+| **Idea, estructuración y diseño técnico** | Diseño y modelado 3D en Fusion 360, toma de decisiones estructurales, lógica de fabricación y práctica de soldadura MIG. | Autor |
+| **Refinamiento de texto** | Estructuración del relato, corrección de estilo y gramática de la documentación, traducción de términos técnicos. | Google Gemini |
 
 
-#### Detalle de Prompts y Resultados:
-- **Propósito:** Refinamiento de la narrativa y claridad en la sección de dificultades.
-- **Prompt:(*)** *"Analiza todo el texto a continucion, realiza las correcciones ortograficas correspondientes, revisa la estructuracion del texto, los tiempos verbales y la coherencia dentro del mismo. Sugiere cambios en la redaccion, argumentando el porque." *
-- **Resultado:** Se obtuvo una estructura más clara que facilitó la comunicación del proceso real vivido.
-
+---
 
 ## Reflexión personal
 
-Este proyecto representó un cambio de mentalidad fundamental en mi proceso como empreendedor. Al inicio del posgrado, mi enfoque estaba en la complejidad e innovación conceptual (la integración del biorreactor de algas). Sin embargo, la realidad técnica y los desafíos de fabricación me obligaron a realizar un ejercicio de humildad profesional: entender que, antes de innovar en la superficie, la estructura debe ser impecable.
-Los tres aprendizajes clave:
+Este proyecto representó un cambio de mentalidad fundamental en mi proceso como emprendedor. Al inicio del posgrado, mi enfoque estaba en la complejidad e innovación conceptual (la integración del biorreactor de algas). Sin embargo, la realidad técnica y los desafíos de fabricación me obligaron a realizar un ejercicio de humildad profesional: entender que, antes de innovar en la superficie, la estructura debe ser impecable.
 
-- De lo "ideal" a lo "real": Abandonar el biorreactor no fue un fracaso, sino una decisión estratégica. Aprendí que en diseño industrial, la robustez y la facilidad de mantenimiento son formas de innovación tan valiosas como la estética.
+**Los tres aprendizajes clave:**
 
-- La autonomía a través de la técnica: La decisión de aprender soldadura MIG cambió mi forma de diseñar en Fusion 360. Ahora, cuando modelo una unión, no solo pienso en la geometría, sino en el ángulo de la antorcha y la penetración del cordón de soldadura. Diseñar para la fabricación (Design for Manufacturing) ya no es un concepto teórico, sino una práctica física.
+- **De lo "ideal" a lo "real":** Abandonar el biorreactor no fue un fracaso, sino una decisión estratégica. En diseño industrial, la robustez y la facilidad de mantenimiento son formas de innovación tan valiosas como la estética.
 
-- El valor de la documentación viva: Mantener este registro me permitió notar que los cambios de proveedores de fuentes de alimentación, que inicialmente vi como un obstáculo, eran en realidad la oportunidad perfecta para probar la modularidad de mi diseño.
+- **La autonomía a través de la técnica:** La decisión de aprender soldadura MIG cambió mi forma de diseñar en Fusion 360. Ahora, cuando modelo una unión, no solo pienso en la geometría, sino en el ángulo de la antorcha y la penetración del cordón de soldadura. El diseño orientado a la fabricación (*Design for Manufacturing*) dejó de ser un concepto teórico para convertirse en una práctica física.
 
+- **El valor de la documentación viva:** Mantener este registro me permitió notar que los cambios de proveedores de fuentes de alimentación, que inicialmente percibí como un obstáculo, eran en realidad la oportunidad perfecta para probar la modularidad del diseño.
+
+---
 
 ## Próximos pasos
 
-- Fabricar.................
+- Inicio de fabricación de la primera serie (10 unidades) una vez confirmado el anticipo financiero del cliente.
+- Ajuste de detalles en función de pruebas físicas del primer prototipo fabricado.
+- Documentación de nuevas iteraciones del proyecto.
+- Integración de los aprendizajes derivados del proceso de soldadura al flujo de diseño en Fusion 360.
+- Evaluación de la línea UUGrenPower para configuración de 2 fuentes (segundo semestre 2026).
 
-
+---
 
 ## Recordatorio final
 
-> *“Does not matter what you did, only what you documented.”*
+> *"No importa lo que hiciste, solo lo que documentaste."*
 
 Documentar este proceso forma parte activa del aprendizaje y no representa un cierre definitivo del proyecto.
 
+---
 
 ## Referencias citadas en el documento
 
 **Componentes y proveedores de potencia**
-- **Fuente DC Phoenix Contact CHARX 30kW:** https://www.phoenixcontact.com/pt-br/produtos/modulo-de-potencia-dc-charx-ps-m2-825dc-1000dc-30kw-1296467
-- **Fuente DC Maxwell MXR100050B (50kW):** https://www.maxwellpower.cn/productinfo/2413106.html
+- **Fuente DC Phoenix Contact CHARX 30 kW:** https://www.phoenixcontact.com/pt-br/produtos/modulo-de-potencia-dc-charx-ps-m2-825dc-1000dc-30kw-1296467
+- **Fuente DC Maxwell MXR100050B (52 kW):** https://www.maxwellpower.cn/productinfo/2413106.html
 
 **Normativa**
 - **Norma IEC 61851 (carga conductiva para vehículos eléctricos):** https://www.unit.org.uy/normalizacion/norma/100001554
-
-
 
 **Proveedores locales contactados**
 - **Tincafil — Metalmecánica (Rivera, Uruguay):** imello.tincafil@gmail.com · arodriguez.tincafil@gmail.com · Tel: 4623 1020 / 4622 6760
